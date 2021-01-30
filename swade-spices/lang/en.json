@@ -1,7 +1,4 @@
 {
-
-  "SWADENothing.NothingYetName": "Does nothing yet:",
-  "SWADENothing.NothingYetHint": "This is a placeholder and does nothing yet.",
-  "SWADEStill.StillNothingName": "Does nothing yet:",
-  "SWADEStill.StillNothingHint": "This is a placeholder and does nothing yet."
+  "SWADESPICE.AddSkillIcons": "Add icons for skills",
+  "SWADESPICE.AddSkillIconsHint": "Set this setting to add icons to skills in the sheet"
 }

@@ -1,0 +1,7 @@
+.swade-skill-image {
+	max-height: 1em;
+	flex-grow: 0;
+	object-fit: scale-down;
+	margin-top: 2px !important;
+	border: none;
+}

@@ -1,0 +1,24 @@
+{
+	"name": "swade-spices",
+	"title": "SWADE Spices & Flavours",
+	"description": "A simple module to configure some stuff in the SWADE System on Foundry VTT.",
+	"minimumCoreVersion": "0.7.4",
+	"compatibleCoreVersion": "0.7.9",
+	"version": "0.0.1",
+	"author": "SalieriC, Javier Rivera",
+	"languages": [
+		{
+			"lang": "en",
+			"name": "English",
+			"path": "lang/en.json"
+		}
+	],
+	"systems": ["swade"],
+	"esmodules": ["./scripts/init.js"],
+	"scripts": ["./scripts/settings-extender.js"],
+	"styles": [],
+	"packs": [],
+	"url": "https://github.com/SalieriC/SWADE-Spices-Flavours",
+	"manifest": "",
+	"download": ""
+}

@@ -19,6 +19,6 @@
 	"styles": [],
 	"packs": [],
 	"url": "https://github.com/SalieriC/SWADE-Spices-Flavours",
-	"manifest": "",
+	"manifest": "https://raw.githubusercontent.com/SalieriC/SWADE-Spices-Flavours/main/swade-spices/module.json",
 	"download": ""
 }

@@ -2,20 +2,9 @@
 function register_settings() {
     // Custom bennie settings
     // noinspection JSUnresolvedVariable
-    game.settings.register('swade-spices', 'nothingYet', {
-        name: game.i18n.localize("SWADENothing.NothingYetName"),
-        hint: game.i18n.localize("SWADENothing.NothingYetHint"),
-        type: window.Azzu.SettingsTypes.FilePickerImage,
-        default: '',
-        scope: 'world',
-        config: true,
-        onChange: () => {
-            window.location.reload();
-        }
-    });
-    game.settings.register('swade-spices', 'StillNothing', {
-        name: game.i18n.localize("SWADEStill.StillNothingName"),
-        hint: game.i18n.localize("SWADEStill.StillNothingHint"),
+    game.settings.register('swade-spices', 'sheetBack', {
+        name: game.i18n.localize("SWADEBack.sheetBackName"),
+        hint: game.i18n.localize("SWADEBack.sheetBackHint"),
         type: window.Azzu.SettingsTypes.FilePickerImage,
         default: '',
         scope: 'world',
@@ -28,6 +17,11 @@ function register_settings() {
 
 function modify_character_sheet(_, html, __) {
     console.log('Swade Spices & Flavours for SWADE | Ready');
+    let back_sheet = game.settings.get(
+        'swade-spices', 'sheetBack');
+    if (back_sheet) {
+        html.find(".window-content").css("background-image", `url(${back_sheet})`);
+    }
 }
 
 
@@ -36,4 +30,4 @@ Hooks.on(`ready`, () => {
     register_settings();
 });
 
-Hooks.on(`renderCharacterSheet`, modify_character_sheet)
+Hooks.on(`renderSwadeCharacterSheet`, modify_character_sheet)

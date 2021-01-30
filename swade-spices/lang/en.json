@@ -3,5 +3,7 @@
   "SWADENothing.NothingYetName": "Does nothing yet:",
   "SWADENothing.NothingYetHint": "This is a placeholder and does nothing yet.",
   "SWADEStill.StillNothingName": "Does nothing yet:",
-  "SWADEStill.StillNothingHint": "This is a placeholder and does nothing yet."
+  "SWADEStill.StillNothingHint": "This is a placeholder and does nothing yet.",
+  "SWADEBack.sheetBackName": "Community Sheet Background:",
+  "SWADEBack.sheetBackHint": "Set a custom background image for the Community Sheet."
 }

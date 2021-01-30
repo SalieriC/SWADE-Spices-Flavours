@@ -75,7 +75,10 @@ function add_icons (actor, html) {
 }
 
 function modify_character_sheet(app, html, __) {
-    add_icons(app.object, html);
+    let icons_true = game.settings.get(
+        'swade-spices', 'add_icons');
+    if(icons_true) {
+        add_icons(app.object, html)};
     let back_sheet = game.settings.get(
         'swade-spices', 'sheetBack');
     if (back_sheet) {
@@ -90,7 +93,10 @@ function modify_character_sheet(app, html, __) {
 }
 
 function modify_npc_sheet(app, html, __) {
-    add_icons(app.object, html);
+    let icons_true = game.settings.get(
+        'swade-spices', 'add_icons');
+    if(icons_true) {
+        add_icons(app.object, html)};
     let back_sheet = game.settings.get(
         'swade-spices', 'sheetBack');
     if (back_sheet) {

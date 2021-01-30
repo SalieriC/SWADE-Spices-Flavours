@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Various other options to change the appearance of the Community Sheet.
 - Fix the black border around the logo using stylesheet.
 - Fix the checkbox for skill icons so that it actually does something.
+- Put sub-menues to the config page to better sort the features.
 ### Done
 - Added Skill Icons to Custom Character and NPC Sheet.
 - Option to create a custom Logo to the PC sheet.

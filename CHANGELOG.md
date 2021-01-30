@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fix the black border around the logo using stylesheet.
 - Fix the checkbox for skill icons so that it actually does something.
 - Put sub-menues to the config page to better sort the features.
+- Add an option to add Attribute icons.
 ### Done
 - Added Skill Icons to Custom Character and NPC Sheet.
 - Option to create a custom Logo to the PC sheet.

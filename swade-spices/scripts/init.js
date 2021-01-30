@@ -85,7 +85,7 @@ function modify_character_sheet(app, html, __) {
     let logo_sheet = game.settings.get(
         'swade-spices', 'sheetLogo');
     if (logo_sheet) {
-        html.find(".charname").before(`<img src="${logo_sheet}">`);
+        html.find(".charname").before(`<img class="swade-logo" src="${logo_sheet}">`);
     }
 }
 

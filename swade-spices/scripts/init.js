@@ -2,6 +2,19 @@
 function register_settings() {
     // Custom bennie settings
     // noinspection JSUnresolvedVariable
+    // Sheet Logo
+    game.settings.register('swade-logo', 'sheetLogo', {
+        name: game.i18n.localize("SWADESPICE.sheetLogoName"),
+        hint: game.i18n.localize("SWADESPICE.sheetLogoHint"),
+        type: window.Azzu.SettingsTypes.FilePickerImage,
+        default: '',
+        scope: 'world',
+        config: true,
+        onChange: () => {
+            window.location.reload();
+        }
+    });
+    // Sheet Background
     game.settings.register('swade-spices', 'sheetBack', {
         name: game.i18n.localize("SWADESPICE.sheetBackName"),
         hint: game.i18n.localize("SWADESPICE.sheetBackHint"),
@@ -68,6 +81,15 @@ function modify_character_sheet(app, html, __) {
     if (back_sheet) {
         html.find(".window-content").css("background-image", `url(${back_sheet})`);
     }
+    // Preparing a way to inject custom logos:
+    /*
+    let logo_sheet = game.settings.get(
+        'swade-spices', 'sheetLogo);
+    if (logo_sheet) {
+        ???
+    }
+    */
+    )
 }
 
 

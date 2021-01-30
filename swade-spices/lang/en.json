@@ -1,4 +1,6 @@
 {
+  "SWADESPICE.sheetLogoName": "Custom Logo:",
+  "SWADESPICE.sheetLogoHint": "Set up a custom logo to be shown on the character sheet. (Make sure that you are allowed to use whatever you select here or on any of the settings below.)",
   "SWADESPICE.sheetBackName": "Community Sheet Background:",
   "SWADESPICE.sheetBackHint": "Set a custom background image for the Community Sheet.",
   "SWADESPICE.AddSkillIcons": "Add icons for skills",

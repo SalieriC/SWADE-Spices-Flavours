@@ -1,4 +1,6 @@
 {
+  "SWADESPICE.sheetBackName": "Community Sheet Background:",
+  "SWADESPICE.sheetBackHint": "Set a custom background image for the Community Sheet.",
   "SWADESPICE.AddSkillIcons": "Add icons for skills",
   "SWADESPICE.AddSkillIconsHint": "Set this setting to add icons to skills in the sheet"
 }

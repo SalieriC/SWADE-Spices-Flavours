@@ -3,8 +3,8 @@ function register_settings() {
     // Custom bennie settings
     // noinspection JSUnresolvedVariable
     game.settings.register('swade-spices', 'sheetBack', {
-        name: game.i18n.localize("SWADEBack.sheetBackName"),
-        hint: game.i18n.localize("SWADEBack.sheetBackHint"),
+        name: game.i18n.localize("SWADESPICE.sheetBackName"),
+        hint: game.i18n.localize("SWADESPICE.sheetBackHint"),
         type: window.Azzu.SettingsTypes.FilePickerImage,
         default: '',
         scope: 'world',

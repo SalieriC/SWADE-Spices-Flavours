@@ -8,8 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Planned
 - Colour Picker to change the .tabs and .header colours.
 - Various other options to change the appearance of the Community Sheet.
+- Fix the black border around the logo using stylesheet.
 ### Done
 - Added Skill Icons to Custom Character and NPC Sheet.
+- Option to create a custom Logo to the PC sheet.
 
 ## [0.1.0] - 2021-01-30
 ### Added

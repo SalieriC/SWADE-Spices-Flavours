@@ -3,7 +3,7 @@ function register_settings() {
     // Custom bennie settings
     // noinspection JSUnresolvedVariable
     // Sheet Logo
-    game.settings.register('swade-logo', 'sheetLogo', {
+    game.settings.register('swade-spices', 'sheetLogo', {
         name: game.i18n.localize("SWADESPICE.sheetLogoName"),
         hint: game.i18n.localize("SWADESPICE.sheetLogoHint"),
         type: window.Azzu.SettingsTypes.FilePickerImage,
@@ -81,17 +81,22 @@ function modify_character_sheet(app, html, __) {
     if (back_sheet) {
         html.find(".window-content").css("background-image", `url(${back_sheet})`);
     }
-    // Preparing a way to inject custom logos:
-    /*
+    // Custom Logo
     let logo_sheet = game.settings.get(
-        'swade-spices', 'sheetLogo);
+        'swade-spices', 'sheetLogo');
     if (logo_sheet) {
-        ???
+        html.find(".charname").before(`<img src="${logo_sheet}">`);
     }
-    */
-    )
 }
 
+function modify_npc_sheet(app, html, __) {
+    add_icons(app.object, html);
+    let back_sheet = game.settings.get(
+        'swade-spices', 'sheetBack');
+    if (back_sheet) {
+        html.find(".window-content").css("background-image", `url(${back_sheet})`);
+    }
+}
 
 Hooks.on(`ready`, () => {
     console.log('Swade Spices & Flavours for SWADE | Ready');
@@ -100,4 +105,4 @@ Hooks.on(`ready`, () => {
 
 Hooks.on(`renderSwadeCharacterSheet`, modify_character_sheet);
 
-Hooks.on('renderSwadeNPCSheet', modify_character_sheet);
+Hooks.on('renderSwadeNPCSheet', modify_npc_sheet);

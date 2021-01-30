@@ -34,11 +34,19 @@ function register_settings() {
         default: false,
         scope: 'world',
         config: true
-    })
+    });
+    // Portrait before name
+    game.settings.register('swade-spices', 'protrait_first', {
+        name: game.i18n.localize("SWADESPICE.PortraitFirst"),
+        hint: game.i18n.localize("SWADESPICE.PortraitFirstHint"),
+        type: Boolean,
+        default: false,
+        scope: 'world',
+        config: true
+    });
 }
 
 function add_icons (actor, html) {
-    console.log(actor, html)
 	// Remove all scrollables and inline actor styles
 	html.find('.scrollable').removeClass('scrollable');
 	html.find('.quickaccess-list, .inventory, .power-list, .skills-list, .gear-list, .gear.skills').css(
@@ -88,7 +96,10 @@ function modify_character_sheet(app, html, __) {
     let logo_sheet = game.settings.get(
         'swade-spices', 'sheetLogo');
     if (logo_sheet) {
-        html.find(".charname").before(`<img class="swade-logo" src="${logo_sheet}">`);
+        html.find(".charname").after(`<img class="swade-logo" src="${logo_sheet}">`);
+    }
+    if (game.settings.get('swade-spices', 'protrait_first')) {
+        html.find(".charname").before(`<img class="swade-portrait" src="${app.object.img}">`);
     }
 }
 

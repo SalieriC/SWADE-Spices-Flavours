@@ -18,6 +18,10 @@
 	align-items: center;
 }
 
+input.charname {
+	text-align: center;
+}
+
 /*
 .swade-attribute-icons {
 

@@ -96,10 +96,10 @@ function modify_character_sheet(app, html, __) {
     let logo_sheet = game.settings.get(
         'swade-spices', 'sheetLogo');
     if (logo_sheet) {
-        html.find(".charname").after(`<img class="swade-logo" src="${logo_sheet}">`);
+        html.find(".charname").before(`<img class="swade-logo" src="${logo_sheet}">`);
     }
     if (game.settings.get('swade-spices', 'protrait_first')) {
-        html.find(".charname").before(`<img class="swade-portrait" src="${app.object.img}">`);
+        html.find(".charline").append(`<img class="swade-portrait" src="${app.object.img}">`);
     }
 }
 

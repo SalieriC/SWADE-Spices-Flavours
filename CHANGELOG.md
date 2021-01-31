@@ -11,7 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Remove the black border around the logo using stylesheet.
 - Put sub-menues to the config page to better sort the features.
 - Add an option to add Attribute icons.
-- Moving the character portrait to the right.
+- Move the character portrait to the right.
+- Move the Logo back to the left.
 - Apply custom background to chat messages.
 ### Done
 - Added Skill Icons to Custom Character and NPC Sheet.

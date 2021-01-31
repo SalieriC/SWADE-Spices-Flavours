@@ -13,6 +13,11 @@
 .swade-portrait {
 	border: none;
 }
+
+.charline {
+	align-items: center;
+}
+
 /*
 .swade-attribute-icons {
 

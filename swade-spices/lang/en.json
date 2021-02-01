@@ -3,8 +3,18 @@
   "SWADESPICE.sheetLogoHint": "Set up a custom logo to be shown on the character sheet (PC sheet only). (Make sure that you are allowed to use whatever you select here or on any of the settings below.)",
   "SWADESPICE.sheetBackName": "Community Sheet Background:",
   "SWADESPICE.sheetBackHint": "Set a custom background image for the Community Sheet.",
+  "SWADESPICE.tabColourName": "Tab and header background colour:",
+  "SWADESPICE.tabColourHint": "Colour for the tabs and headers background.",
+  "SWADESPICE.textColourName": "Tab and header text colour:",
+  "SWADESPICE.textColourHint": "Colour for the tabs and headers text.",
+  "SWADESPICE.columnColourName": "Item column colour:",
+  "SWADESPICE.columnColourHint": "(PC sheet only.) Changes the colour of the item columns background (in the items tab).",
+  "SWADESPICE.columnTextColourName": "Item column text colour:",
+  "SWADESPICE.columnTextColourHint": "(PC sheet only.) Changes the colour of the item columns text (in the items tab).",
   "SWADESPICE.AddSkillIcons": "Add icons for skills",
-  "SWADESPICE.AddSkillIconsHint": "Set this setting to add icons to skills in the sheet",
+  "SWADESPICE.AddSkillIconsHint": "Set this setting to add icons to skills in the sheet.",
   "SWADESPICE.PortraitFirst": "Add a character portrait",
-  "SWADESPICE.PortraitFirstHint": "Put a portrait of the character before the name"
+  "SWADESPICE.PortraitFirstHint": "Put a portrait of the character before the name.",
+  "SWADESPICE.CharnameCenteredName": "Center character name",
+  "SWADESPICE.CharnameCenteredHint": "Aligns the character name to the center of its field."
 }

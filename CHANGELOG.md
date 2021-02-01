@@ -6,19 +6,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Planned
-- Colour Picker to change the .tabs, .header and scroll bar colours.
-- Various other options to change the appearance of the Community Sheet.
-- Remove the black border around the logo using stylesheet.
-- Put sub-menues to the config page to better sort the features.
-- Add an option to add Attribute icons.
-- Move the character portrait to the right.
-- Move the Logo back to the left.
+- Colour Picker to change all the colour options, instead of a string.
+- Colour Picker to change the scroll bar colours.
+- Colour Picker to change the status checkbox colours.
+- Put sub-menues to the config page as it is getting quite big.
 - Apply custom background to chat messages.
-### Done
-- Added Skill Icons to Custom Character and NPC Sheet.
+### Maybeboard
+- Dynamically change the characters name font size so that longer names are still displayed fully.
+- Add an option to add Attribute icons.
+
+## [1.0.0] - Unreleased
+### Added
 - Option to create a custom Logo to the PC sheet.
-- Fix the checkbox for skill icons so that it actually does something.
+- Option to display Skill icons on the Sheets.
 - Option to show character artwork on the top of the sheet.
+- Option to center the character name within its field.
+- Option to change the background and text colour of the sheets headers and tabs.
+- Option to change the background and text colour of the PC sheets item colums background and text.
 
 ## [0.1.0] - 2021-01-30
 ### Added

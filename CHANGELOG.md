@@ -17,7 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.0] - Unreleased
 ### Added
-- Option to create a custom Logo to the PC sheet.
+- Option to display a custom Logo to the PC sheet.
 - Option to display Skill icons on the Sheets.
 - Option to show character artwork on the top of the sheet.
 - Option to center the character name within its field.

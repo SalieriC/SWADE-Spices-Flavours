@@ -15,7 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Dynamically change the characters name font size so that longer names are still displayed fully.
 - Add an option to add Attribute icons.
 
-## [1.0.0] - 2021-02-01
+## [0.1.0] - 2021-02-01
 ### Added
 - Option to display a custom Logo to the PC sheet.
 - Option to display Skill icons on the Sheets.
@@ -25,7 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Option to change the background and text colour of the PC sheets item colums background and text.
 - Added dependancies for [lib - Color Settings](https://foundryvtt.com/packages/colorsettings/) and the [SWADE system](https://foundryvtt.com/packages/swade/).
 
-## [0.1.0] - 2021-01-30
+## [0.0.2] - 2021-01-30
 ### Added
 - Option to configure a custom background image for the community sheet.
 

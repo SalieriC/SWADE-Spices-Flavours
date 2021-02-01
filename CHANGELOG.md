@@ -15,7 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Dynamically change the characters name font size so that longer names are still displayed fully.
 - Add an option to add Attribute icons.
 
-## [1.0.0] - Unreleased
+## [1.0.0] - 2021-02-01
 ### Added
 - Option to display a custom Logo to the PC sheet.
 - Option to display Skill icons on the Sheets.

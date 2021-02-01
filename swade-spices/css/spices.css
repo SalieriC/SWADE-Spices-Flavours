@@ -17,11 +17,11 @@
 .charline {
 	align-items: center;
 }
-
+/* Keeping this here in case we reconsider.
 input.charname {
 	text-align: center;
 }
-
+*/
 /*
 .swade-attribute-icons {
 

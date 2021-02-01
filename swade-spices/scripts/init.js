@@ -26,52 +26,40 @@ function register_settings() {
         }
     });
     // Tab and Header background colour picker
-    game.settings.register('swade-spices', 'tabColour', {
+    new window.Ardittristan.ColorSetting("swade-spices", "tabColour", {
         name: game.i18n.localize("SWADESPICE.tabColourName"),
         hint: game.i18n.localize("SWADESPICE.tabColourHint"),
-        type: String,
-        default: '#972824',
-        scope: 'world',
-        config: true,
-        onChange: () => {
-            window.location.reload();
-        }
+        label: game.i18n.localize("SWADESPICE.tabColourButton"),
+        restricted: true,
+        defaultColor: "#972824",
+        scope: "world",
     });
     // Tab and Header text colour picker
-    game.settings.register('swade-spices', 'textColour', {
+    new window.Ardittristan.ColorSetting("swade-spices", "textColour", {
         name: game.i18n.localize("SWADESPICE.textColourName"),
         hint: game.i18n.localize("SWADESPICE.textColourHint"),
-        type: String,
-        default: '#dfe6f5',
-        scope: 'world',
-        config: true,
-        onChange: () => {
-            window.location.reload();
-        }
+        label: game.i18n.localize("SWADESPICE.textColourButton"),
+        restricted: true,
+        defaultColor: "#dfe6f5",
+        scope: "world",
     });
     // Item column background colour picker
-    game.settings.register('swade-spices', 'columnColour', {
+    new window.Ardittristan.ColorSetting("swade-spices", "columnColour", {
         name: game.i18n.localize("SWADESPICE.columnColourName"),
         hint: game.i18n.localize("SWADESPICE.columnColourHint"),
-        type: String,
-        default: '#972824',
-        scope: 'world',
-        config: true,
-        onChange: () => {
-            window.location.reload();
-        }
+        label: game.i18n.localize("SWADESPICE.columnColourButton"),
+        restricted: true,
+        defaultColor: "#972824",
+        scope: "world",
     });
     // Item column text colour picker
-    game.settings.register('swade-spices', 'columnTextColour', {
+    new window.Ardittristan.ColorSetting("swade-spices", "columnTextColour", {
         name: game.i18n.localize("SWADESPICE.columnTextColourName"),
         hint: game.i18n.localize("SWADESPICE.columnTextColourHint"),
-        type: String,
-        default: '#ffffff',
-        scope: 'world',
-        config: true,
-        onChange: () => {
-            window.location.reload();
-        }
+        label: game.i18n.localize("SWADESPICE.columnTextColourButton"),
+        restricted: true,
+        defaultColor: "#ffffff",
+        scope: "world",
     });
     // Skill icons
     game.settings.register('swade-spices', 'add_icons', {
@@ -233,6 +221,9 @@ function modify_npc_sheet(app, html, __) {
 Hooks.on(`ready`, () => {
     console.log('Swade Spices & Flavours for SWADE | Ready');
     register_settings();
+    try{window.Ardittristan.ColorSetting.tester} catch {
+        ui.notifications.notify('Please make sure you have the "lib - ColorSettings" module installed and enabled.', "error");
+    }
 });
 
 Hooks.on(`renderSwadeCharacterSheet`, modify_character_sheet);

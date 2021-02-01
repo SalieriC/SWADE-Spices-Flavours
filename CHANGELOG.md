@@ -6,11 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Planned
-- Colour Picker to change all the colour options, instead of a string.
 - Colour Picker to change the scroll bar colours.
 - Colour Picker to change the status checkbox colours.
 - Put sub-menues to the config page as it is getting quite big.
 - Apply custom background to chat messages.
+- Add a way to return to the default colour on the colour pickers.
 ### Maybeboard
 - Dynamically change the characters name font size so that longer names are still displayed fully.
 - Add an option to add Attribute icons.
@@ -23,6 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Option to center the character name within its field.
 - Option to change the background and text colour of the sheets headers and tabs.
 - Option to change the background and text colour of the PC sheets item colums background and text.
+- Added dependancies for [lib - Color Settings](https://foundryvtt.com/packages/colorsettings/) and the [SWADE system](https://foundryvtt.com/packages/swade/).
 
 ## [0.1.0] - 2021-01-30
 ### Added

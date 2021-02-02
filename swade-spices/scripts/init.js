@@ -192,10 +192,6 @@ function modify_character_sheet(app, html, __) {
     let colour_checkboxBG = game.settings.get(
         'swade-spices', 'checkboxBGColour');
         html.find(".checkmark").css("background-color", `${colour_checkboxBG}`)
-    // Checkbox checkmark colour
-    let colour_checkmark = game.settings.get(
-        'swade-spices', 'checkmarkColour');
-        html.find(".check-container .checkmark:after").css("border", `solid ${colour_checkmark}`)
 }
 
 function modify_npc_sheet(app, html, __) {
@@ -295,7 +291,3 @@ Hooks.on('renderSwadeNPCSheet', modify_npc_sheet);
 Hooks.on('renderSwadeItemSheet', modify_item_sheet);
 
 Hooks.on('renderSwadeVehicleSheet', modify_vehicle_sheet);
-
-let back_chat = game.settings.get(
-    'swade-spices', 'sheetBack');
-  $(html).find('body').css('--swade-spices-sheetBack', `url(${back_chat})`);

@@ -70,7 +70,7 @@ function register_settings() {
         defaultColor: "#aca592",
         scope: "world",
     });
-    // Checkmark colour
+    /* Checkmark colour
     new window.Ardittristan.ColorSetting("swade-spices", "checkmarkColour", {
         name: game.i18n.localize("SWADESPICE.checkmarkColourName"),
         hint: game.i18n.localize("SWADESPICE.checkmarkColourHint"),
@@ -78,7 +78,7 @@ function register_settings() {
         restricted: true,
         defaultColor: "#972824",
         scope: "world",
-    });
+    });*/
     // Skill icons
     game.settings.register('swade-spices', 'add_icons', {
         name: game.i18n.localize("SWADESPICE.AddSkillIcons"),

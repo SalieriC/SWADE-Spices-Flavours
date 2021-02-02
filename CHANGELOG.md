@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Planned
 - Colour Picker to change the scroll bar colours.
-- Colour Picker to change the status checkbox colours.
+- Colour Picker to change the status checkmark colours.
 - Put sub-menues to the config page as it is getting quite big.
 - Apply custom background to chat messages.
 - Add a way to return to the default colour on the colour pickers.
@@ -18,9 +18,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Option to show owner portrait on item sheets if an item from a character sheet is opened, making it easy to see who this belongs to.
 - A way to export settings as a way to create and share presets with other worlds and users.
 
-## [0.2.0] - Unreleased
+## [0.1.1] - 2021-02-02
 ### Fixed
 - Item and Vehicle Sheets are now affected.
+- Colour Picker to change the status checkbox colours. (The checkmark currently cannot be edited.)
 
 ## [0.1.0] - 2021-02-01
 ### Added

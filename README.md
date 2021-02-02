@@ -1,5 +1,5 @@
 # SWADE Spices & Flavours
-A simple module to configure some stuff in the SWADE System on Foundry VTT. Please note: Due to the restrictions from PEG, we are unable to add options to change the appearance of the official sheet. Also because of PEGs restrictions we cannot offer an option to change the Benny image (if Dice So Nice! is enabled). We hope that PEG will reconsider their decision on not allowing to change the Benny image.
+A simple module to configure some stuff in the SWADE System on Foundry VTT.
 
 ## Current Features
 Currently the module has the following features (almost all of them are optional):

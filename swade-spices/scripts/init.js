@@ -155,33 +155,21 @@ function modify_character_sheet(app, html, __) {
     //Header and Tabs background colour
     let colour_tab = game.settings.get(
         'swade-spices', 'tabColour');
-    //If can be removed when the colour picker is set up as there is no way to have an empty value then.        
-    if (colour_tab) {
         html.find(".header-field").css("background", `${colour_tab}`);
         html.find(".tabs .item").css("background", `${colour_tab}`);
-    }
     //Header and Tabs text colour
     let colour_text = game.settings.get(
         'swade-spices', 'textColour');
-    //If can be removed when the colour picker is set up as there is no way to have an empty value then.
-    if (colour_text) {
         html.find(".header-field").css("color", `${colour_text}`);
         html.find(".tabs .item").css("color", `${colour_text}`);
-    }
     //Item column background colour
     let colour_column = game.settings.get(
         'swade-spices', 'columnColour');
-    //If can be removed when the colour picker is set up as there is no way to have an empty value then.        
-    if (colour_column) {
         html.find(".item-titles").css("background", `${colour_column}`);
-    }
-    //Header and Tabs text colour
+    //Item column text colour
     let colour_columnText = game.settings.get(
         'swade-spices', 'columnTextColour');
-    //If can be removed when the colour picker is set up as there is no way to have an empty value then.
-    if (colour_columnText) {
         html.find(".item-titles").css("color", `${colour_columnText}`);
-    }
 }
 
 function modify_npc_sheet(app, html, __) {
@@ -203,19 +191,67 @@ function modify_npc_sheet(app, html, __) {
     //Header and Tabs background colour
     let colour_tab = game.settings.get(
         'swade-spices', 'tabColour');
-    //If can be removed when the colour picker is set up as there is no way to have an empty value then.
-    if (colour_tab) {
         html.find(".header-field").css("background", `${colour_tab}`);
         html.find(".tabs .item").css("background", `${colour_tab}`);
-    }
     //Header and Tabs text colour
     let colour_text = game.settings.get(
         'swade-spices', 'textColour');
-    //If can be removed when the colour picker is set up as there is no way to have an empty value then.
-    if (colour_text) {
         html.find(".header-field").css("color", `${colour_text}`);
         html.find(".tabs .item").css("color", `${colour_text}`);
+}
+
+function modify_item_sheet(_, html, __) {
+    // Sheet Background
+    let back_sheet = game.settings.get(
+        'swade-spices', 'sheetBack');
+    if (back_sheet) {
+        html.find(".window-content").css("background-image", `url(${back_sheet})`);
     }
+    //Header and Tabs background colour
+    let colour_tab = game.settings.get(
+        'swade-spices', 'tabColour');
+        html.find(".header-field").css("background", `${colour_tab}`);
+        html.find(".tabs .item").css("background", `${colour_tab}`);
+    //Header and Tabs text colour
+    let colour_text = game.settings.get(
+        'swade-spices', 'textColour');
+        html.find(".header-field").css("color", `${colour_text}`);
+        html.find(".tabs .item").css("color", `${colour_text}`); 
+    // Optional centered charname
+    if (game.settings.get('swade-spices', 'charname_centered')) {
+        html.find("input.itemname").css("text-align", `center`);
+    }
+}
+
+function modify_vehicle_sheet(_, html, __) {
+    // Sheet Background
+    let back_sheet = game.settings.get(
+        'swade-spices', 'sheetBack');
+    if (back_sheet) {
+        html.find(".window-content").css("background-image", `url(${back_sheet})`);
+    }
+    //Header and Tabs background colour
+    let colour_tab = game.settings.get(
+        'swade-spices', 'tabColour');
+        html.find(".header-field").css("background", `${colour_tab}`);
+        html.find(".tabs .item").css("background", `${colour_tab}`);
+    //Header and Tabs text colour
+    let colour_text = game.settings.get(
+        'swade-spices', 'textColour');
+        html.find(".header-field").css("color", `${colour_text}`);
+        html.find(".tabs .item").css("color", `${colour_text}`); 
+    // Optional centered charname
+    if (game.settings.get('swade-spices', 'charname_centered')) {
+        html.find(".charname").css("text-align", `center`);
+    }
+    //Item column background colour
+    let colour_column = game.settings.get(
+        'swade-spices', 'columnColour');
+        html.find(".item-titles").css("background", `${colour_column}`);
+    //Item column text colour
+    let colour_columnText = game.settings.get(
+        'swade-spices', 'columnTextColour');
+        html.find(".item-titles").css("color", `${colour_columnText}`);
 }
 
 Hooks.on(`ready`, () => {
@@ -229,3 +265,7 @@ Hooks.on(`ready`, () => {
 Hooks.on(`renderSwadeCharacterSheet`, modify_character_sheet);
 
 Hooks.on('renderSwadeNPCSheet', modify_npc_sheet);
+
+Hooks.on('renderSwadeItemSheet', modify_item_sheet);
+
+Hooks.on('renderSwadeVehicleSheet', modify_vehicle_sheet);

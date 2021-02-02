@@ -3,10 +3,10 @@ A simple module to configure some stuff in the SWADE System on Foundry VTT.
 
 ## Current Features
 Currently the module has the following features (almost all of them are optional):
-- Option to configure a custom background image for the community sheet.
+- Option to configure a custom background image for the community sheets.
 - Option to display a custom Logo to the PC sheet.
 - Option to display Skill icons on the Sheets.
-- Option to show character artwork on the top of the sheet.
+- Option to show character artwork on the top of the PC sheet.
 - Option to center the character name within its field.
 - Option to change the background and text colour of the sheets headers and tabs.
 - Option to change the background and text colour of the PC sheets item colums background and text.

@@ -11,9 +11,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Put sub-menues to the config page as it is getting quite big.
 - Apply custom background to chat messages.
 - Add a way to return to the default colour on the colour pickers.
+- Option to select Fonts.
 ### Maybeboard
 - Dynamically change the characters name font size so that longer names are still displayed fully.
-- Add an option to add Attribute icons.
+- Option to add Attribute icons.
+- Option to show owner portrait on item sheets if an item from a character sheet is opened, making it easy to see who this belongs to.
+
+## [0.2.0] - Unreleased
+### Fixed
+- Item and Vehicle Sheets are now affected.
 
 ## [0.1.0] - 2021-02-01
 ### Added

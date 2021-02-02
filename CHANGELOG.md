@@ -20,7 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.1.1] - 2021-02-02
 ### Added
-- Colour Picker to change the status checkbox colours. (The checkmark currently cannot be edited.)
+- Colour Picker to change the status checkbox colours (only PC sheet atm). (The checkmark currently cannot be edited.)
 ### Fixed
 - Item and Vehicle Sheets are now affected.
 

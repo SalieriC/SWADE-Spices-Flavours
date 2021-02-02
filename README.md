@@ -10,7 +10,7 @@ Currently the module has the following features (almost all of them are optional
 - Option to center the character name within its field.
 - Option to change the background and text colour of the sheets headers and tabs.
 - Option to change the background and text colour of the PC sheets item colums background and text.
-- Colour Picker to change the status checkbox colours. (The checkmark currently cannot be edited.)
+- Colour Picker to change the status checkbox colours (only PC sheet atm). (The checkmark currently cannot be edited.)
 
 ## Planned Features
 You can take a look at the [Changelog](https://github.com/SalieriC/SWADE-Spices-Flavours/blob/main/CHANGELOG.md) to see our unreleased but planned features.

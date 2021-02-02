@@ -295,3 +295,7 @@ Hooks.on('renderSwadeNPCSheet', modify_npc_sheet);
 Hooks.on('renderSwadeItemSheet', modify_item_sheet);
 
 Hooks.on('renderSwadeVehicleSheet', modify_vehicle_sheet);
+
+let back_chat = game.settings.get(
+    'swade-spices', 'sheetBack');
+  $(html).find('body').css('--swade-spices-sheetBack', `url(${back_chat})`);

@@ -17,6 +17,23 @@
 .charline {
 	align-items: center;
 }
+/*
+.swade.sheet .check-container .checkmark:after {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+}
+*/
+#chat-log .chat-message {
+    background-image: var(--swade-spices-sheetBack);
+}
+textarea#chat-message {
+    background-image: var(--swade-spices-sheetBack);
+}
+#chat-log .chat-message.whisper {
+    background-image: var(--swade-spices-sheetBack);
+    border: 3px solid #ffd453;
+}
+
 /* Keeping this here in case we reconsider.
 input.charname {
 	text-align: center;

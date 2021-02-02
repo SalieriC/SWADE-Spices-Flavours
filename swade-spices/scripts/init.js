@@ -34,6 +34,16 @@ function register_settings() {
         defaultColor: "#972824",
         scope: "world",
     });
+    /* Active Tab background colour picker
+    new window.Ardittristan.ColorSetting("swade-spices", "activeTabColour", {
+        name: game.i18n.localize("SWADESPICE.activeTabColourName"),
+        hint: game.i18n.localize("SWADESPICE.activeTabColourHint"),
+        label: game.i18n.localize("SWADESPICE.activeTabColourButton"),
+        restricted: true,
+        defaultColor: "#aca592",
+        scope: "world",
+    });
+    */
     // Tab and Header text colour picker
     new window.Ardittristan.ColorSetting("swade-spices", "textColour", {
         name: game.i18n.localize("SWADESPICE.textColourName"),
@@ -175,6 +185,11 @@ function modify_character_sheet(app, html, __) {
         'swade-spices', 'tabColour');
         html.find(".header-field").css("background", `${colour_tab}`);
         html.find(".tabs .item").css("background", `${colour_tab}`);
+    /*Active Tab background colour
+    let colour_tab_active = game.settings.get(
+        'swade-spices', 'activeTabColour');
+        html.find(".tabs .item.active").css("background", `${colour_tab_active}`);
+    */
     //Header and Tabs text colour
     let colour_text = game.settings.get(
         'swade-spices', 'textColour');

@@ -61,6 +61,24 @@ function register_settings() {
         defaultColor: "#ffffff",
         scope: "world",
     });
+    // Checkbox background colour
+    new window.Ardittristan.ColorSetting("swade-spices", "checkboxBGColour", {
+        name: game.i18n.localize("SWADESPICE.checkboxBGColourName"),
+        hint: game.i18n.localize("SWADESPICE.checkboxBGColourHint"),
+        label: game.i18n.localize("SWADESPICE.checkboxBGColourButton"),
+        restricted: true,
+        defaultColor: "#aca592",
+        scope: "world",
+    });
+    // Checkmark colour
+    new window.Ardittristan.ColorSetting("swade-spices", "checkmarkColour", {
+        name: game.i18n.localize("SWADESPICE.checkmarkColourName"),
+        hint: game.i18n.localize("SWADESPICE.checkmarkColourHint"),
+        label: game.i18n.localize("SWADESPICE.checkmarkColourButton"),
+        restricted: true,
+        defaultColor: "#972824",
+        scope: "world",
+    });
     // Skill icons
     game.settings.register('swade-spices', 'add_icons', {
         name: game.i18n.localize("SWADESPICE.AddSkillIcons"),
@@ -170,6 +188,14 @@ function modify_character_sheet(app, html, __) {
     let colour_columnText = game.settings.get(
         'swade-spices', 'columnTextColour');
         html.find(".item-titles").css("color", `${colour_columnText}`);
+    // Checkbox Background colour
+    let colour_checkboxBG = game.settings.get(
+        'swade-spices', 'checkboxBGColour');
+        html.find(".checkmark").css("background-color", `${colour_checkboxBG}`)
+    // Checkbox checkmark colour
+    let colour_checkmark = game.settings.get(
+        'swade-spices', 'checkmarkColour');
+        html.find(".check-container .checkmark:after").css("border", `solid ${colour_checkmark}`)
 }
 
 function modify_npc_sheet(app, html, __) {

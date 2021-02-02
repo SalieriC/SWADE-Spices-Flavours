@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Dynamically change the characters name font size so that longer names are still displayed fully.
 - Option to add Attribute icons.
 - Option to show owner portrait on item sheets if an item from a character sheet is opened, making it easy to see who this belongs to.
+- A way to export settings as a way to create and share presets with other worlds and users.
 
 ## [0.2.0] - Unreleased
 ### Fixed

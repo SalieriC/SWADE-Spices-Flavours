@@ -178,7 +178,7 @@ function add_icons (actor, html) {
 	}
 }
 
-function modify_comminity_sheets(_, html) {
+function modify_community_sheets(_, html) {
     // Sheet Background
     let back_sheet = game.settings.get(
         'swade-spices', 'sheetBack');
@@ -221,7 +221,7 @@ function modify_comminity_sheets(_, html) {
 function modify_character_sheet(app, html, __) {
     // Skill Icons
     add_icons(app.object, html)
-    modify_comminity_sheets(app, html)
+    modify_community_sheets(app, html)
     // Custom Logo
     let logo_sheet = game.settings.get(
         'swade-spices', 'sheetLogo');
@@ -237,7 +237,7 @@ function modify_character_sheet(app, html, __) {
 function modify_npc_sheet(app, html, _) {
     // Skill Icons
     add_icons(app.object, html)
-    modify_comminity_sheets(app, html)
+    modify_community_sheets(app, html)
 }
 
 function modify_official_sheet(_, html, __) {
@@ -270,8 +270,8 @@ Hooks.on(`renderSwadeCharacterSheet`, modify_character_sheet);
 
 Hooks.on('renderSwadeNPCSheet', modify_npc_sheet);
 
-Hooks.on('renderSwadeItemSheet', modify_comminity_sheets);
+Hooks.on('renderSwadeItemSheet', modify_community_sheets);
 
-Hooks.on('renderSwadeVehicleSheet', modify_comminity_sheets);
+Hooks.on('renderSwadeVehicleSheet', modify_community_sheets);
 
 Hooks.on(`renderCharacterSheet`, modify_official_sheet);

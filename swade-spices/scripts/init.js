@@ -142,6 +142,7 @@ function register_settings() {
 }
 
 function add_icons (actor, html) {
+    if (! game.settings.get('swade-spices', 'add_icons')) return;
 	// Remove all scrollables and inline actor styles
 	html.find('.scrollable').removeClass('scrollable');
 	html.find('.quickaccess-list, .inventory, .power-list, .skills-list, .gear-list, .gear.skills').css(
@@ -177,37 +178,22 @@ function add_icons (actor, html) {
 	}
 }
 
-function modify_character_sheet(app, html, __) {
-    // Skill Icons
-    let icons_true = game.settings.get(
-        'swade-spices', 'add_icons');
-    if(icons_true) {
-        add_icons(app.object, html)};
+function modify_comminity_sheets(_, html) {
     // Sheet Background
     let back_sheet = game.settings.get(
         'swade-spices', 'sheetBack');
     if (back_sheet) {
         html.find(".window-content").css("background-image", `url(${back_sheet})`);
     }
-    // Custom Logo
-    let logo_sheet = game.settings.get(
-        'swade-spices', 'sheetLogo');
-    if (logo_sheet) {
-        html.find(".charname").before(`<img class="swade-logo" src="${logo_sheet}">`);
-    }
-    // Character Portrait on front page
-    if (game.settings.get('swade-spices', 'protrait_first')) {
-        html.find(".charline").append(`<img class="swade-portrait" src="${app.object.img}">`);
-    }
     // Optional centered charname
     if (game.settings.get('swade-spices', 'charname_centered')) {
-        html.find("input.charname").css("text-align", `center`);
+        html.find("input.charname, .charname>input").css("text-align", `center`);
     }
     //Header and Tabs background colour
     let colour_tab = game.settings.get(
         'swade-spices', 'tabColour');
-        html.find(".header-field").css("background", `${colour_tab}`);
-        html.find(".tabs .item").css("background", `${colour_tab}`);
+    html.find(".header-field").css("background", `${colour_tab}`);
+    html.find(".tabs .item").css("background", `${colour_tab}`);
     /*Active Tab background colour
     let colour_tab_active = game.settings.get(
         'swade-spices', 'activeTabColour');
@@ -232,98 +218,26 @@ function modify_character_sheet(app, html, __) {
         html.find(".checkmark").css("background-color", `${colour_checkboxBG}`)
 }
 
-function modify_npc_sheet(app, html, __) {
+function modify_character_sheet(app, html, __) {
     // Skill Icons
-    let icons_true = game.settings.get(
-        'swade-spices', 'add_icons');
-    if(icons_true) {
-        add_icons(app.object, html)};
-    // Sheet Background
-    let back_sheet = game.settings.get(
-        'swade-spices', 'sheetBack');
-    if (back_sheet) {
-        html.find(".window-content").css("background-image", `url(${back_sheet})`);
+    add_icons(app.object, html)
+    modify_comminity_sheets(app, html)
+    // Custom Logo
+    let logo_sheet = game.settings.get(
+        'swade-spices', 'sheetLogo');
+    if (logo_sheet) {
+        html.find(".charname").before(`<img class="swade-logo" src="${logo_sheet}">`);
     }
-    // Optional centered charname
-    if (game.settings.get('swade-spices', 'charname_centered')) {
-        html.find("input.charname").css("text-align", `center`);
+    // Character Portrait on front page
+    if (game.settings.get('swade-spices', 'protrait_first')) {
+        html.find(".charline").append(`<img class="swade-portrait" src="${app.object.img}">`);
     }
-    //Header and Tabs background colour
-    let colour_tab = game.settings.get(
-        'swade-spices', 'tabColour');
-        html.find(".header-field").css("background", `${colour_tab}`);
-        html.find(".tabs .item").css("background", `${colour_tab}`);
-    //Header and Tabs text colour
-    let colour_text = game.settings.get(
-        'swade-spices', 'textColour');
-        html.find(".header-field").css("color", `${colour_text}`);
-        html.find(".tabs .item").css("color", `${colour_text}`);
-    // Checkbox Background colour
-    let colour_checkboxBG = game.settings.get(
-        'swade-spices', 'checkboxBGColour');
-        html.find(".checkmark").css("background-color", `${colour_checkboxBG}`)
 }
 
-function modify_item_sheet(_, html, __) {
-    // Sheet Background
-    let back_sheet = game.settings.get(
-        'swade-spices', 'sheetBack');
-    if (back_sheet) {
-        html.find(".window-content").css("background-image", `url(${back_sheet})`);
-    }
-    //Header and Tabs background colour
-    let colour_tab = game.settings.get(
-        'swade-spices', 'tabColour');
-        html.find(".header-field").css("background", `${colour_tab}`);
-        html.find(".tabs .item").css("background", `${colour_tab}`);
-    //Header and Tabs text colour
-    let colour_text = game.settings.get(
-        'swade-spices', 'textColour');
-        html.find(".header-field").css("color", `${colour_text}`);
-        html.find(".tabs .item").css("color", `${colour_text}`); 
-    // Optional centered charname
-    if (game.settings.get('swade-spices', 'charname_centered')) {
-        html.find("input.itemname").css("text-align", `center`);
-    }
-    // Checkbox Background colour
-    let colour_checkboxBG = game.settings.get(
-        'swade-spices', 'checkboxBGColour');
-        html.find(".checkmark").css("background-color", `${colour_checkboxBG}`)
-}
-
-function modify_vehicle_sheet(_, html, __) {
-    // Sheet Background
-    let back_sheet = game.settings.get(
-        'swade-spices', 'sheetBack');
-    if (back_sheet) {
-        html.find(".window-content").css("background-image", `url(${back_sheet})`);
-    }
-    //Header and Tabs background colour
-    let colour_tab = game.settings.get(
-        'swade-spices', 'tabColour');
-        html.find(".header-field").css("background", `${colour_tab}`);
-        html.find(".tabs .item").css("background", `${colour_tab}`);
-    //Header and Tabs text colour
-    let colour_text = game.settings.get(
-        'swade-spices', 'textColour');
-        html.find(".header-field").css("color", `${colour_text}`);
-        html.find(".tabs .item").css("color", `${colour_text}`); 
-    // Optional centered charname
-    if (game.settings.get('swade-spices', 'charname_centered')) {
-        html.find(".charname").css("text-align", `center`);
-    }
-    //Item column background colour
-    let colour_column = game.settings.get(
-        'swade-spices', 'columnColour');
-        html.find(".item-titles").css("background", `${colour_column}`);
-    //Item column text colour
-    let colour_columnText = game.settings.get(
-        'swade-spices', 'columnTextColour');
-        html.find(".item-titles").css("color", `${colour_columnText}`);
-    // Checkbox Background colour
-    let colour_checkboxBG = game.settings.get(
-        'swade-spices', 'checkboxBGColour');
-        html.find(".checkmark").css("background-color", `${colour_checkboxBG}`)
+function modify_npc_sheet(app, html, _) {
+    // Skill Icons
+    add_icons(app.object, html)
+    modify_comminity_sheets(app, html)
 }
 
 function modify_official_sheet(_, html, __) {
@@ -356,8 +270,8 @@ Hooks.on(`renderSwadeCharacterSheet`, modify_character_sheet);
 
 Hooks.on('renderSwadeNPCSheet', modify_npc_sheet);
 
-Hooks.on('renderSwadeItemSheet', modify_item_sheet);
+Hooks.on('renderSwadeItemSheet', modify_comminity_sheets);
 
-Hooks.on('renderSwadeVehicleSheet', modify_vehicle_sheet);
+Hooks.on('renderSwadeVehicleSheet', modify_comminity_sheets);
 
 Hooks.on(`renderCharacterSheet`, modify_official_sheet);

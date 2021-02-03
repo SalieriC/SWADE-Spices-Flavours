@@ -4,16 +4,22 @@
 	"description": "A simple module to configure some stuff in the SWADE System on Foundry VTT.",
 	"minimumCoreVersion": "0.7.4",
 	"compatibleCoreVersion": "0.7.9",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"author": "SalieriC, Javier Rivera",
 	"dependencies": [
 		{
 		  "name": "colorsettings",
+		  "type": "module",
 		  "manifest": "https://raw.githubusercontent.com/ardittristan/VTTColorSettings/master/module.json"
 		},
 		{
 		  "name": "swade",
 		  "type": "system"
+		},
+		{
+			"name": "dice-so-nice",
+			"type": "module",
+			"manifest": "https://gitlab.com/riccisi/foundryvtt-dice-so-nice/-/raw/master/module/module.json"
 		}
 	],
 	"languages": [

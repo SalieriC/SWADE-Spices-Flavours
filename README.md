@@ -1,5 +1,5 @@
 # SWADE Spices & Flavours
-A simple module to configure some stuff in the SWADE System on Foundry VTT.
+A simple module to configure some stuff in the SWADE System on Foundry VTT. Most Features affect the community sheet only.
 
 ## Current Features
 Currently the module has the following features (almost all of them are optional):
@@ -10,7 +10,8 @@ Currently the module has the following features (almost all of them are optional
 - Option to center the character name within its field.
 - Option to change the background and text colour of the sheets headers and tabs.
 - Option to change the background and text colour of the PC sheets item colums background and text.
-- Colour Picker to change the status checkbox colours (only PC sheet atm). (The checkmark currently cannot be edited.)
+- Colour Picker to change the status checkbox colours. (The checkmark currently cannot be edited.)
+- Option to change the Benny front and back image. If changed, the Benny will also be shown on the official sheet.
 
 ## Planned Features
 You can take a look at the [Changelog](https://github.com/SalieriC/SWADE-Spices-Flavours/blob/main/CHANGELOG.md) to see our unreleased but planned features.

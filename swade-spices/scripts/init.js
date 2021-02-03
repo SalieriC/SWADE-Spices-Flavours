@@ -1,6 +1,29 @@
 
 function register_settings() {
+    // Custom bennie settings
     // noinspection JSUnresolvedVariable
+    game.settings.register('swade-spices', 'bennyFront', {
+        name: game.i18n.localize("SWADESPICE.BennieFrontName"),
+        hint: game.i18n.localize("SWADESPICE.BennieFrontHint"),
+        type: window.Azzu.SettingsTypes.FilePickerImage,
+        default: '',
+        scope: 'world',
+        config: true,
+        onChange: () => {
+            window.location.reload();
+        }
+    });
+    game.settings.register('swade-spices', 'bennyBack', {
+        name: game.i18n.localize("SWADESPICE.BennieBackName"),
+        hint: game.i18n.localize("SWADESPICE.BennieBackHint"),
+        type: window.Azzu.SettingsTypes.FilePickerImage,
+        default: '',
+        scope: 'world',
+        config: true,
+        onChange: () => {
+            window.location.reload();
+        }
+    });
     // Sheet Logo
     game.settings.register('swade-spices', 'sheetLogo', {
         name: game.i18n.localize("SWADESPICE.sheetLogoName"),
@@ -235,6 +258,10 @@ function modify_npc_sheet(app, html, __) {
         'swade-spices', 'textColour');
         html.find(".header-field").css("color", `${colour_text}`);
         html.find(".tabs .item").css("color", `${colour_text}`);
+    // Checkbox Background colour
+    let colour_checkboxBG = game.settings.get(
+        'swade-spices', 'checkboxBGColour');
+        html.find(".checkmark").css("background-color", `${colour_checkboxBG}`)
 }
 
 function modify_item_sheet(_, html, __) {
@@ -258,6 +285,10 @@ function modify_item_sheet(_, html, __) {
     if (game.settings.get('swade-spices', 'charname_centered')) {
         html.find("input.itemname").css("text-align", `center`);
     }
+    // Checkbox Background colour
+    let colour_checkboxBG = game.settings.get(
+        'swade-spices', 'checkboxBGColour');
+        html.find(".checkmark").css("background-color", `${colour_checkboxBG}`)
 }
 
 function modify_vehicle_sheet(_, html, __) {
@@ -289,6 +320,18 @@ function modify_vehicle_sheet(_, html, __) {
     let colour_columnText = game.settings.get(
         'swade-spices', 'columnTextColour');
         html.find(".item-titles").css("color", `${colour_columnText}`);
+    // Checkbox Background colour
+    let colour_checkboxBG = game.settings.get(
+        'swade-spices', 'checkboxBGColour');
+        html.find(".checkmark").css("background-color", `${colour_checkboxBG}`)
+}
+
+function modify_official_sheet(_, html, __) {
+    let back_benny = CONFIG.SWADE.bennies.textures.back;
+    if (back_benny) {
+        html.find(".bennies .spend-benny").css(
+                "background-image", `url(${back_benny})`);
+    }
 }
 
 Hooks.on(`ready`, () => {
@@ -296,6 +339,16 @@ Hooks.on(`ready`, () => {
     register_settings();
     try{window.Ardittristan.ColorSetting.tester} catch {
         ui.notifications.notify('Please make sure you have the "lib - ColorSettings" module installed and enabled.', "error");
+    }
+    const benny_front = game.settings.get(
+        'swade-spices', 'bennyBack');
+    if (benny_front) {
+        CONFIG.SWADE.bennies.textures.front = benny_front;
+    }
+    const benny_back = game.settings.get(
+        'swade-spices', 'bennyBack');
+    if (benny_back) {
+        CONFIG.SWADE.bennies.textures.back = benny_back;
     }
 });
 
@@ -306,3 +359,5 @@ Hooks.on('renderSwadeNPCSheet', modify_npc_sheet);
 Hooks.on('renderSwadeItemSheet', modify_item_sheet);
 
 Hooks.on('renderSwadeVehicleSheet', modify_vehicle_sheet);
+
+Hooks.on(`renderCharacterSheet`, modify_official_sheet);

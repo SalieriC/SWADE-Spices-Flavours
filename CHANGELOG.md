@@ -18,6 +18,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Option to show owner portrait on item sheets if an item from a character sheet is opened, making it easy to see who this belongs to.
 - A way to export settings as a way to create and share presets with other worlds and users.
 
+## [0.1.2] - 2021-02-03
+### Added
+- Option to change the Benny front and back image. If changed, the Benny will also be shown on the official sheet.
+### Fixed
+- All community sheets should have the checkbox colours now.
+
 ## [0.1.1] - 2021-02-02
 ### Added
 - Colour Picker to change the status checkbox colours (only PC sheet atm). (The checkmark currently cannot be edited.)

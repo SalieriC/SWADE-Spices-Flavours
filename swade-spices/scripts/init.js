@@ -341,7 +341,7 @@ Hooks.on(`ready`, () => {
         ui.notifications.notify('Please make sure you have the "lib - ColorSettings" module installed and enabled.', "error");
     }
     const benny_front = game.settings.get(
-        'swade-spices', 'bennyBack');
+        'swade-spices', 'bennyFront');
     if (benny_front) {
         CONFIG.SWADE.bennies.textures.front = benny_front;
     }

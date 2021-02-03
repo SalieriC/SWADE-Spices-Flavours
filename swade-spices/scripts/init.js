@@ -139,6 +139,15 @@ function register_settings() {
         scope: 'world',
         config: true
     });
+    // Fonts
+    game.settings.register('swade-spices', 'font-family', {
+        name: game.i18n.localize('SWADESPICE.FontFamilyName'),
+        hint: game.i18n.localize("SWADESPICE.FontFamilyHint"),
+        type: String,
+        default: "",
+        scope: "world",
+        config: true
+    });
 }
 
 function add_icons (actor, html) {
@@ -215,7 +224,14 @@ function modify_community_sheets(_, html) {
     // Checkbox Background colour
     let colour_checkboxBG = game.settings.get(
         'swade-spices', 'checkboxBGColour');
-        html.find(".checkmark").css("background-color", `${colour_checkboxBG}`)
+        html.find(".checkmark").css("background-color", `${colour_checkboxBG}`);
+    // FOnts
+    let font_family = game.settings.get('swade-spices', 'font-family');
+    if (font_family) {
+        console.log(font_family)
+        console.log(html.find('.swade.sheet'))
+        html.find('.window-content').css('font-family', font_family);
+    }
 }
 
 function modify_character_sheet(app, html, __) {

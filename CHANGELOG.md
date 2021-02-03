@@ -20,7 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.1.3] - 2021-02-03
 ### Fixed
-- Fixed a minor bug that causes the front side of the Benny not showing properly.
+- Fixed a minor bug that caused the front side of the Benny not showing properly.
 
 ## [0.1.2] - 2021-02-03
 ### Added

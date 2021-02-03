@@ -19,7 +19,7 @@ You can take a look at the [Changelog](https://github.com/SalieriC/SWADE-Spices-
 ## Dependencies
 Obviously you need a [SWADE system](https://foundryvtt.com/packages/swade/) world to make any use of the module.
 
-You'll also neet [Dice So Nice!](https://foundryvtt.com/packages/dice-so-nice/).
+You'll also neet [Dice So Nice!](https://foundryvtt.com/packages/dice-so-nice/) (you will be notified about it).
 
 You also need [lib - Color Settings](https://foundryvtt.com/packages/colorsettings/) activated in your world (you will be notified about it).
 

@@ -17,6 +17,15 @@
 .charline {
 	align-items: center;
 }
+
+.effect-action .fa-power-off {
+	color: rgb(0, 148, 12);
+}
+
+.effect-action .fa-power-off [style="color: gray;"] {
+	color: rgb(148, 0, 0) !important;
+  }
+
 /*
 .swade.sheet .check-container .checkmark:after {
     border: solid white;

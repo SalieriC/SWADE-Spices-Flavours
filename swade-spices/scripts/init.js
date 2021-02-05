@@ -65,6 +65,9 @@ function register_settings() {
         restricted: true,
         defaultColor: "#aca592",
         scope: "world",
+        onChange: () => {
+            window.location.reload();
+        }
     });
     // Tab and Header text colour picker
     new window.Ardittristan.ColorSetting("swade-spices", "textColour", {
@@ -102,7 +105,7 @@ function register_settings() {
         defaultColor: "#aca592",
         scope: "world",
     });
-    /* Checkmark colour
+    //Checkmark colour
     new window.Ardittristan.ColorSetting("swade-spices", "checkmarkColour", {
         name: game.i18n.localize("SWADESPICE.checkmarkColourName"),
         hint: game.i18n.localize("SWADESPICE.checkmarkColourHint"),
@@ -110,7 +113,7 @@ function register_settings() {
         restricted: true,
         defaultColor: "#972824",
         scope: "world",
-    });*/
+    });
     // Skill icons
     game.settings.register('swade-spices', 'add_icons', {
         name: game.i18n.localize("SWADESPICE.AddSkillIcons"),
@@ -201,12 +204,6 @@ function modify_community_sheets(_, html) {
     let colour_tab = game.settings.get(
         'swade-spices', 'tabColour');
     html.find(".header-field").css("background", `${colour_tab}`);
-    // html.find(".tabs .item").css("background", `${colour_tab}`);
-    /*Active Tab background colour
-    let colour_tab_active = game.settings.get(
-        'swade-spices', 'activeTabColour');
-        html.find(".tabs .item.active").css("background", `${colour_tab_active}`);
-    */
     //Header and Tabs text colour
     let colour_text = game.settings.get(
         'swade-spices', 'textColour');
@@ -232,6 +229,11 @@ function modify_community_sheets(_, html) {
     // Disabled active effects
     html.find('.effect-controls>a>i.fa-power-off[style="color: gray;"]').parent().parent().parent().css(
         'text-decoration', 'line-through');
+    //Checkmark Colour
+    let colour_checkmark = game.settings.get("swade-spices", "checkmarkColour");
+    if (colour_checkmark) {
+        document.documentElement.style.setProperty('--checkmark_colour', "solid colour_checkmark");
+    }
 }
 
 function modify_character_sheet(app, html, __) {
@@ -288,6 +290,10 @@ Hooks.on(`ready`, () => {
     const colour_tab_active = game.settings.get("swade-spices", "activeTabColour");
     if (colour_tab_active) {
         document.documentElement.style.setProperty('--active_tab_color', colour_tab_active);
+    }
+    const chat_background = game.settings.get("swade-spices", "sheetBack");
+    if (chat_background) {
+        document.documentElement.style.setProperty('--background_chat', `url("${chat_background}")`);
     }
 });
 

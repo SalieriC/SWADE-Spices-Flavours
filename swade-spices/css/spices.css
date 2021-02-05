@@ -39,23 +39,22 @@
 	background: var(--active_tab_color);
 }
 
-/*
 .swade.sheet .check-container .checkmark:after {
-    border: solid white;
+    border: var(--checkmark_colour);
     border-width: 0 3px 3px 0;
 }
 
 #chat-log .chat-message {
-    background-image: var(--swade-spices-sheetBack);
+    background-image: var(--background_chat);
 }
 textarea#chat-message {
-    background-image: var(--swade-spices-sheetBack);
+    background-image: var(--background_chat);
 }
 #chat-log .chat-message.whisper {
-    background-image: var(--swade-spices-sheetBack);
+    background-image: var(--background_chat);
     border: 3px solid #ffd453;
 }
-*/
+
 /* Keeping this here in case we reconsider.
 input.charname {
 	text-align: center;

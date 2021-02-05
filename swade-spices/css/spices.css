@@ -1,6 +1,6 @@
 :root {
 	--active_tab_color: #ffffff;
-	--pasive_tab_color: #444444;
+	--passive_tab_color: #444444;
 }
 
 .swade-skill-image {
@@ -32,7 +32,7 @@
   }
 
 .swade.sheet .tabs a.item {
-	background: var(--pasive_tab_color);
+	background: var(--passive_tab_color);
 }
 
 .swade.sheet .tabs a.item.active {

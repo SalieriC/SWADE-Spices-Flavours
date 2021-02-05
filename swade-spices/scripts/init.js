@@ -57,7 +57,7 @@ function register_settings() {
         defaultColor: "#972824",
         scope: "world",
     });
-    /* Active Tab background colour picker
+    // Active Tab background colour picker
     new window.Ardittristan.ColorSetting("swade-spices", "activeTabColour", {
         name: game.i18n.localize("SWADESPICE.activeTabColourName"),
         hint: game.i18n.localize("SWADESPICE.activeTabColourHint"),
@@ -66,7 +66,6 @@ function register_settings() {
         defaultColor: "#aca592",
         scope: "world",
     });
-    */
     // Tab and Header text colour picker
     new window.Ardittristan.ColorSetting("swade-spices", "textColour", {
         name: game.i18n.localize("SWADESPICE.textColourName"),
@@ -280,6 +279,15 @@ Hooks.on(`ready`, () => {
         'swade-spices', 'bennyBack');
     if (benny_back) {
         CONFIG.SWADE.bennies.textures.back = benny_back;
+    }
+    // Modify css variables
+    const colour_tab_passive = game.settings.get("swade-spices", "tabColour");
+    if (colour_tab_passive) {
+        document.documentElement.style.setProperty('--passive_tab_color', colour_tab_passive);
+    }
+    const colour_tab_active = game.settings.get("swade-spices", "activeTabColour");
+    if (colour_tab_active) {
+        document.documentElement.style.setProperty('--active_tab_color', colour_tab_active);
     }
 });
 

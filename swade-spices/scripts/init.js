@@ -293,7 +293,7 @@ Hooks.on(`ready`, () => {
     }
     const chat_background = game.settings.get("swade-spices", "sheetBack");
     if (chat_background) {
-        document.documentElement.style.setProperty('--background_chat', `url("${chat_background}")`);
+        document.documentElement.style.setProperty('--background_chat', `url("/${chat_background}")`);
     }
 });
 

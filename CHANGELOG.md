@@ -9,7 +9,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Colour Picker to change the scroll bar colours.
 - Colour Picker to change the status checkmark colours.
 - Put sub-menues to the config page as it is getting quite big.
-- Apply custom background to chat messages.
 - Add a way to return to the default colour on the colour pickers.
 - Option to select Fonts.
 ### Maybeboard
@@ -17,6 +16,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Option to add Attribute icons.
 - Option to show owner portrait on item sheets if an item from a character sheet is opened, making it easy to see who this belongs to.
 - A way to export settings as a way to create and share presets with other worlds and users.
+
+## [0.1.4] - 2021-02-03
+### Added
+- More visible toggle for Active Effects (hopefully for colour blind people as well).
+- Option to make the sheets background image the chat message background.
+- Option to give whispered chat messages a border colour, the border is 3 pixels wide and transparent (invisible) by default.
+### Fixed
+- Hovered and active Tabs now can have a seperate colour.
+- The hint for the character portrait option now reads "Put a portrait of the character behind the name.", previously it incorrectly read "before".
 
 ## [0.1.3] - 2021-02-03
 ### Fixed

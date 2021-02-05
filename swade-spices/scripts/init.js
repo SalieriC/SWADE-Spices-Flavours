@@ -32,9 +32,6 @@ function register_settings() {
         default: '',
         scope: 'world',
         config: true,
-        onChange: () => {
-            window.location.reload();
-        }
     });
     // Sheet Background
     game.settings.register('swade-spices', 'sheetBack', {
@@ -44,9 +41,6 @@ function register_settings() {
         default: '',
         scope: 'world',
         config: true,
-        onChange: () => {
-            window.location.reload();
-        }
     });
     // Tab and Header background colour picker
     new window.Ardittristan.ColorSetting("swade-spices", "tabColour", {
@@ -65,9 +59,6 @@ function register_settings() {
         restricted: true,
         defaultColor: "#aca592",
         scope: "world",
-        onChange: () => {
-            window.location.reload();
-        }
     });
     // Tab and Header text colour picker
     new window.Ardittristan.ColorSetting("swade-spices", "textColour", {
@@ -141,7 +132,31 @@ function register_settings() {
         scope: 'world',
         config: true
     });
-    // Fonts
+    // Sheets Background become chats background.
+    game.settings.register('swade-spices', 'chatBackgroundOption', {
+        name: game.i18n.localize("SWADESPICE.ChatBackgroundName"),
+        hint: game.i18n.localize("SWADESPICE.ChatBackgroundHint"),
+        type: Boolean,
+        default: false,
+        scope: 'world',
+        config: true,
+        onChange: () => {
+            window.location.reload();
+        }
+    });
+    // Private chat message border colour
+    new window.Ardittristan.ColorSetting("swade-spices", "privateMessageBorder", {
+        name: game.i18n.localize("SWADESPICE.privateMessageBorderName"),
+        hint: game.i18n.localize("SWADESPICE.privateMessageBorderHint"),
+        label: game.i18n.localize("SWADESPICE.privateMessageBorderButton"),
+        restricted: true,
+        defaultColor: "#ffffff00",
+        scope: "world",
+        onChange: () => {
+            window.location.reload();
+        }
+    });
+    /* Fonts
     game.settings.register('swade-spices', 'font-family', {
         name: game.i18n.localize('SWADESPICE.FontFamilyName'),
         hint: game.i18n.localize("SWADESPICE.FontFamilyHint"),
@@ -149,7 +164,7 @@ function register_settings() {
         default: "",
         scope: "world",
         config: true
-    });
+    });*/
 }
 
 function add_icons (actor, html) {
@@ -221,11 +236,11 @@ function modify_community_sheets(_, html) {
     let colour_checkboxBG = game.settings.get(
         'swade-spices', 'checkboxBGColour');
         html.find(".checkmark").css("background-color", `${colour_checkboxBG}`);
-    // Fonts
+    /* Fonts
     let font_family = game.settings.get('swade-spices', 'font-family');
     if (font_family) {
         html.find('.window-content').css('font-family', font_family);
-    }
+    }*/
     // Disabled active effects
     html.find('.effect-controls>a>i.fa-power-off[style="color: gray;"]').parent().parent().parent().css(
         'text-decoration', 'line-through');
@@ -291,9 +306,15 @@ Hooks.on(`ready`, () => {
     if (colour_tab_active) {
         document.documentElement.style.setProperty('--active_tab_color', colour_tab_active);
     }
-    const chat_background = game.settings.get("swade-spices", "sheetBack");
-    if (chat_background) {
-        document.documentElement.style.setProperty('--background_chat', `url("/${chat_background}")`);
+    if (game.settings.get('swade-spices', 'chatBackgroundOption')) {
+        const chat_background = game.settings.get("swade-spices", "sheetBack");
+        if (chat_background) {
+            document.documentElement.style.setProperty('--background_chat', `url("/${chat_background}")`);
+        }
+    }
+    const private_border = game.settings.get("swade-spices", "privateMessageBorder");
+    if (private_border) {
+        document.documentElement.style.setProperty('--private_color', `3px solid ${private_border}`);
     }
 });
 

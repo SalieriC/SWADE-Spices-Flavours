@@ -31,7 +31,14 @@
   "SWADESPICE.AddSkillIcons": "Add icons for skills",
   "SWADESPICE.AddSkillIconsHint": "Set this setting to add icons to skills in the sheet.",
   "SWADESPICE.PortraitFirst": "Add a character portrait",
-  "SWADESPICE.PortraitFirstHint": "Put a portrait of the character before the name.",
+  "SWADESPICE.PortraitFirstHint": "Put a portrait of the character behind the name.",
   "SWADESPICE.CharnameCenteredName": "Center character name",
-  "SWADESPICE.CharnameCenteredHint": "Aligns the character name to the center of its field."
+  "SWADESPICE.CharnameCenteredHint": "Aligns the character name to the center of its field.",
+  "SWADESPICE.ChatBackgroundName": "Custom chat background:",
+  "SWADESPICE.ChatBackgroundHint": "If enabled, the background of your sheet (see option above) is also used as the background for chat messages.",
+  "SWADESPICE.privateMessageBorderName": "Border for whispered chat message:",
+  "SWADESPICE.privateMessageBorderHint": "This adds a border to whispered chat messages of the given colour which is 3 pixels wide.",
+  "SWADESPICE.privateMessageBorderButton": "Pick a border colour for your private messages. Defauft: #ffffff00",
+  "SWADESPICE.FontFamilyName": "Change the sheets font:",
+  "SWADESPICE.FontFamilyHint": "Type the exact name of the font here (i.e. 'Arial'). All players must have the font installed, so share this font with your players before playing or restrict yourself to fonts which are installed on all operating systems. (Uses the standard font if empty.)"
 }

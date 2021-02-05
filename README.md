@@ -12,6 +12,9 @@ Currently the module has the following features (almost all of them are optional
 - Option to change the background and text colour of the PC sheets item colums background and text.
 - Colour Picker to change the status checkbox colours. (The checkmark currently cannot be edited.)
 - Option to change the Benny front and back image. If changed, the Benny will also be shown on the official sheet.
+- More visible toggle for Active Effects (hopefully for colour blind people as well).
+- Option to make the sheets background image the chat message background.
+- Option to give whispered chat messages a border colour, the border is 3 pixels wide and transparent (invisible) by default.
 
 ## Planned Features
 You can take a look at the [Changelog](https://github.com/SalieriC/SWADE-Spices-Flavours/blob/main/CHANGELOG.md) to see our unreleased but planned features.

@@ -1,5 +1,5 @@
 # SWADE Spices & Flavours
-A simple module to configure some stuff in the SWADE System on Foundry VTT. Most Features affect the community sheet only.
+A simple module to configure some stuff in the SWADE System on Foundry VTT. Most features affect the community sheet only.
 
 ## Current Features
 Currently the module has the following features (almost all of them are optional):
@@ -17,12 +17,12 @@ Currently the module has the following features (almost all of them are optional
 You can take a look at the [Changelog](https://github.com/SalieriC/SWADE-Spices-Flavours/blob/main/CHANGELOG.md) to see our unreleased but planned features.
 
 ## Dependencies
-- Obviously you need a [SWADE system](https://foundryvtt.com/packages/swade/) world to make any use of the module.
+- Obviously you need a [SWADE System](https://foundryvtt.com/packages/swade/) world to make any use of the module.
 - You also need [Dice So Nice!](https://foundryvtt.com/packages/dice-so-nice/) and
 - [lib - Color Settings](https://foundryvtt.com/packages/colorsettings/) activated in your world (you will be notified about it).
 
 ## Credits and Mentions
-**Devseloped by:** [Salieri](https://github.com/SalieriC) & [Javier](https://github.com/javierriveracastro)
+**Developed by:** [Salieri](https://github.com/SalieriC) & [Javier](https://github.com/javierriveracastro)
 Colour Picker made possible by [lib - Color Settings](https://foundryvtt.com/packages/colorsettings/)
 For questions you can reach me on Discord: SalieriC#8263
 For suggestions and bugs please create an issue.

@@ -232,7 +232,7 @@ function modify_community_sheets(_, html) {
     //Checkmark Colour
     let colour_checkmark = game.settings.get("swade-spices", "checkmarkColour");
     if (colour_checkmark) {
-        document.documentElement.style.setProperty('--checkmark_colour', colour_checkmark);
+        document.documentElement.style.setProperty('--checkmark_colour', `solid ${colour_checkmark}`);
     }
 }
 

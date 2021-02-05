@@ -202,7 +202,7 @@ function modify_community_sheets(_, html) {
     let colour_tab = game.settings.get(
         'swade-spices', 'tabColour');
     html.find(".header-field").css("background", `${colour_tab}`);
-    html.find(".tabs .item").css("background", `${colour_tab}`);
+    // html.find(".tabs .item").css("background", `${colour_tab}`);
     /*Active Tab background colour
     let colour_tab_active = game.settings.get(
         'swade-spices', 'activeTabColour');
@@ -231,7 +231,8 @@ function modify_community_sheets(_, html) {
         html.find('.window-content').css('font-family', font_family);
     }
     // Disabled active effects
-    html.find('.effect-controls>a>i.fa-power-off[style="color: gray;"]').parent().parent().parent().css('text-decoration', 'line-through');
+    html.find('.effect-controls>a>i.fa-power-off[style="color: gray;"]').parent().parent().parent().css(
+        'text-decoration', 'line-through');
 }
 
 function modify_character_sheet(app, html, __) {

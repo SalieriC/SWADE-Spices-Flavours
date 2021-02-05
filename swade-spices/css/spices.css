@@ -1,3 +1,8 @@
+:root {
+	--active_tab_color: #ffffff;
+	--pasive_tab_color: #444444;
+}
+
 .swade-skill-image {
 	max-height: 1em;
 	flex-grow: 0;
@@ -25,6 +30,14 @@
 .effect-action .fa-power-off[style="color: gray;"] {
 	color: rgb(148, 0, 0) !important;
   }
+
+.swade.sheet .tabs a.item {
+	background: var(--pasive_tab_color);
+}
+
+.swade.sheet .tabs a.item.active {
+	background: var(--active_tab_color);
+}
 
 /*
 .swade.sheet .check-container .checkmark:after {

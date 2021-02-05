@@ -225,13 +225,14 @@ function modify_community_sheets(_, html) {
     let colour_checkboxBG = game.settings.get(
         'swade-spices', 'checkboxBGColour');
         html.find(".checkmark").css("background-color", `${colour_checkboxBG}`);
-    // FOnts
+    // Fonts
     let font_family = game.settings.get('swade-spices', 'font-family');
     if (font_family) {
-        console.log(font_family)
-        console.log(html.find('.swade.sheet'))
         html.find('.window-content').css('font-family', font_family);
     }
+    // Disabled active effects
+    console.log(html.find('.effect-controls>a>i.fa-power-off[style="color: gray;"]').parent().parent().parent())
+    html.find('.effect-controls>a>i.fa-power-off[style="color: gray;"]').parent().parent().parent().css('text-decoration', 'line-through');
 }
 
 function modify_character_sheet(app, html, __) {

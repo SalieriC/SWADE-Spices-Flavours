@@ -22,7 +22,7 @@
 	color: rgb(0, 148, 12);
 }
 
-.effect-action .fa-power-off [style="color: gray;"] {
+.effect-action .fa-power-off[style="color: gray;"] {
 	color: rgb(148, 0, 0) !important;
   }
 

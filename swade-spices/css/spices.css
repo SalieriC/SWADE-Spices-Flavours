@@ -1,6 +1,8 @@
 :root {
 	--active_tab_color: #ffffff;
 	--passive_tab_color: #444444;
+	--checkmark_colour: solid white;
+	--background_chat: "url(../ui/parchment.jpg)";
 }
 
 .swade-skill-image {

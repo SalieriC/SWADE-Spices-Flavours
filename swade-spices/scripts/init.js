@@ -231,7 +231,6 @@ function modify_community_sheets(_, html) {
         html.find('.window-content').css('font-family', font_family);
     }
     // Disabled active effects
-    console.log(html.find('.effect-controls>a>i.fa-power-off[style="color: gray;"]').parent().parent().parent())
     html.find('.effect-controls>a>i.fa-power-off[style="color: gray;"]').parent().parent().parent().css('text-decoration', 'line-through');
 }
 

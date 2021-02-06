@@ -1,4 +1,3 @@
-
 function register_settings() {
     // Custom bennie settings
     // noinspection JSUnresolvedVariable
@@ -68,6 +67,39 @@ function register_settings() {
         restricted: true,
         defaultColor: "#dfe6f5",
         scope: "world",
+    });
+    // Tab and Header border colour
+    new window.Ardittristan.ColorSetting("swade-spices", "tabBorderColour", {
+        name: game.i18n.localize("SWADESPICE.tabBorderColourName"),
+        hint: game.i18n.localize("SWADESPICE.tabBorderColourHint"),
+        label: game.i18n.localize("SWADESPICE.tabBorderColourButton"),
+        restricted: true,
+        defaultColor: "#2c4251",
+        scope: "world",
+    });
+    // Tab border radius
+    game.settings.register('swade-spices', 'tabBorderRadius', {
+        name: game.i18n.localize("SWADESPICE.tabBorderRadiusName"),
+        hint: game.i18n.localize("SWADESPICE.tabBorderRadiusHint"),
+        type: Number,
+        default: '4',
+        scope: 'world',
+        config: true,
+        onChange: () => {
+            window.location.reload();
+        }
+    });
+    // Header border radius
+    game.settings.register('swade-spices', 'headerBorderRadius', {
+        name: game.i18n.localize("SWADESPICE.headerBorderRadiusName"),
+        hint: game.i18n.localize("SWADESPICE.headerBorderRadiusHint"),
+        type: Number,
+        default: '0',
+        scope: 'world',
+        config: true,
+        onChange: () => {
+            window.location.reload();
+        }
     });
     // Item column background colour picker
     new window.Ardittristan.ColorSetting("swade-spices", "columnColour", {
@@ -151,6 +183,30 @@ function register_settings() {
         label: game.i18n.localize("SWADESPICE.privateMessageBorderButton"),
         restricted: true,
         defaultColor: "#ffffff00",
+        scope: "world",
+        onChange: () => {
+            window.location.reload();
+        }
+    });
+    //Scrollbar background colour
+    new window.Ardittristan.ColorSetting("swade-spices", "scrollbarColour", {
+        name: game.i18n.localize("SWADESPICE.scrollbarColourName"),
+        hint: game.i18n.localize("SWADESPICE.scrollbarColourHint"),
+        label: game.i18n.localize("SWADESPICE.scrollbarColourButton"),
+        restricted: true,
+        defaultColor: "#782e22",
+        scope: "world",
+        onChange: () => {
+            window.location.reload();
+        }
+    });
+    //Scrollbar border colour
+    new window.Ardittristan.ColorSetting("swade-spices", "scrollbarBorderColour", {
+        name: game.i18n.localize("SWADESPICE.scrollbarBorderColourName"),
+        hint: game.i18n.localize("SWADESPICE.scrollbarBorderColourHint"),
+        label: game.i18n.localize("SWADESPICE.scrollbarBorderColourButton"),
+        restricted: true,
+        defaultColor: "#ff6400",
         scope: "world",
         onChange: () => {
             window.location.reload();
@@ -244,10 +300,25 @@ function modify_community_sheets(_, html) {
     // Disabled active effects
     html.find('.effect-controls>a>i.fa-power-off[style="color: gray;"]').parent().parent().parent().css(
         'text-decoration', 'line-through');
-    //Checkmark Colour
+    // Checkmark Colour
     let colour_checkmark = game.settings.get("swade-spices", "checkmarkColour");
     if (colour_checkmark) {
         document.documentElement.style.setProperty('--checkmark_colour', `solid ${colour_checkmark}`);
+    }
+    // Tab and Header Border Colour
+    let colour_tab_border = game.settings.get("swade-spices", "tabBorderColour");
+    if (colour_tab_border) {
+        document.documentElement.style.setProperty('--tab_border_colour', `1px solid ${colour_tab_border}`);
+    }
+    // Tab Border Radius
+    let border_tab_radius = game.settings.get("swade-spices", "tabBorderRadius");
+    if (border_tab_radius) {
+        document.documentElement.style.setProperty('--tab_border_radius', `${border_tab_radius}px`);
+    }
+    // Header Border Radius
+    let border_header_radius = game.settings.get("swade-spices", "headerBorderRadius");
+    if (border_header_radius) {
+        document.documentElement.style.setProperty('--header_border_radius', `${border_header_radius}px`);
     }
 }
 
@@ -302,19 +373,32 @@ Hooks.on(`ready`, () => {
     if (colour_tab_passive) {
         document.documentElement.style.setProperty('--passive_tab_color', colour_tab_passive);
     }
+    //Active Tab Colour
     const colour_tab_active = game.settings.get("swade-spices", "activeTabColour");
     if (colour_tab_active) {
         document.documentElement.style.setProperty('--active_tab_color', colour_tab_active);
     }
+    //Make sheet BG the chat BG.
     if (game.settings.get('swade-spices', 'chatBackgroundOption')) {
         const chat_background = game.settings.get("swade-spices", "sheetBack");
         if (chat_background) {
             document.documentElement.style.setProperty('--background_chat', `url("/${chat_background}")`);
         }
     }
+    //Whisper message border colour
     const private_border = game.settings.get("swade-spices", "privateMessageBorder");
     if (private_border) {
         document.documentElement.style.setProperty('--private_color', `3px solid ${private_border}`);
+    }
+    //Scrollbar BG colour
+    const scrollbar_bg = game.settings.get("swade-spices", "scrollbarColour");
+    if (scrollbar_bg) {
+        document.documentElement.style.setProperty('--scrollbar_background', `${scrollbar_bg}`);
+    }
+    //Scrollbar border colour
+    const scrollbar_border = game.settings.get("swade-spices", "scrollbarBorderColour");
+    if (scrollbar_border) {
+        document.documentElement.style.setProperty('--scrollbar_border', `1px solid ${scrollbar_border}`);
     }
 });
 

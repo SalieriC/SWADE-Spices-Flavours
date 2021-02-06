@@ -13,6 +13,13 @@
   "SWADESPICE.activeTabColourName": "Active tab background colour:",
   "SWADESPICE.activeTabColourHint": "Colour for the active tab background.",
   "SWADESPICE.activeTabColourButton": "Pick a background colour for the active tab. Default: #aca592",
+  "SWADESPICE.tabBorderColourName": "Tab and header border colour:",
+  "SWADESPICE.tabBorderColourHint": "Sets the colour of the tabs and headers border. It is 1px wide.",
+  "SWADESPICE.tabBorderColourButton": "Pick a border colour for tabs and headers. Default: #2c4251",
+  "SWADESPICE.tabBorderRadiusName": "Tab border radius:",
+  "SWADESPICE.tabBorderRadiusHint": "You can set round edges of your tabs with this option. It is the radius in pixels. Default: 4",
+  "SWADESPICE.headerBorderRadiusName": "Header border radius:",
+  "SWADESPICE.headerBorderRadiusHint": "You can set round edges of your headers with this option. It is the radius in pixels. Default: 0",
   "SWADESPICE.textColourName": "Tab and header text colour:",
   "SWADESPICE.textColourHint": "Colour for the tabs and headers text.",
   "SWADESPICE.textColourButton": "Pick a Tab and header text colour. Default: #dfe6f5",
@@ -40,5 +47,11 @@
   "SWADESPICE.privateMessageBorderHint": "This adds a border to whispered chat messages of the given colour which is 3 pixels wide.",
   "SWADESPICE.privateMessageBorderButton": "Pick a border colour for your private messages. Defauft: #ffffff00",
   "SWADESPICE.FontFamilyName": "Change the sheets font:",
-  "SWADESPICE.FontFamilyHint": "Type the exact name of the font here (i.e. 'Arial'). All players must have the font installed, so share this font with your players before playing or restrict yourself to fonts which are installed on all operating systems. (Uses the standard font if empty.)"
+  "SWADESPICE.FontFamilyHint": "Type the exact name of the font here (i.e. 'Arial'). All players must have the font installed, so share this font with your players before playing or restrict yourself to fonts which are installed on all operating systems. (Uses the standard font if empty.)",
+  "SWADESPICE.scrollbarColourName": "Scrollbar main colour:",
+  "SWADESPICE.scrollbarColourHint": "Changes the main (background) colour of scrollbars. (Does not affect scrollbars in currently edited fields.)",
+  "SWADESPICE.scrollbarColourButton": "Pick a scrollbar colour. Default: #782e22",
+  "SWADESPICE.scrollbarBorderColourName": "Scrollbar border colour:",
+  "SWADESPICE.scrollbarBorderColourHint": "Changes the border colour of scrollbars. It has a radius of 1 pixel. (Does not affect scrollbars in currently edited fields.)",
+  "SWADESPICE.scrollbarBorderColourButton": "Pick a scrollbar border colour. Default: #ff6400"
 }

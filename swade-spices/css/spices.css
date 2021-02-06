@@ -4,6 +4,11 @@
 	--checkmark_colour: solid white;
 	--background_chat: url("/ui/parchment.jpg");
 	--private_color: 3px solid #ffffff00;
+	--tab_border_colour: 1px solid #2c4251;
+	--tab_border_radius: 4px;
+	--header_border_radius: 0px;
+	--scrollbar_background: #782e22;
+	--scrollbar_border: 1px solid #ff6400;
 }
 
 .swade-skill-image {
@@ -32,17 +37,27 @@
 
 .effect-action .fa-power-off[style="color: gray;"] {
 	color: rgb(148, 0, 0) !important;
-  }
+}
 
 .swade.sheet .tabs a.item {
 	background: var(--passive_tab_color);
+	border: var(--tab_border_colour);
+	border-radius: var(--tab_border_radius);
 }
 .swade.sheet .tabs .item:hover, .swade.sheet .tabs .item:focus {
-    background: var(--active_tab_color) !important;
+	background: var(--active_tab_color) !important;
+	border-radius: var(--tab_border_radius);
 }
-
 .swade.sheet .tabs a.item.active {
 	background: var(--active_tab_color);
+	border-radius: var(--tab_border_radius);
+}
+.swade.sheet.item .sheet-body .header-field, .swade.sheet.actor.character .inventory .items-list .item-header, .swade.sheet.actor .sheet-body .header-field {
+	border: var(--tab_border_colour);
+	border-radius: var(--header_border_radius);
+}
+.swade.sheet .tabs {
+	border-bottom: var(--tab_border_colour);
 }
 
 .swade.sheet .check-container .checkmark:after {
@@ -59,6 +74,11 @@ textarea#chat-message {
 #chat-log .chat-message.whisper {
     background-image: var(--background_chat);
     border: var(--private_color);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--scrollbar_background);
+	border: var(--scrollbar_border);
 }
 
 /* Keeping this here in case we reconsider.

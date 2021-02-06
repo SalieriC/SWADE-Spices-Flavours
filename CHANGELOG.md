@@ -6,8 +6,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Planned
-- Colour Picker to change the scroll bar colours.
-- Colour Picker to change the status checkmark colours.
 - Put sub-menues to the config page as it is getting quite big.
 - Add a way to return to the default colour on the colour pickers.
 - Option to select Fonts.
@@ -17,11 +15,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Option to show owner portrait on item sheets if an item from a character sheet is opened, making it easy to see who this belongs to.
 - A way to export settings as a way to create and share presets with other worlds and users.
 
+## [0.2.0] - Unreleased
+### Added
+- Option to set the tabs and headers border colour.
+- Option to change the border radius of the sheets headers and tabs individually (to give it a sharp or round edge).
+- Colour Picker to change the scrollbar colours (does not affect those in currently edited fields).
+
 ## [0.1.4] - 2021-02-03
 ### Added
 - More visible toggle for Active Effects (hopefully for colour blind people as well).
 - Option to make the sheets background image the chat message background.
 - Option to give whispered chat messages a border colour, the border is 3 pixels wide and transparent (invisible) by default.
+- Colour Picker to change the status checkmark colours.
 ### Fixed
 - Hovered and active Tabs now can have a seperate colour.
 - The hint for the character portrait option now reads "Put a portrait of the character behind the name.", previously it incorrectly read "before".

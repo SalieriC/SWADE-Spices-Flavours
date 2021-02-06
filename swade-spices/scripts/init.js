@@ -58,6 +58,9 @@ function register_settings() {
         restricted: true,
         defaultColor: "#aca592",
         scope: "world",
+        onChange: () => {
+            window.location.reload();
+        }
     });
     // Tab and Header text colour picker
     new window.Ardittristan.ColorSetting("swade-spices", "textColour", {

@@ -11,6 +11,7 @@ Currently the module has the following features (almost all of them are optional
 - Option to change the background, border and text colour of the sheets headers and tabs.
 - Option to change the background and text colour of the PC sheets item colums background and text.
 - Option to change the border radius of the sheets headers and tabs individually (to give it a sharp or round edge).
+- - The tab radius is also used for powers in the Powers Tab.
 - Colour Picker to change the scrollbar colours (does not affect those in currently edited fields).
 - Colour Picker to change the status checkbox colours. (The checkmark currently cannot be edited.)
 - Option to change the Benny front and back image. If changed, the Benny will also be shown on the official sheet.

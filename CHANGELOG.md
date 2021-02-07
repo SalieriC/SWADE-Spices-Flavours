@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Option to show owner portrait on item sheets if an item from a character sheet is opened, making it easy to see who this belongs to.
 - A way to export settings as a way to create and share presets with other worlds and users.
 - Show the Benny image on the community sheet.
+- Adding Benny Image to the community sheet.
 
 ## [0.2.0] - Unreleased
 ### Added

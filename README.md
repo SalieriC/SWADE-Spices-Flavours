@@ -23,7 +23,7 @@ Currently the module has the following features (almost all of them are optional
 - Option to change the background colour of every second (even) Skill. This colour is also used for Gear (Inventory tab), Edges and Hindrances (both in the Edges tab).
 - Option to change the passive (non-selected) AB tab background colour. Active and hovered over tabs use the colour of the general tabs. The text colour is inherited from the passive and active general tabs respectively.
 
-**Mind the [Changelog](https://github.com/SalieriC/SWADE-Spices-Flavours/blob/main/CHANGELOG.md) as some of the "Current Features" may not be released right now.**
+**Mind the [Changelog](https://github.com/SalieriC/SWADE-Spices-Flavours/blob/main/CHANGELOG.md) as some of the "Current Features" may not be released just yet.**
 
 ## Planned Features
 You can take a look at the [Changelog](https://github.com/SalieriC/SWADE-Spices-Flavours/blob/main/CHANGELOG.md) to see our unreleased but planned features.

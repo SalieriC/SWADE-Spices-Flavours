@@ -17,6 +17,10 @@ Currently the module has the following features (almost all of them are optional
 - More visible toggle for Active Effects (hopefully for colour blind people as well).
 - Option to make the sheets background image the chat message background.
 - Option to give whispered chat messages a border colour, the border is 3 pixels wide and transparent (invisible) by default.
+- Option to change the active tab text colour
+- Option to change the Quick Access background colour.
+- Option to change the background colour of every second (even) Skill. This colour is also used for Gear (Inventory tab), Edges and Hindrances (both in the Edges tab).
+- Option to change the passive (non-selected) AB tab background colour. Active and hovered over tabs use the colour of the general tabs. The text colour is inherited from the passive and active general tabs respectively.
 
 ## Planned Features
 You can take a look at the [Changelog](https://github.com/SalieriC/SWADE-Spices-Flavours/blob/main/CHANGELOG.md) to see our unreleased but planned features.

@@ -1,6 +1,8 @@
 :root {
 	--active_tab_color: #ffffff;
+	--active_tab_text_color: #ffffff;
 	--passive_tab_color: #444444;
+	--passive_tab_text_colour: #dfe6f5;
 	--checkmark_colour: solid white;
 	--background_chat: url("/ui/parchment.jpg");
 	--private_color: 3px solid #ffffff00;
@@ -9,6 +11,9 @@
 	--header_border_radius: 0px;
 	--scrollbar_background: #782e22;
 	--scrollbar_border: 1px solid #ff6400;
+	--quick_access_bg_colour: #00000033;
+	--skills_even_bg_colour: #0000001a;
+	--passive_ab_tab: #972824;
 }
 
 .swade-skill-image {
@@ -39,25 +44,73 @@
 	color: rgb(148, 0, 0) !important;
 }
 
+/* Discovered this by accident and like it so I'll keep it here but... This is Whetstone Territory...
+.tabs .item {
+	color: var(--passive_tab_text_colour);
+}
+*/
+
 .swade.sheet .tabs a.item {
 	background: var(--passive_tab_color);
 	border: var(--tab_border_colour);
 	border-radius: var(--tab_border_radius);
+	color: var(--passive_tab_text_colour);
 }
 .swade.sheet .tabs .item:hover, .swade.sheet .tabs .item:focus {
 	background: var(--active_tab_color) !important;
+	color: var(--active_tab_text_color) !important;
 	border-radius: var(--tab_border_radius);
 }
 .swade.sheet .tabs a.item.active {
 	background: var(--active_tab_color);
+	color: var(--active_tab_text_color) !important;
 	border-radius: var(--tab_border_radius);
 }
 .swade.sheet.item .sheet-body .header-field, .swade.sheet.actor.character .inventory .items-list .item-header, .swade.sheet.actor .sheet-body .header-field {
 	border: var(--tab_border_colour);
 	border-radius: var(--header_border_radius);
+	color: var(--passive_tab_text_colour);
 }
 .swade.sheet .tabs {
 	border-bottom: var(--tab_border_colour);
+}
+
+.swade.sheet.actor .sheet-body .quickaccess-list .gear-list .gear-card .card-header {
+	background: var(--quick_access_bg_colour);
+}
+.swade.sheet.actor.character .skills .skills-list .skill:nth-child(even) {
+	background-color: var(--skills_even_bg_colour);
+}
+.swade.sheet.actor.character .edges .edges-hindrances-list .items-list .item:nth-child(even) {
+	background-color: var(--skills_even_bg_colour);
+}
+.swade.sheet.actor.character .edges .edges-hindrances-list .items-list .item:nth-child(even) {
+	background-color: var(--skills_even_bg_colour);
+}
+.swade.sheet.actor .inventory .inventory-categories .item-list .item:nth-child(even) {
+	background-color: var(--skills_even_bg_colour);
+}
+
+.swade.sheet.actor .powers .arcane-tabs .arcane.active {
+	background: var(--active_tab_color);
+	color: var(--active_tab_text_color);
+}
+.swade.sheet.actor .powers .arcane-tabs .arcane {
+	background: var(--passive_ab_tab);
+}
+.swade.sheet.actor .powers .arcane-tabs .arcane:hover, .swade.sheet.actor .powers .arcane-tabs .arcane:focus {
+	background: var(--active_tab_color);
+	color: var(--active_tab_text_color);
+}
+.swade.sheet.actor .powers .powers-list .power .power-header {
+	background: var(--passive_tab_color);
+	color: var(--passive_tab_text_colour);
+}
+.swade.sheet.actor .powers .powers-list .power .power-header .item-controls {
+	color: var(--passive_tab_text_colour);
+}
+.swade.sheet.actor .powers .powers-list .power.active {
+	border-radius: var(--tab_border_radius);
 }
 
 .swade.sheet .check-container .checkmark:after {

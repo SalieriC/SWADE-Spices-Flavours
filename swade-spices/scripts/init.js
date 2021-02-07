@@ -62,6 +62,18 @@ function register_settings() {
             window.location.reload();
         }
     });
+    // Active Tab text colour picker
+    new window.Ardittristan.ColorSetting("swade-spices", "activeTabTextColour", {
+        name: game.i18n.localize("SWADESPICE.activeTabTextColourName"),
+        hint: game.i18n.localize("SWADESPICE.activeTabTextColourHint"),
+        label: game.i18n.localize("SWADESPICE.activeTabTextColourButton"),
+        restricted: true,
+        defaultColor: "#dfe6f5",
+        scope: "world",
+        onChange: () => {
+            window.location.reload();
+        }
+    });
     // Tab and Header text colour picker
     new window.Ardittristan.ColorSetting("swade-spices", "textColour", {
         name: game.i18n.localize("SWADESPICE.textColourName"),
@@ -104,6 +116,24 @@ function register_settings() {
             window.location.reload();
         }
     });
+    // Quick Access Background Colour
+    new window.Ardittristan.ColorSetting("swade-spices", "quicAccessBGColour", {
+        name: game.i18n.localize("SWADESPICE.quicAccessBGColourName"),
+        hint: game.i18n.localize("SWADESPICE.quicAccessBGColourHint"),
+        label: game.i18n.localize("SWADESPICE.quicAccessBGColourButton"),
+        restricted: true,
+        defaultColor: "#00000033",
+        scope: "world",
+    });
+    // Even Skills background colour
+    new window.Ardittristan.ColorSetting("swade-spices", "evenSkillsBGColour", {
+        name: game.i18n.localize("SWADESPICE.evenSkillsBGColourName"),
+        hint: game.i18n.localize("SWADESPICE.evenSkillsBGColourHint"),
+        label: game.i18n.localize("SWADESPICE.evenSkillsBGColourButton"),
+        restricted: true,
+        defaultColor: "#0000001a",
+        scope: "world",
+    });
     // Item column background colour picker
     new window.Ardittristan.ColorSetting("swade-spices", "columnColour", {
         name: game.i18n.localize("SWADESPICE.columnColourName"),
@@ -120,6 +150,15 @@ function register_settings() {
         label: game.i18n.localize("SWADESPICE.columnTextColourButton"),
         restricted: true,
         defaultColor: "#ffffff",
+        scope: "world",
+    });
+    // Passive AB Tab Colour
+    new window.Ardittristan.ColorSetting("swade-spices", "passiveABTabColour", {
+        name: game.i18n.localize("SWADESPICE.passiveABTabColourName"),
+        hint: game.i18n.localize("SWADESPICE.passiveABTabColourHint"),
+        label: game.i18n.localize("SWADESPICE.passiveABTabColourButton"),
+        restricted: true,
+        defaultColor: "#972824",
         scope: "world",
     });
     // Checkbox background colour
@@ -279,10 +318,10 @@ function modify_community_sheets(_, html) {
         'swade-spices', 'tabColour');
     html.find(".header-field").css("background", `${colour_tab}`);
     //Header and Tabs text colour
-    let colour_text = game.settings.get(
-        'swade-spices', 'textColour');
-        html.find(".header-field").css("color", `${colour_text}`);
-        html.find(".tabs .item").css("color", `${colour_text}`);
+    let colour_text = game.settings.get('swade-spices', 'textColour');
+        /*html.find(".header-field").css("color", `${colour_text}`);
+        html.find(".tabs .item").css("color", `${colour_text}`);*/
+        document.documentElement.style.setProperty('--passive_tab_text_colour', `${colour_text}`);
     //Item column background colour
     let colour_column = game.settings.get(
         'swade-spices', 'columnColour');
@@ -323,6 +362,14 @@ function modify_community_sheets(_, html) {
     if (border_header_radius) {
         document.documentElement.style.setProperty('--header_border_radius', `${border_header_radius}px`);
     }
+    let quick_access_bg = game.settings.get("swade-spices", "quicAccessBGColour");
+    if (quick_access_bg) {
+        document.documentElement.style.setProperty('--quick_access_bg_colour', `${quick_access_bg}`);
+    }
+    let passive_ab_tab = game.settings.get("swade-spices", "passiveABTabColour");
+    if (passive_ab_tab) {
+        document.documentElement.style.setProperty('--passive_ab_tab', `${passive_ab_tab}`);
+    }
 }
 
 function modify_character_sheet(app, html, __) {
@@ -338,6 +385,10 @@ function modify_character_sheet(app, html, __) {
     // Character Portrait on front page
     if (game.settings.get('swade-spices', 'protrait_first')) {
         html.find(".charline").append(`<img class="swade-portrait" src="${app.object.img}">`);
+    }
+    let even_skills_bg = game.settings.get("swade-spices", "evenSkillsBGColour");
+    if (even_skills_bg) {
+        document.documentElement.style.setProperty('--skills_even_bg_colour', `${even_skills_bg}`);
     }
 }
 
@@ -380,6 +431,11 @@ Hooks.on(`ready`, () => {
     const colour_tab_active = game.settings.get("swade-spices", "activeTabColour");
     if (colour_tab_active) {
         document.documentElement.style.setProperty('--active_tab_color', colour_tab_active);
+    }
+    //Active Tab Text Colour
+    const colour_tab_text_active = game.settings.get("swade-spices", "activeTabTextColour");
+    if (colour_tab_text_active) {
+        document.documentElement.style.setProperty('--active_tab_text_color', colour_tab_text_active);
     }
     //Make sheet BG the chat BG.
     if (game.settings.get('swade-spices', 'chatBackgroundOption')) {

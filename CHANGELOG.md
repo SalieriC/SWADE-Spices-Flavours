@@ -20,7 +20,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Option to set the tabs and headers border colour.
 - Option to change the border radius of the sheets headers and tabs individually (to give it a sharp or round edge).
+- - Tab border radius also affects the powers border radius in the Powers tab.
 - Colour Picker to change the scrollbar colours (does not affect those in currently edited fields).
+- Option to change the active tab text colour
+- Option to change the Quick Access background colour.
+- Option to change the background colour of every second (even) Skill. This colour is also used for Gear (Inventory tab), Edges and Hindrances (both in the Edges tab).
+- Option to change the passive (non-selected) AB tab background colour. Active and hovered over tabs use the colour of the general tabs. The text colour is inherited from the passive and active general tabs respectively.
+- In the Powers tab the headline of the powers use the passive tab background and text colour now.
 
 ## [0.1.4] - 2021-02-03
 ### Added

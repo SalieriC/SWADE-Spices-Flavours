@@ -195,10 +195,13 @@ function register_settings() {
     game.settings.register('swade-spices', 'protrait_first', {
         name: game.i18n.localize("SWADESPICE.PortraitFirst"),
         hint: game.i18n.localize("SWADESPICE.PortraitFirstHint"),
-        type: Boolean,
-        default: false,
+        type: String,
+        default: '',
         scope: 'world',
-        config: true
+        config: true,
+        choices: {'' : game.i18n.localize("SWADESPICE.None"),
+            actor: game.i18n.localize("SWADESPICE.Actor"),
+            token: game.i18n.localize("SWADESPICE.Token")}
     });
     // Charname centered
     game.settings.register('swade-spices', 'charname_centered', {
@@ -382,7 +385,10 @@ function modify_character_sheet(app, html, __) {
     }
     // Character Portrait on front page
     if (game.settings.get('swade-spices', 'protrait_first')) {
-        html.find(".charline").append(`<img class="swade-portrait" src="${app.object.img}">`);
+        console.log(app.object)
+        const src = game.settings.get('swade-spices', 'protrait_first') === 'actor' ?
+            app.object.img : (app.token ? app.token.data.img : app.object.data.token.img);
+        html.find(".charline").append(`<img class="swade-portrait" src="${src}">`);
     }
     let even_skills_bg = game.settings.get("swade-spices", "evenSkillsBGColour");
     if (even_skills_bg) {

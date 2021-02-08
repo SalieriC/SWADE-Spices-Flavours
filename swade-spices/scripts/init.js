@@ -41,6 +41,15 @@ function register_settings() {
         scope: 'world',
         config: true,
     });
+    // Window background colour
+    new window.Ardittristan.ColorSetting("swade-spices", "windowBGColour", {
+        name: game.i18n.localize("SWADESPICE.windowBGColourName"),
+        hint: game.i18n.localize("SWADESPICE.windowBGColourHint"),
+        label: game.i18n.localize("SWADESPICE.windowBGColourButton"),
+        restricted: true,
+        defaultColor: "#faf9ed",
+        scope: "world",
+    });
     // Tab and Header background colour picker
     new window.Ardittristan.ColorSetting("swade-spices", "tabColour", {
         name: game.i18n.localize("SWADESPICE.tabColourName"),
@@ -58,9 +67,6 @@ function register_settings() {
         restricted: true,
         defaultColor: "#aca592",
         scope: "world",
-        onChange: () => {
-            window.location.reload();
-        }
     });
     // Active Tab text colour picker
     new window.Ardittristan.ColorSetting("swade-spices", "activeTabTextColour", {
@@ -70,9 +76,6 @@ function register_settings() {
         restricted: true,
         defaultColor: "#dfe6f5",
         scope: "world",
-        onChange: () => {
-            window.location.reload();
-        }
     });
     // Tab and Header text colour picker
     new window.Ardittristan.ColorSetting("swade-spices", "textColour", {
@@ -226,9 +229,6 @@ function register_settings() {
         restricted: true,
         defaultColor: "#ffffff00",
         scope: "world",
-        onChange: () => {
-            window.location.reload();
-        }
     });
     //Scrollbar background colour
     new window.Ardittristan.ColorSetting("swade-spices", "scrollbarColour", {
@@ -238,9 +238,6 @@ function register_settings() {
         restricted: true,
         defaultColor: "#782e22",
         scope: "world",
-        onChange: () => {
-            window.location.reload();
-        }
     });
     //Scrollbar border colour
     new window.Ardittristan.ColorSetting("swade-spices", "scrollbarBorderColour", {
@@ -250,9 +247,6 @@ function register_settings() {
         restricted: true,
         defaultColor: "#ff6400",
         scope: "world",
-        onChange: () => {
-            window.location.reload();
-        }
     });
     /* Fonts
     game.settings.register('swade-spices', 'font-family', {
@@ -370,6 +364,10 @@ function modify_community_sheets(_, html) {
     if (passive_ab_tab) {
         document.documentElement.style.setProperty('--passive_ab_tab', `${passive_ab_tab}`);
     }
+    let window_bg_colour = game.settings.get("swade-spices", "windowBGColour");
+    if (window_bg_colour) {
+        document.documentElement.style.setProperty('--window-bg-colour', `${window_bg_colour}`);
+    }
 }
 
 function modify_character_sheet(app, html, __) {
@@ -440,8 +438,10 @@ Hooks.on(`ready`, () => {
     //Make sheet BG the chat BG.
     if (game.settings.get('swade-spices', 'chatBackgroundOption')) {
         const chat_background = game.settings.get("swade-spices", "sheetBack");
+        const chat_background_colour = game.settings.get("swade-spices", "windowBGColour");
         if (chat_background) {
             document.documentElement.style.setProperty('--background_chat', `url("/${chat_background}")`);
+            document.documentElement.style.setProperty('--chat-bg-colour', `${chat_background_colour}`);
         }
     }
     //Whisper message border colour

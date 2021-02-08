@@ -28,6 +28,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Option to change the background colour of every second (even) Skill. This colour is also used for Gear (Inventory tab), Edges and Hindrances (both in the Edges tab).
 - Option to change the passive (non-selected) AB tab background colour. Active and hovered over tabs use the colour of the general tabs. The text colour is inherited from the passive and active general tabs respectively.
 - In the Powers tab the headline of the powers use the passive tab background and text colour now.
+- Option to set a sheets background colour. This is important for background images with transparency, you won't notice changes otherwise.
+- - If you set your sheets background image to also be your chats background image, this colour will also used for the chat. If you don't toggle this option, there will be no ill effects.
+### Removed
+- Colour pickers do not force a reload anymore as it was not working properly. **Important: Remember to always reload your world (on PC this is F5) upon changes unless the world reloads on saving your settings anyway. Otherwise some changes might not show up**
 
 ## [0.1.4] - 2021-02-03
 ### Added

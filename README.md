@@ -1,6 +1,9 @@
 # SWADE Spices & Flavours
 A module to configure visuals and various other elements in the SWADE System on Foundry VTT. Most features affect the community sheet only. The ultimate goal is to create a full customisation suite for the SWADE community sheet.
 
+## Usage
+Enable this module and all its dependencies in your SWADE game world (the module won't show on non SWADE worlds). Navigate to the Module configuration and set up your theme. **Important: Remember to always reload your world (on PC this is F5) upon changes unless the world reloads on saving your settings anyway. Otherwise some changes might not show up** Changes on the colour pickers do not force a reload because then it would reload the world each time a colour from a single colour picker is chosen which is slowing down theme creation tremendously. Thus you may need to reload your world manually.
+
 ## Current Features
 Currently the module has the following features (almost all of them are optional):
 - Option to configure a custom background image for the community sheets.
@@ -22,6 +25,8 @@ Currently the module has the following features (almost all of them are optional
 - Option to change the Quick Access background colour.
 - Option to change the background colour of every second (even) Skill. This colour is also used for Gear (Inventory tab), Edges and Hindrances (both in the Edges tab).
 - Option to change the passive (non-selected) AB tab background colour. Active and hovered over tabs use the colour of the general tabs. The text colour is inherited from the passive and active general tabs respectively.
+- Option to set a sheets background colour. This is important for background images with transparency, you won't notice changes otherwise.
+- - If you set your sheets background image to also be your chats background image, this colour will also used for the chat. If you don't toggle this option, there will be no ill effects.
 
 **Mind the [Changelog](https://github.com/SalieriC/SWADE-Spices-Flavours/blob/main/CHANGELOG.md) as some of the "Current Features" may not be released just yet.**
 

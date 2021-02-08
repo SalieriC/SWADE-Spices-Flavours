@@ -1,4 +1,6 @@
 :root {
+	--window-bg-colour: #faf9ed;
+	--chat-bg-colour: #ffffff00;
 	--active_tab_color: #ffffff;
 	--active_tab_text_color: #ffffff;
 	--passive_tab_color: #444444;
@@ -49,6 +51,14 @@
 	color: var(--passive_tab_text_colour);
 }
 */
+
+#chat-log .chat-message {
+	background: var(--chat-bg-colour);
+}
+
+.swade.sheet .window-content {
+	background: var(--window-bg-colour);
+}
 
 .swade.sheet .tabs a.item {
 	background: var(--passive_tab_color);

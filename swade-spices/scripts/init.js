@@ -385,7 +385,6 @@ function modify_character_sheet(app, html, __) {
     }
     // Character Portrait on front page
     if (game.settings.get('swade-spices', 'protrait_first')) {
-        console.log(app.object)
         const src = game.settings.get('swade-spices', 'protrait_first') === 'actor' ?
             app.object.img : (app.token ? app.token.data.img : app.object.data.token.img);
         html.find(".charline").append(`<img class="swade-portrait" src="${src}">`);
@@ -408,6 +407,21 @@ function modify_official_sheet(_, html, __) {
         html.find(".bennies .spend-benny").css(
                 "background-image", `url(${back_benny})`);
     }
+}
+
+function modify_item_sheet(app, html) {
+    // Character Portrait on owned items
+    if (app.object.isOwned) {
+        if (game.settings.get('swade-spices', 'protrait_first')) {
+            console.log(app.object)
+            const src = game.settings.get('swade-spices', 'protrait_first') === 'actor' ?
+                app.object.actor.data.img :
+                (app.object.actor.data.token ? app.object.actor.data.token.img : app.object.actor.data.img);
+            html.find(".sheet-header").append(
+                `<img src="${src}" class="swade-portrait">`)
+        }
+    }
+    modify_community_sheets(app, html);
 }
 
 Hooks.on(`ready`, () => {
@@ -471,7 +485,7 @@ Hooks.on(`renderSwadeCharacterSheet`, modify_character_sheet);
 
 Hooks.on('renderSwadeNPCSheet', modify_npc_sheet);
 
-Hooks.on('renderSwadeItemSheet', modify_community_sheets);
+Hooks.on('renderSwadeItemSheet', modify_item_sheet);
 
 Hooks.on('renderSwadeVehicleSheet', modify_community_sheets);
 

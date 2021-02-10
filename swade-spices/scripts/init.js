@@ -191,10 +191,22 @@ function register_settings() {
         scope: 'world',
         config: true
     });
-    // Portrait before name
+    // Portrait behind name
     game.settings.register('swade-spices', 'protrait_first', {
         name: game.i18n.localize("SWADESPICE.PortraitFirst"),
         hint: game.i18n.localize("SWADESPICE.PortraitFirstHint"),
+        type: String,
+        default: '',
+        scope: 'world',
+        config: true,
+        choices: {'' : game.i18n.localize("SWADESPICE.None"),
+            actor: game.i18n.localize("SWADESPICE.Actor"),
+            token: game.i18n.localize("SWADESPICE.Token")}
+    });
+    // Portrait on owned items name
+    game.settings.register('swade-spices', 'protrait_items', {
+        name: game.i18n.localize("SWADESPICE.PortraitItemsName"),
+        hint: game.i18n.localize("SWADESPICE.PortraitItemsHint"),
         type: String,
         default: '',
         scope: 'world',
@@ -412,9 +424,9 @@ function modify_official_sheet(_, html, __) {
 function modify_item_sheet(app, html) {
     // Character Portrait on owned items
     if (app.object.isOwned) {
-        if (game.settings.get('swade-spices', 'protrait_first')) {
+        if (game.settings.get('swade-spices', 'protrait_items')) {
             console.log(app.object)
-            const src = game.settings.get('swade-spices', 'protrait_first') === 'actor' ?
+            const src = game.settings.get('swade-spices', 'protrait_items') === 'actor' ?
                 app.object.actor.data.img :
                 (app.object.actor.data.token ? app.object.actor.data.token.img : app.object.actor.data.img);
             html.find(".sheet-header").append(

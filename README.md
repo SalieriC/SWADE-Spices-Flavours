@@ -12,7 +12,7 @@ Currently the module has the following features (almost all of them are optional
 - Option to configure a custom background image for the community sheets.
 - Option to display a custom Logo to the PC sheet.
 - Option to display Skill icons on the Sheets.
-- Option to show character artwork on the top of the PC sheet.
+- Option to show character artwork or token artwork on the top of the PC sheet.
 - Option to center the character name within its field.
 - Option to change the background, border and text colour of the sheets headers and tabs.
 - Option to change the background and text colour of the PC sheets item colums background and text.
@@ -30,8 +30,7 @@ Currently the module has the following features (almost all of them are optional
 - Option to change the passive (non-selected) AB tab background colour. Active and hovered over tabs use the colour of the general tabs. The text colour is inherited from the passive and active general tabs respectively.
 - Option to set a sheets background colour. This is important for background images with transparency, you won't notice changes otherwise.
 - - If you set your sheets background image to also be your chats background image, this colour will also used for the chat. If you don't toggle this option, there will be no ill effects.
-
-**Mind the [Changelog](https://github.com/SalieriC/SWADE-Spices-Flavours/blob/main/CHANGELOG.md) as some of the "Current Features" may not be released just yet.**
+- Option to display character or token artwork on owned items.
 
 ## Planned Features
 You can take a look at the [Changelog](https://github.com/SalieriC/SWADE-Spices-Flavours/blob/main/CHANGELOG.md) to see our unreleased but planned features.

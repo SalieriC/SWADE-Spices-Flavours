@@ -30,6 +30,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - In the Powers tab the headline of the powers use the passive tab background and text colour now.
 - Option to set a sheets background colour. This is important for background images with transparency, you won't notice changes otherwise.
 - - If you set your sheets background image to also be your chats background image, this colour will also used for the chat. If you don't toggle this option, there will be no ill effects.
+- Option to show the character portrait/token image on owned items.
+### Changed
+- It is now possible to choose whether to show the character portrait or the token image on the character sheet.
 ### Removed
 - Colour pickers do not force a reload anymore as it was not working properly. **Important: Remember to always reload your world (on PC this is F5) upon changes unless the world reloads on saving your settings anyway. Otherwise some changes might not show up**
 

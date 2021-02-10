@@ -31,6 +31,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Option to set a sheets background colour. This is important for background images with transparency, you won't notice changes otherwise.
 - - If you set your sheets background image to also be your chats background image, this colour will also used for the chat. If you don't toggle this option, there will be no ill effects.
 - Option to show the character portrait/token image on owned items.
+### Fixed
+- Hovered and active Tabs now can have a seperate colour.
+- The hint for the character portrait option now reads "Put a portrait of the character behind the name.", previously it incorrectly read "before".
 ### Changed
 - It is now possible to choose whether to show the character portrait or the token image on the character sheet.
 ### Removed

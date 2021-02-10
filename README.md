@@ -43,8 +43,10 @@ You can take a look at the [Changelog](https://github.com/SalieriC/SWADE-Spices-
 
 ## Credits and Mentions
 **Developed by:** [Salieri](https://github.com/SalieriC) & [Javier](https://github.com/javierriveracastro)
+
 Colour Picker made possible by [lib - Color Settings](https://foundryvtt.com/packages/colorsettings/)
-For questions you can reach me on Discord: SalieriC#8263
+
+For questions you can reach me on Discord: SalieriC#8263. 
 For suggestions and bugs please create an issue.
 
 ## Contributors ✨

@@ -56,7 +56,13 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
+all-contributors/add-Alis-72
     <td align="center"><a href="https://github.com/Alis-72"><img src="https://avatars.githubusercontent.com/u/75221971?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Alis-72</b></sub></a><br /><a href="#a11y-Alis-72" title="Accessibility">️️️️♿️</a> <a href="#ideas-Alis-72" title="Ideas, Planning, & Feedback">🤔</a></td>
+all-contributors/add-parvusdomus
+    <td align="center"><a href="https://github.com/parvusdomus"><img src="https://avatars.githubusercontent.com/u/71666845?v=4?s=100" width="100px;" alt=""/><br /><sub><b>parvusdomus</b></sub></a><br /><a href="https://github.com/SalieriC/SWADE-Spices-Flavours/issues?q=author%3Aparvusdomus" title="Bug reports">🐛</a></td>
+all-contributors/add-montver
+    <td align="center"><a href="https://github.com/montver"><img src="https://avatars.githubusercontent.com/u/72754407?v=4?s=100" width="100px;" alt=""/><br /><sub><b>montver</b></sub></a><br /><a href="#ideas-montver" title="Ideas, Planning, & Feedback">🤔</a></td>
+main
   </tr>
 </table>
 

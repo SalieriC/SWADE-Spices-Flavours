@@ -1,1 +1,14 @@
-{}
+{
+    "SWADESPICE.sheetLogoHint": "Configura un logo personalizado que aparecerá en la hoja de personaje (PJ solo). Asegúrate de tener permisos para usar lo que elijas aquí o en las opciones de más abajo.",
+    "SWADESPICE.windowBGColourHint": "Solo necesitas esta opción si la imagen de fondo que has elegido tiene transparencias. Esto configura un color de fondo que se verá a través de esta transparencia. Este color se usa también en el chat si configuras la opción para que la imagen de fondo de las cartas del chat sea la misma que el fondo de la hoja. Si no lo haces no afectara al chat aunque tu imagen de fondo de la hoja tenga transparencias.",
+    "SWADESPICE.BennieBackHint": "Ruta de la imagen que se verá en la cara trasera del beni. Esta imagen se verá también en la hoja oficial.",
+    "SWADESPICE.sheetLogoName": "Logo personalizado:",
+    "SWADESPICE.sheetBackName": "Fondo de la hoja de la comunidad:",
+    "SWADESPICE.sheetBackHint": "Configura una imagen de fondo para la hoja de la comunidad.",
+    "SWADESPICE.windowBGColourName": "Color de fondo para la hoja de la comunidad:",
+    "SWADESPICE.windowBGColourButton": "Elige un color de fondo para tu hoja. Por defecto: #faf9ed",
+    "SWADESPICE.tabColourName": "Color de fondo para pestañas y cabecera:",
+    "SWADESPICE.tabColourHint": "Color para el fondo de las pestañas y de la cabecera.",
+    "SWADESPICE.tabColourButton": "Elige un color de fondo para las pestañas y la cabecera. Por defecto: #972824",
+    "SWADESPICE.BennieFrontHint": "Ruta a la imagen que se verá en la cara delantera del beni."
+}

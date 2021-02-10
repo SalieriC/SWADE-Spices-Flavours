@@ -1,0 +1,25 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "Alis-72",
+      "name": "Alis-72",
+      "avatar_url": "https://avatars.githubusercontent.com/u/75221971?v=4",
+      "profile": "https://github.com/Alis-72",
+      "contributions": [
+        "a11y",
+        "ideas"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "SWADE-Spices-Flavours",
+  "projectOwner": "SalieriC",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}

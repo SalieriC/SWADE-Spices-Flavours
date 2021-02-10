@@ -56,7 +56,11 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
+all-contributors/add-parvusdomus
     <td align="center"><a href="https://github.com/parvusdomus"><img src="https://avatars.githubusercontent.com/u/71666845?v=4?s=100" width="100px;" alt=""/><br /><sub><b>parvusdomus</b></sub></a><br /><a href="https://github.com/SalieriC/SWADE-Spices-Flavours/issues?q=author%3Aparvusdomus" title="Bug reports">🐛</a></td>
+all-contributors/add-montver
+    <td align="center"><a href="https://github.com/montver"><img src="https://avatars.githubusercontent.com/u/72754407?v=4?s=100" width="100px;" alt=""/><br /><sub><b>montver</b></sub></a><br /><a href="#ideas-montver" title="Ideas, Planning, & Feedback">🤔</a></td>
+main
   </tr>
 </table>
 

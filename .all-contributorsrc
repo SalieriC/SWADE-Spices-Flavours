@@ -6,12 +6,21 @@
   "commit": false,
   "contributors": [
     {
-      "login": "parvusdomus",
-      "name": "parvusdomus",
-      "avatar_url": "https://avatars.githubusercontent.com/u/71666845?v=4",
-      "profile": "https://github.com/parvusdomus",
+      "login": "montver",
+      "name": "montver",
+      "avatar_url": "https://avatars.githubusercontent.com/u/72754407?v=4",
+      "profile": "https://github.com/montver",
       "contributions": [
-        "bug"
+        "ideas"
+      ]
+    },
+    {
+      "login": "montver",
+      "name": "montver",
+      "avatar_url": "https://avatars.githubusercontent.com/u/72754407?v=4",
+      "profile": "https://github.com/montver",
+      "contributions": [
+        "ideas"
       ]
     }
   ],

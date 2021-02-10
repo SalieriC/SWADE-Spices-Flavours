@@ -1,4 +1,7 @@
 # SWADE Spices & Flavours
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 A module to configure visuals and various other elements in the SWADE System on Foundry VTT. Most features affect the community sheet only. The ultimate goal is to create a full customisation suite for the SWADE community sheet.
 
 ## Usage
@@ -43,3 +46,23 @@ You can take a look at the [Changelog](https://github.com/SalieriC/SWADE-Spices-
 Colour Picker made possible by [lib - Color Settings](https://foundryvtt.com/packages/colorsettings/)
 For questions you can reach me on Discord: SalieriC#8263
 For suggestions and bugs please create an issue.
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/Alis-72"><img src="https://avatars.githubusercontent.com/u/75221971?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Alis-72</b></sub></a><br /><a href="#a11y-Alis-72" title="Accessibility">️️️️♿️</a> <a href="#ideas-Alis-72" title="Ideas, Planning, & Feedback">🤔</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

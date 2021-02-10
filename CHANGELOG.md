@@ -17,7 +17,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Show the Benny image on the community sheet.
 - Adding Benny Image to the community sheet.
 
-## [0.2.0] - Unreleased
+## [0.2.1] - Unreleased
+### Fixed
+- Typos.
+
+## [0.2.0] - 2021-02-10
 ### Added
 - Option to set the tabs and headers border colour.
 - Option to change the border radius of the sheets headers and tabs individually (to give it a sharp or round edge).

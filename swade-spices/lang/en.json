@@ -47,7 +47,7 @@
   "SWADESPICE.checkboxBGColourName": "Checkbox Background Colour:",
   "SWADESPICE.checkboxBGColourHint": "Sets the Background colour for the checkboxes (for example the Shaken Checkbox).",
   "SWADESPICE.checkboxBGColourButton": "Pick a checkbox colour. Default: #aca592",
-  "SWADESPICE.checkmarkColourName": "Ceckmark Colour:",
+  "SWADESPICE.checkmarkColourName": "Checkmark Colour:",
   "SWADESPICE.checkmarkColourHint": "Sets the checkmark colour inside the checkbox after checking it.",
   "SWADESPICE.checkmarkColourButton": "Pick a checkmark colour. Default: #972824",
   "SWADESPICE.AddSkillIcons": "Add icons for skills",

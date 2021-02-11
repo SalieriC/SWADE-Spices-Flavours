@@ -55,7 +55,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://github.com/jvir"><img src="https://avatars.githubusercontent.com/u/5990316?v=4?s=100" width="100px;" alt=""/><br /><sub><b>jvir</b></sub></a><br /><a href="#translation-jvir" title="Translation">🌍</a></td>
-    <td align="center"><a href="https://github.com/parvusdomus"><img src="https://avatars.githubusercontent.com/u/71666845?v=4?s=100" width="100px;" alt=""/><br /><sub><b>parvusdomus</b></sub></a><br /><a href="#translation-parvusdomus" title="Translation">🌍</a> <a href="https://github.com/SalieriC/SWADE-Spices-Flavours/issues?q=author%3Aparvusdomus" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/parvusdomus"><img src="https://avatars.githubusercontent.com/u/71666845?v=4?s=100" width="100px;" alt=""/><br /><sub><b>parvusdomus</b></sub></a><br /><a href="#translation-parvusdomus" title="Translation">🌍</a> <a href="https://github.com/SalieriC/SWADE-Spices-Flavours/issues?q=author%3Aparvusdomus" title="Bug reports">🐛</a> <a href="#ideas-parvusdomus" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 

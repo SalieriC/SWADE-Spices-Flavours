@@ -1,6 +1,6 @@
 ## Usage
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 Enable this module and all its dependencies in your SWADE game world (the module won't show on non SWADE worlds). Navigate to the Module configuration and set up your theme. **Important: Remember to always reload your world (on PC this is F5) upon changes unless the world reloads on saving your settings anyway. Otherwise some changes might not show up** Changes on the colour pickers do not force a reload because then it would reload the world each time a colour from a single colour picker is chosen which is slowing down theme creation tremendously. Thus you may need to reload your world manually.
 
@@ -57,6 +57,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/jvir"><img src="https://avatars.githubusercontent.com/u/5990316?v=4?s=100" width="100px;" alt=""/><br /><sub><b>jvir</b></sub></a><br /><a href="#translation-jvir" title="Translation">🌍</a></td>
     <td align="center"><a href="https://github.com/parvusdomus"><img src="https://avatars.githubusercontent.com/u/71666845?v=4?s=100" width="100px;" alt=""/><br /><sub><b>parvusdomus</b></sub></a><br /><a href="#translation-parvusdomus" title="Translation">🌍</a> <a href="https://github.com/SalieriC/SWADE-Spices-Flavours/issues?q=author%3Aparvusdomus" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/montver"><img src="https://avatars.githubusercontent.com/u/72754407?v=4?s=100" width="100px;" alt=""/><br /><sub><b>montver</b></sub></a><br /><a href="#ideas-montver" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="http://ko-fi.com/examinator"><img src="https://avatars.githubusercontent.com/u/2758908?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Steven Weingärtner</b></sub></a><br /><a href="#ideas-eXaminator" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 

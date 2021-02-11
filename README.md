@@ -1,9 +1,3 @@
-# SWADE Spices & Flavours
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-A module to configure visuals and various other elements in the SWADE System on Foundry VTT. Most features affect the community sheet only. The ultimate goal is to create a full customisation suite for the SWADE community sheet.
-
 ## Usage
 Enable this module and all its dependencies in your SWADE game world (the module won't show on non SWADE worlds). Navigate to the Module configuration and set up your theme. **Important: Remember to always reload your world (on PC this is F5) upon changes unless the world reloads on saving your settings anyway. Otherwise some changes might not show up** Changes on the colour pickers do not force a reload because then it would reload the world each time a colour from a single colour picker is chosen which is slowing down theme creation tremendously. Thus you may need to reload your world manually.
 
@@ -47,25 +41,3 @@ Colour Picker made possible by [lib - Color Settings](https://foundryvtt.com/pac
 
 For questions you can reach me on Discord: SalieriC#8263. 
 For suggestions and bugs please create an issue.
-
-## Contributors ✨
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/Alis-72"><img src="https://avatars.githubusercontent.com/u/75221971?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Alis-72</b></sub></a><br /><a href="#a11y-Alis-72" title="Accessibility">️️️️♿️</a> <a href="#ideas-Alis-72" title="Ideas, Planning, & Feedback">🤔</a></td>
-    <td align="center"><a href="https://github.com/parvusdomus"><img src="https://avatars.githubusercontent.com/u/71666845?v=4?s=100" width="100px;" alt=""/><br /><sub><b>parvusdomus</b></sub></a><br /><a href="https://github.com/SalieriC/SWADE-Spices-Flavours/issues?q=author%3Aparvusdomus" title="Bug reports">🐛</a></td>
-    <td align="center"><a href="https://github.com/montver"><img src="https://avatars.githubusercontent.com/u/72754407?v=4?s=100" width="100px;" alt=""/><br /><sub><b>montver</b></sub></a><br /><a href="#ideas-montver" title="Ideas, Planning, & Feedback">🤔</a></td>
-  </tr>
-</table>
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

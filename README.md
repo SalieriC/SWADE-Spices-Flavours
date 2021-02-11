@@ -33,8 +33,8 @@ Currently the module has the following features (almost all of them are optional
 You can take a look at the [Changelog](https://github.com/SalieriC/SWADE-Spices-Flavours/blob/main/CHANGELOG.md) to see our unreleased but planned features.
 
 ## Dependencies
-- Obviously you need a [SWADE System](https://foundryvtt.com/packages/swade/) world to make any use of the module.
-- You also need [Dice So Nice!](https://foundryvtt.com/packages/dice-so-nice/) and
+- Obviously you need a [SWADE System](https://foundryvtt.com/packages/swade/) world to make any use of the module,
+- you also need [Dice So Nice!](https://foundryvtt.com/packages/dice-so-nice/) and
 - [lib - Color Settings](https://foundryvtt.com/packages/colorsettings/) activated in your world (you will be notified about it).
 
 ## Credits and Mentions

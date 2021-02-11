@@ -23,6 +23,15 @@
         "translation",
         "bug"
       ]
+    },
+    {
+      "login": "montver",
+      "name": "montver",
+      "avatar_url": "https://avatars.githubusercontent.com/u/72754407?v=4",
+      "profile": "https://github.com/montver",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,

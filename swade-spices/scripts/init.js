@@ -311,6 +311,23 @@ function add_icons (actor, html) {
 	}
 }
 
+
+function getTextWidth (fontSize, value) {
+  let div = document.createElement('div');
+  div.innerHTML = value;
+  div.style.fontSize = fontSize;
+  div.style.width = 'auto';
+  div.style.display = 'inline-block';
+  div.style.visibility = 'hidden';
+  div.style.position = 'fixed';
+  div.style.overflow = 'auto';
+  document.body.append(div)
+  let width = div.clientWidth;
+  div.remove();
+  return width;
+}
+
+
 function modify_community_sheets(_, html) {
     // Sheet Background
     let back_sheet = game.settings.get(
@@ -383,6 +400,21 @@ function modify_community_sheets(_, html) {
     if (window_bg_colour) {
         document.documentElement.style.setProperty('--window-bg-colour', `${window_bg_colour}`);
     }
+    // Font size in char input.
+    const name_input = html.find('.charname')
+    // We need to give it some time to adjust rendenring
+    if (name_input) {
+        setTimeout(() => {
+            const input_with = name_input[0].offsetWidth;
+            const text_with = getTextWidth('40px', name_input[0].value);
+            if (text_with > input_with) {
+                // Name too long, adjust font
+                let ideal_font_size = Math.floor(40 * input_with / text_with);
+                ideal_font_size -= 1;
+                name_input.css('font-size', `${ideal_font_size}px`);
+            }
+        }, 50);
+    }
 }
 
 function modify_character_sheet(app, html, __) {
@@ -425,7 +457,6 @@ function modify_item_sheet(app, html) {
     // Character Portrait on owned items
     if (app.object.isOwned) {
         if (game.settings.get('swade-spices', 'protrait_items')) {
-            console.log(app.object)
             const src = game.settings.get('swade-spices', 'protrait_items') === 'actor' ?
                 app.object.actor.data.img :
                 (app.object.actor.data.token ? app.object.actor.data.token.img : app.object.actor.data.img);

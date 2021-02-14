@@ -1,0 +1,13 @@
+<form id="colourSettings">
+    <h2 class="module-header">{{localize "SWADESPICE.ColourOptionSettingsName"}}</h2>
+    <p>{{localize "SWADESPICE.ColourOptionSettingsHint"}}</p>
+    
+    <div class="form-group">
+        <label>{{localize "SWADESPICE.windowBGColourName"}}</label>
+        <div class="form-fields"><input type="color" name="fightingSkill" id="fightingSkill" value="{{fightingName}}"/></div>
+        <p class="notes">{{localize "SWADESPICE.windowBGColourHint"}}</p>
+        </div>
+    
+      {{{formHtml}}}
+    <button type="submit"><i class="far fa-save"></i>{{localize "SWADESPICE.Save"}}</button>
+    </form>

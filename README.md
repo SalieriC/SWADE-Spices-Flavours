@@ -44,7 +44,7 @@ Colour Picker made possible by [lib - Color Settings](https://foundryvtt.com/pac
 
 ### Assets (used with explicit permission):
 **SFX:**  
-- Open sheet sfx: [fesliyanstudios.com](https://www.fesliyanstudios.com/)
+- Open & close sheet sfx: [fesliyanstudios.com](https://www.fesliyanstudios.com/)
 
 For questions you can reach me on Discord: SalieriC#8263. 
 For suggestions and bugs please create an issue.

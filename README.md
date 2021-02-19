@@ -38,9 +38,12 @@ You can take a look at the [Changelog](https://github.com/SalieriC/SWADE-Spices-
 - [lib - Color Settings](https://foundryvtt.com/packages/colorsettings/) activated in your world (you will be notified about it).
 
 ## Credits and Mentions
-**Developed by:** [Salieri](https://github.com/SalieriC) & [Javier](https://github.com/javierriveracastro)
+**Developed by:** [Salieri](https://github.com/SalieriC) & [Javier](https://github.com/javierriveracastro)  
+Colour Picker made possible by [lib - Color Settings](https://foundryvtt.com/packages/colorsettings/)  
 
-Colour Picker made possible by [lib - Color Settings](https://foundryvtt.com/packages/colorsettings/)
+### Assets (used with explicit permission):
+**SFX:**  
+- Open sheet sfx: [fesliyanstudios.com](https://www.fesliyanstudios.com/)
 
 For questions you can reach me on Discord: SalieriC#8263. 
 For suggestions and bugs please create an issue.

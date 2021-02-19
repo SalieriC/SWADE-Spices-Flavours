@@ -287,7 +287,15 @@ function register_settings() {
         name: game.i18n.localize("SWADESPICE.openSFXName"),
         hint: game.i18n.localize("SWADESPICE.openSFXHint"),
         type: window.Azzu.SettingsTypes.FilePickerAudio,
-        default: 'modules/swade-spices/assets/open_sheet-fesliyanstudios.com.ogg',
+        default: 'modules/swade-spices/assets/open_sheet-www.fesliyanstudios.com.ogg',
+        scope: 'world',
+        config: true,
+    });
+    game.settings.register('swade-spices', 'closeSFX', {
+        name: game.i18n.localize("SWADESPICE.closeSFXName"),
+        hint: game.i18n.localize("SWADESPICE.closeSFXHint"),
+        type: window.Azzu.SettingsTypes.FilePickerAudio,
+        default: 'modules/swade-spices/assets/close_sheet-www.fesliyanstudios.com.ogg',
         scope: 'world',
         config: true,
     });
@@ -435,7 +443,7 @@ function modify_community_sheets(_, html) {
         }, 50);
     }
     // Open sheet SFX
-    const open_sfx = game.settings.get('swade-spices', 'openSFX',);
+    let open_sfx = game.settings.get('swade-spices', 'openSFX',);
     if (open_sfx) {
         AudioHelper.play({ src: `${open_sfx}` }, false);
     }
@@ -489,6 +497,14 @@ function modify_item_sheet(app, html) {
         }
     }
     modify_community_sheets(app, html);
+}
+
+function close_sheet(_, __, ___) {
+    // Open sheet SFX
+    let close_sfx = game.settings.get('swade-spices', 'closeSFX',);
+    if (close_sfx) {
+        AudioHelper.play({ src: `${close_sfx}` }, false);
+    }
 }
 
 Hooks.on(`ready`, () => {
@@ -557,3 +573,11 @@ Hooks.on('renderSwadeItemSheet', modify_item_sheet);
 Hooks.on('renderSwadeVehicleSheet', modify_community_sheets);
 
 Hooks.on(`renderCharacterSheet`, modify_official_sheet);
+
+Hooks.on(`closeSwadeCharacterSheet`, close_sheet);
+
+Hooks.on('closeSwadeNPCSheet', close_sheet);
+
+Hooks.on('closeSwadeItemSheet', close_sheet);
+
+Hooks.on('closeSwadeVehicleSheet', close_sheet);

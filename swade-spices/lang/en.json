@@ -79,6 +79,8 @@
   "SWADESPICE.scrollbarBorderColourButton": "Pick a scrollbar border colour. Default: #ff6400",
   "SWADESPICE.openSFXName": "Open Sheet SFX:",
   "SWADESPICE.openSFXHint": "The sound to be played whenever a sheet is opened. Empty this line if you don't want a sound effect upon opening a sheet. The SFX is only played for the user who opens a sheet, not for everyone.",
+  "SWADESPICE.closeSFXName": "Close Sheet SFX:",
+  "SWADESPICE.closeSFXHint": "The sound to be played whenever a sheet is closed. Empty this line if you don't want a sound effect upon closing a sheet. The SFX is only played for the user who closes a sheet, not for everyone.",
   "SWADESPICE.None": "None",
   "SWADESPICE.Actor": "Actor portrait",
   "SWADESPICE.Token": "Token Image"

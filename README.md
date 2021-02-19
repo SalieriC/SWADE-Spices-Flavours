@@ -2,7 +2,8 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
-Enable this module and all its dependencies in your SWADE game world (the module won't show on non SWADE worlds). Navigate to the Module configuration and set up your theme. **Important: Remember to always reload your world (on PC this is F5) upon changes unless the world reloads on saving your settings anyway. Otherwise some changes might not show up** Changes on the colour pickers do not force a reload because then it would reload the world each time a colour from a single colour picker is chosen which is slowing down theme creation tremendously. Thus you may need to reload your world manually.
+Enable this module and all its dependencies in your SWADE game world (the module won't show on non SWADE worlds). Navigate to the Module configuration and set up your theme. **Important: Remember to always reload your world (on PC this is F5) upon changes unless the world reloads on saving your settings anyway. Otherwise some changes might not show up** Changes on the colour pickers do not force a reload because then it would reload the world each time a colour from a single colour picker is chosen which is slowing down theme creation tremendously. Thus you may need to reload your world manually.  
+This module will soon feature some sound effects (sfx) and will come with assets. **Be very careful when using your own assets!** You will have no way to stop the sfx from playing once they start playing (except reloading), so only use very short sound files (probably less than 3 seconds or so).
 
 ## Current Features
 Currently the module has the following features (almost all of them are optional):

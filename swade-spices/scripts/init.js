@@ -430,7 +430,7 @@ function modify_community_sheets(_, html) {
     // Font size in char input.
     const name_input = html.find('.charname')
     // We need to give it some time to adjust rendenring
-    if (name_input) {
+    if (name_input.length) {
         setTimeout(() => {
             const input_with = name_input[0].offsetWidth;
             const text_with = getTextWidth('40px', name_input[0].value);

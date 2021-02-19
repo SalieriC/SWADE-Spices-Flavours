@@ -282,6 +282,15 @@ function register_settings() {
         scope: "world",
         config: true
     });*/
+    // Open sheet SFX
+    game.settings.register('swade-spices', 'openSFX', {
+        name: game.i18n.localize("SWADESPICE.openSFXName"),
+        hint: game.i18n.localize("SWADESPICE.openSFXHint"),
+        type: window.Azzu.SettingsTypes.FilePickerAudio,
+        default: 'modules/swade-spices/assets/open_sheet-fesliyanstudios.com.ogg',
+        scope: 'world',
+        config: true,
+    });
 }
 
 function add_icons (actor, html) {
@@ -424,6 +433,11 @@ function modify_community_sheets(_, html) {
                 name_input.css('font-size', `${ideal_font_size}px`);
             }
         }, 50);
+    }
+    // Open sheet SFX
+    const open_sfx = game.settings.get('swade-spices', 'openSFX',);
+    if (open_sfx) {
+        AudioHelper.play({ src: `${open_sfx}` }, false);
     }
 }
 

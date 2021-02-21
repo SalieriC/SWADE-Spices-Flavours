@@ -17,4 +17,8 @@ export class ColourConfiguration extends FormApplication {
         console.log(options);
         return {something: "this is somethinf"};
     }
+
+    async _updateObject(event, formData) {
+        console.log(event, formData)
+    }
 }

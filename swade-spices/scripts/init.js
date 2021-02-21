@@ -501,7 +501,7 @@ function modify_item_sheet(app, html) {
 
 function close_sheet(_, __, ___) {
     // Open sheet SFX
-    let close_sfx = game.settings.get('swade-spices', 'closeSFX',);
+    let close_sfx = game.settings.get('swade-spices', 'closeSFX');
     if (close_sfx) {
         AudioHelper.play({ src: `${close_sfx}` }, false);
     }

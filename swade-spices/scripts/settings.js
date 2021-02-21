@@ -13,9 +13,10 @@ export class ColourConfiguration extends FormApplication {
         return options;
       }
 
-    getData(options) {
-        console.log(options);
-        return {something: "this is somethinf"};
+    getData(_) {
+        let curr_colours = {};
+        curr_colours.curr_windowBGColourButton = game.settings.get("swade-spices", "windowBGColour")
+        return curr_colours;
     }
 
     async _updateObject(event, formData) {

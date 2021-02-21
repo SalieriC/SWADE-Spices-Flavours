@@ -19,6 +19,7 @@ export class ColourConfiguration extends FormApplication {
     }
 
     async _updateObject(event, formData) {
-        console.log(event, formData)
+        const new_windowBGColourButton = formData.windowBGColourButton;
+        game.settings.set("swade-spices", "windowBGColour", new_windowBGColourButton);
     }
 }

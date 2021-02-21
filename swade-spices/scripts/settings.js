@@ -12,4 +12,9 @@ export class ColourConfiguration extends FormApplication {
         options.width = 600;
         return options;
       }
+
+    getData(options) {
+        console.log(options);
+        return {something: "this is somethinf"};
     }
+}

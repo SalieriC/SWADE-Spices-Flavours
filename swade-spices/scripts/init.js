@@ -1,9 +1,11 @@
+/* Hiding this for now as it is unfinished in 0.3.0
 import {ColourConfiguration} from "./settings.js";
-
+*/
 
 function register_settings() {
     // Custom bennie settings
     // noinspection JSUnresolvedVariable
+    /* Hiding this for now as it is unfinished in 0.3.0
     game.settings.registerMenu('swade-spices', 'colour-config', {
         name: game.i18n.localize("SWADESPICE.ColourSettingConf"),
         label: game.i18n.localize("SWADESPICE.ColourSettingConfLabel"),
@@ -11,6 +13,7 @@ function register_settings() {
         icon: 'fas fa-globe',
         type: ColourConfiguration,
     });
+    */
     game.settings.register('swade-spices', 'bennyFront', {
         name: game.i18n.localize("SWADESPICE.BennieFrontName"),
         hint: game.i18n.localize("SWADESPICE.BennieFrontHint"),

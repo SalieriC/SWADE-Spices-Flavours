@@ -17,10 +17,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Show the Benny image on the community sheet.
 - Adding Benny Image to the community sheet.
 
-## [0.3.0] - Unreleased
+## [0.3.0] - 2021-02-26
 ### Added
-- SFX upon opening and closing sheets (currently a bit buggy).
+- SFX upon opening and closing sheets (currently a bit buggy as it plays upon editing a sheet as well).
 - - Includes assets.
+- - Only plays for the one who is opening/closing the sheet, not everyone.
 - Option to lock the token rotation by default, which is especially useful for portrait-style token art (as seen in PEGs VTT assets) so that the art doesn't rotate when you rotate your directed light source (essentially creating compatibility from the system to the core rules module).
 - - This option is true by default because the core rules mainly use portrait style tokens. You can disable it any time though.
 - - This also locks the rotation for actors upon importing them (i.e. from a compendium). It does not affect actors which already exist in the world though.

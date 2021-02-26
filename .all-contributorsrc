@@ -51,6 +51,15 @@
         "a11y",
         "ideas"
       ]
+    },
+    {
+      "login": "Tenyryas",
+      "name": "Tenyryas",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61804473?v=4",
+      "profile": "https://github.com/Tenyryas",
+      "contributions": [
+        "example"
+      ]
     }
   ],
   "contributorsPerLine": 7,

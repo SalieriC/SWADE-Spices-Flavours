@@ -299,6 +299,36 @@ function register_settings() {
         scope: 'world',
         config: true,
     });
+    // Lock Token Rotation by default.
+    game.settings.register('swade-spices', 'lockRotation', {
+        name: game.i18n.localize("SWADESPICE.lockRotationName"),
+        hint: game.i18n.localize("SWADESPICE.lockRotationHint"),
+        type: Boolean,
+        default: true,
+        scope: 'world',
+        config: true,
+        onChange: () => {
+            window.location.reload();
+        }
+    });
+    // Hide PP from actor sheets and power items.
+    game.settings.register('swade-spices', 'hidePP', {
+        name: game.i18n.localize("SWADESPICE.hidePPName"),
+        hint: game.i18n.localize("SWADESPICE.hidePPHint"),
+        type: Boolean,
+        default: false,
+        scope: 'world',
+        config: true,
+    });
+    // Hide Currency from PC sheet.
+    game.settings.register('swade-spices', 'hideCurr', {
+        name: game.i18n.localize("SWADESPICE.hideCurrName"),
+        hint: game.i18n.localize("SWADESPICE.hideCurrHint"),
+        type: Boolean,
+        default: false,
+        scope: 'world',
+        config: true,
+    });
 }
 
 function add_icons (actor, html) {
@@ -365,6 +395,10 @@ function modify_community_sheets(_, html) {
     // Optional centered charname
     if (game.settings.get('swade-spices', 'charname_centered')) {
         html.find("input.charname, .charname>input").css("text-align", `center`);
+    }
+    // Optional centered itemname
+    if (game.settings.get('swade-spices', 'charname_centered')) {
+        html.find("input.itemname, .itemname>input").css("text-align", `center`);
     }
     //Header and Tabs background colour
     let colour_tab = game.settings.get(
@@ -446,6 +480,18 @@ function modify_community_sheets(_, html) {
     let open_sfx = game.settings.get('swade-spices', 'openSFX',);
     if (open_sfx) {
         AudioHelper.play({ src: `${open_sfx}` }, false);
+    }
+    // Hide PP
+    if (game.settings.get('swade-spices', 'hidePP')) {
+        let hide_PP = "hidden";
+        let hide_row = "none";
+        document.documentElement.style.setProperty('--block_pp', `${hide_PP}`);
+        document.documentElement.style.setProperty('--prevent_empty_space', `${hide_row}`);
+    }
+    // Hide Currency
+    if (game.settings.get('swade-spices', 'hideCurr')) {
+        let hide_curr = "hidden";
+        document.documentElement.style.setProperty('--block_curr', `${hide_curr}`);
     }
 }
 
@@ -581,3 +627,17 @@ Hooks.on('closeSwadeNPCSheet', close_sheet);
 Hooks.on('closeSwadeItemSheet', close_sheet);
 
 Hooks.on('closeSwadeVehicleSheet', close_sheet);
+
+// The "preCreateActor" hook differs from the "createActor" hook in that it is only executed on the client that is creating the actor (createActor will trigger on all clients), and it happens before the actual Actor instance is created, which allows you to safely add data to the actor easily before it's created. We can modify actorData and all of those modifications will show up in the final result.
+Hooks.on('preCreateActor', (actorData, options, userID) => {
+    // Makes sure that if the actor data doesn't already contain a prototype token, we create a blank object for the prototype token that we can modify (otherwise we'll just modify whatever is already there)
+    actorData.token = actorData.token ?? {};
+    // Constant that collects all the changes (makes it future proof in case more options are added later).
+    const defaultTokenOptions = {};
+    // Checks for settings and adds the relevant option to our constant above.
+    if (game.settings.get ('swade-spices', 'lockRotation')) {
+        defaultTokenOptions.lockRotation = true;
+    }
+    // Here we use mergeObject to combine any existing prototype token data with the new changes we want to add. It will take the changes we have and either add them to the prototype token if they don't already exist, or overwrite them if they do already exist.
+    mergeObject(actorData.token, defaultTokenOptions);
+});

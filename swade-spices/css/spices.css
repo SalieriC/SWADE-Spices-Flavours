@@ -16,6 +16,9 @@
 	--quick_access_bg_colour: #00000033;
 	--skills_even_bg_colour: #0000001a;
 	--passive_ab_tab: #972824;
+	--block_pp: visible;
+	--prevent_empty_space: flex;
+	--block_curr: visible;
 }
 
 .swade-skill-image {
@@ -83,6 +86,19 @@
 }
 .swade.sheet .tabs {
 	border-bottom: var(--tab_border_colour);
+}
+
+/* Hiding options */
+.swade.sheet.actor .powers .power-counter.active {
+    display: block;
+    visibility: var(--block_pp);
+}
+input[name="data.pp"], label[for="data.pp"] {
+	visibility: var(--block_pp);
+	display: var(--prevent_empty_space);
+}
+.swade.sheet.actor .inventory .currency {
+	visibility : var(--block_curr);
 }
 
 .swade.sheet.actor .sheet-body .quickaccess-list .gear-list .gear-card .card-header {

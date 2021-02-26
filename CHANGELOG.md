@@ -17,11 +17,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Show the Benny image on the community sheet.
 - Adding Benny Image to the community sheet.
 
-## [0.2.1] - Unreleased
+## [0.3.0] - Unreleased
+### Added
+- SFX upon opening and closing sheets (currently a bit buggy).
+- - Includes assets.
+- Option to lock the token rotation by default, which is especially useful for portrait-style token art (as seen in PEGs VTT assets) so that the art doesn't rotate when you rotate your directed light source (essentially creating compatibility from the system to the core rules module).
+- - This option is true by default because the core rules mainly use portrait style tokens. You can disable it any time though.
+- - This also locks the rotation for actors upon importing them (i.e. from a compendium). It does not affect actors which already exist in the world though.
+- Option to hide the Power Points from both actor sheets and the power item sheet. Useful for the No Power Points setting rule.
+- Option to hide the currency from the PC sheet. Useful for the Wealth system or if you want the money to have a weight.
 ### Fixed
 - Typos.
-- SFX upon opening and closing sheets.
-- - Includes an asset.
 
 ## [0.2.0] - 2021-02-10
 ### Added

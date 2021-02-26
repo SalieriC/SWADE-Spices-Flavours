@@ -81,6 +81,12 @@
   "SWADESPICE.openSFXHint": "The sound to be played whenever a sheet is opened. Empty this line if you don't want a sound effect upon opening a sheet. The SFX is only played for the user who opens a sheet, not for everyone.",
   "SWADESPICE.closeSFXName": "Close Sheet SFX:",
   "SWADESPICE.closeSFXHint": "The sound to be played whenever a sheet is closed. Empty this line if you don't want a sound effect upon closing a sheet. The SFX is only played for the user who closes a sheet, not for everyone.",
+  "SWADESPICE.lockRotationName": "Lock token rotation by default",
+  "SWADESPICE.lockRotationHint": "This option locks the token rotation of newly created and imported actors by default. This is especially useful for portait style token art which you typically don't want to rotate when you rotate your directed light source. It does not change actors which already exist in the world. If you use top-down view tokens you should disable this option.",
+  "SWADESPICE.hidePPName": "Hide Power Points",
+  "SWADESPICE.hidePPHint": "This hides Power Points from the actor sheets and the power item sheet, for example for the No Power Points setting rule.",
+  "SWADESPICE.hideCurrName": "Hide Currency",
+  "SWADESPICE.hideCurrHint": "This hides the currency from the PC sheet, for example when using the Wealth rules or in case you want to calculate weight for the currency.",
   "SWADESPICE.None": "None",
   "SWADESPICE.Actor": "Actor portrait",
   "SWADESPICE.Token": "Token Image"

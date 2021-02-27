@@ -60,6 +60,15 @@
       "contributions": [
         "example"
       ]
+    },
+    {
+      "login": "Ethaks",
+      "name": "Ethaks",
+      "avatar_url": "https://avatars.githubusercontent.com/u/589855?v=4",
+      "profile": "https://github.com/Ethaks",
+      "contributions": [
+        "example"
+      ]
     }
   ],
   "contributorsPerLine": 7,

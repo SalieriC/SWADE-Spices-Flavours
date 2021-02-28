@@ -29,6 +29,14 @@ Currently the module has the following features (almost all of them are optional
 - Option to set a sheets background colour. This is important for background images with transparency, you won't notice changes otherwise.
 - - If you set your sheets background image to also be your chats background image, this colour will also used for the chat. If you don't toggle this option, there will be no ill effects.
 - Option to display character or token artwork on owned items.
+- SFX upon opening and closing sheets (currently a bit buggy as it plays upon editing a sheet as well).
+- - Includes assets.
+- - Only plays for the one who is opening/closing the sheet, not everyone.
+- Option to lock the token rotation by default, which is especially useful for portrait-style token art (as seen in PEGs VTT assets) so that the art doesn't rotate when you rotate your directed light source (essentially creating compatibility from the system to the core rules module).
+- - This option is true by default because the core rules mainly use portrait style tokens. You can disable it any time though.
+- - This also locks the rotation for actors upon importing them (i.e. from a compendium). It does not affect actors which already exist in the world though.
+- Option to hide the Power Points from both actor sheets and the power item sheet. Useful for the No Power Points setting rule.
+- Option to hide the currency from the PC sheet. Useful for the Wealth system or if you want the money to have a weight.
 
 ## Planned Features
 You can take a look at the [Changelog](https://github.com/SalieriC/SWADE-Spices-Flavours/blob/main/CHANGELOG.md) to see our unreleased but planned features.

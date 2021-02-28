@@ -10,12 +10,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add a way to return to the default colour on the colour pickers.
 - Option to select Fonts.
 ### Maybeboard
-- Dynamically change the characters name font size so that longer names are still displayed fully.
 - Option to add Attribute icons.
-- Option to show owner portrait on item sheets if an item from a character sheet is opened, making it easy to see who this belongs to.
 - A way to export settings as a way to create and share presets with other worlds and users.
 - Show the Benny image on the community sheet.
-- Adding Benny Image to the community sheet.
+
+## [0.4.0] - Unreleased
+### Fixed
+- The sfx for opening a sheet was playing whenever a sheet was updated. This should be fixed now.
 
 ## [0.3.0] - 2021-02-26
 ### Added

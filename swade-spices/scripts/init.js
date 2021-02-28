@@ -388,7 +388,7 @@ function getTextWidth (fontSize, value) {
 }
 
 
-function modify_community_sheets(_, html) {
+function modify_community_sheets(app, html) {
     // Sheet Background
     let back_sheet = game.settings.get(
         'swade-spices', 'sheetBack');
@@ -481,7 +481,10 @@ function modify_community_sheets(_, html) {
     }
     // Open sheet SFX
     let open_sfx = game.settings.get('swade-spices', 'openSFX',);
-    if (open_sfx) {
+    if (open_sfx && "spicesRenderer" in app === false) {
+        // Check for initial render of the sheet to prevent sfx upon editing the sheet
+        app.spicesRenderer = true;
+        // Playing the sfx
         AudioHelper.play({ src: `${open_sfx}` }, false);
     }
     // Hide PP
@@ -548,11 +551,13 @@ function modify_item_sheet(app, html) {
     modify_community_sheets(app, html);
 }
 
-function close_sheet(_, __, ___) {
+function close_sheet(app, __, ___) {
     // Open sheet SFX
     let close_sfx = game.settings.get('swade-spices', 'closeSFX');
     if (close_sfx) {
         AudioHelper.play({ src: `${close_sfx}` }, false);
+        // delete the spicesRenderer upon closing so that sfx plays the next time the sheet is opened.
+        if ("spicesRenderer" in app) {delete app.spicesRenderer;}
     }
 }
 

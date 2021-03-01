@@ -340,20 +340,13 @@ function add_icons (actor, html) {
 	html.find('.scrollable').removeClass('scrollable');
 	html.find('.quickaccess-list, .inventory, .power-list, .skills-list, .gear-list, .gear.skills').css(
 		'overflow', 'visible');
-	let skill_list;
-	if (actor.data.type === "character") {
-		skill_list = html.find('li.item.skill');
-	} else {
-        skill_list = html.find('span.item.skill');
-	}
+	let skill_list = html.find('span.item.skill');
 	for (let skill_element of skill_list) {
 		let skill_wrapper = $(skill_element);
-		if (actor.data.type === 'npc') {
-			// Remove the block-inline style so the skills are shown one per
-			// line.
-			skill_wrapper.removeAttr("style");
-			skill_wrapper.attr('style', 'display:flex;');
-		}
+        // Remove the block-inline style so the skills are shown one per
+        // line.
+        skill_wrapper.removeAttr("style");
+        skill_wrapper.attr('style', 'display:flex;');
 		let item_id = String(skill_wrapper.attr('data-item-id'));
 		let skill = actor.getOwnedItem(item_id);
 		skill_wrapper.prepend(`<img alt="roll" class="swade-skill-image" src="${skill.img}" data-item-id="${item_id}">`);
@@ -503,7 +496,6 @@ function modify_community_sheets(app, html) {
 
 function modify_character_sheet(app, html, __) {
     // Skill Icons
-    add_icons(app.object, html)
     modify_community_sheets(app, html)
     // Custom Logo
     let logo_sheet = game.settings.get(

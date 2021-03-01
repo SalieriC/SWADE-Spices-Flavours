@@ -40,12 +40,16 @@
 .charline {
 	align-items: center;
 }
-
+/* Allign AE buttons */
+.effects-list .effect-controls {
+	text-align: left;
+}
+/* AE ON colour */
 .effect-action .fa-power-off {
 	color: rgb(0, 148, 12);
 }
-
-.effect-action .fa-power-off[style="color: gray;"] {
+/* AE OFF colour */
+.disabled-effect .effect-action .fa-power-off {
 	color: rgb(148, 0, 0) !important;
 }
 

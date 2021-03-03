@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.4.0] - Unreleased
 ### Added
 - Allign AE buttons to the left to make them allign with other effects buttons in case there are item based ones.
+- Itemnames now resize when their name is too long for their field.
 ### Fixed
 - The sfx for opening a sheet was playing whenever a sheet was updated. This should be fixed now.
 - Coloured effects button fix for SWADE 0.17.x

@@ -14,7 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - A way to export settings as a way to create and share presets with other worlds and users.
 - Show the Benny image on the community sheet.
 
-## [0.4.0] - Unreleased
+## [0.4.0] - 2021-03-06
 ### Added
 - Allign AE buttons to the left to make them allign with other effects buttons in case there are item based ones.
 - Itemnames now resize when their name is too long for their field.

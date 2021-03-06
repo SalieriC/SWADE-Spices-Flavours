@@ -15,8 +15,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Show the Benny image on the community sheet.
 
 ## [0.4.0] - Unreleased
+### Added
+- Allign AE buttons to the left to make them allign with other effects buttons in case there are item based ones.
+- Itemnames now resize when their name is too long for their field.
 ### Fixed
 - The sfx for opening a sheet was playing whenever a sheet was updated. This should be fixed now.
+- Coloured effects button fix for SWADE 0.17.x
+### Removed
+- Skill icons are only applied to the NPC sheet any longer as the system applies them to PC sheets now.
 
 ## [0.3.0] - 2021-02-26
 ### Added

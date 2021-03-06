@@ -548,6 +548,21 @@ function modify_item_sheet(app, html) {
                 `<img src="${src}" class="swade-portrait">`)
         }
     }
+    // Font size in item input.
+    const name_input = html.find('input.itemname, .itemname>input')
+    // We need to give it some time to adjust rendenring
+    if (name_input.length) {
+        setTimeout(() => {
+            const input_with = name_input[0].offsetWidth;
+            const text_with = getTextWidth('40px', name_input[0].value);
+            if (text_with > input_with) {
+                // Name too long, adjust font
+                let ideal_font_size = Math.floor(40 * input_with / text_with);
+                ideal_font_size -= 1;
+                name_input.css('font-size', `${ideal_font_size}px`);
+            }
+        }, 50);
+    }
     modify_community_sheets(app, html);
 }
 

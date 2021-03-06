@@ -40,12 +40,16 @@
 .charline {
 	align-items: center;
 }
-
+/* Allign AE buttons */
+.effects-list .effect-controls {
+	text-align: left;
+}
+/* AE ON colour */
 .effect-action .fa-power-off {
 	color: rgb(0, 148, 12);
 }
-
-.effect-action .fa-power-off[style="color: gray;"] {
+/* AE OFF colour */
+.disabled-effect .effect-action .fa-power-off {
 	color: rgb(148, 0, 0) !important;
 }
 
@@ -158,6 +162,16 @@ textarea#chat-message {
 ::-webkit-scrollbar-thumb {
 	background: var(--scrollbar_background);
 	border: var(--scrollbar_border);
+}
+
+.skill-label {
+	max-width: 45%;
+}
+
+.skill-icon {
+	padding: 0.8px;
+	margin: 0px 0px !important;
+	margin-right: 0.3em !important;
 }
 
 /* Keeping this here in case we reconsider.

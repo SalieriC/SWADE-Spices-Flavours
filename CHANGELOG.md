@@ -18,9 +18,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Allign AE buttons to the left to make them allign with other effects buttons in case there are item based ones.
 - Itemnames now resize when their name is too long for their field.
+- Slightly changed the way icons are displayed on the PC sheet since SWADE 0.17.0
 ### Fixed
 - The sfx for opening a sheet was playing whenever a sheet was updated. This should be fixed now.
 - Coloured effects button fix for SWADE 0.17.x
+- Fixed a system bug of 0.17.0 and above which caused the skill die types on the PC sheet to not align properly.
 ### Removed
 - Skill icons are only applied to the NPC sheet any longer as the system applies them to PC sheets now.
 

@@ -503,7 +503,7 @@ function modify_community_sheets(app, html) {
 
 function modify_character_sheet(app, html, __) {
     // Skill Icons
-    add_icons(app.object, html)
+    // add_icons(app.object, html)
     modify_community_sheets(app, html)
     // Custom Logo
     let logo_sheet = game.settings.get(
@@ -529,11 +529,19 @@ function modify_npc_sheet(app, html, _) {
     modify_community_sheets(app, html)
 }
 
-function modify_official_sheet(_, html, __) {
+function modify_official_sheet(app, html, __) {
     let back_benny = CONFIG.SWADE.bennies.textures.back;
     if (back_benny) {
         html.find(".bennies .spend-benny").css(
                 "background-image", `url(${back_benny})`);
+    }
+    // Open sheet SFX
+    let open_sfx = game.settings.get('swade-spices', 'openSFX',);
+    if (open_sfx && "spicesRenderer" in app === false) {
+        // Check for initial render of the sheet to prevent sfx upon editing the sheet
+        app.spicesRenderer = true;
+        // Playing the sfx
+        AudioHelper.play({ src: `${open_sfx}` }, false);
     }
 }
 
@@ -567,7 +575,7 @@ function modify_item_sheet(app, html) {
 }
 
 function close_sheet(app, __, ___) {
-    // Open sheet SFX
+    // Close sheet SFX
     let close_sfx = game.settings.get('swade-spices', 'closeSFX');
     if (close_sfx) {
         AudioHelper.play({ src: `${close_sfx}` }, false);
@@ -650,6 +658,8 @@ Hooks.on('closeSwadeNPCSheet', close_sheet);
 Hooks.on('closeSwadeItemSheet', close_sheet);
 
 Hooks.on('closeSwadeVehicleSheet', close_sheet);
+
+Hooks.on(`closeCharacterSheet`, close_sheet);
 
 // The "preCreateActor" hook differs from the "createActor" hook in that it is only executed on the client that is creating the actor (createActor will trigger on all clients), and it happens before the actual Actor instance is created, which allows you to safely add data to the actor easily before it's created. We can modify actorData and all of those modifications will show up in the final result.
 Hooks.on('preCreateActor', (actorData, options, userID) => {

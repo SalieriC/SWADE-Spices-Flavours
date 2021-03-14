@@ -72,16 +72,22 @@
 	border: var(--tab_border_colour);
 	border-radius: var(--tab_border_radius);
 	color: var(--passive_tab_text_colour);
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
 }
 .swade.sheet .tabs .item:hover, .swade.sheet .tabs .item:focus {
 	background: var(--active_tab_color) !important;
 	color: var(--active_tab_text_color) !important;
 	border-radius: var(--tab_border_radius);
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
 }
 .swade.sheet .tabs a.item.active {
 	background: var(--active_tab_color);
 	color: var(--active_tab_text_color) !important;
 	border-radius: var(--tab_border_radius);
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
 }
 .swade.sheet.item .sheet-body .header-field, .swade.sheet.actor.character .inventory .items-list .item-header, .swade.sheet.actor .sheet-body .header-field {
 	border: var(--tab_border_colour);
@@ -143,6 +149,10 @@ input[name="data.pp"], label[for="data.pp"] {
 	border-radius: var(--tab_border_radius);
 }
 
+.swade.sheet.actor .powers .power-counter input {
+	color: var(--passive_tab_text_colour);
+}
+
 .swade.sheet .check-container .checkmark:after {
     border: var(--checkmark_colour);
     border-width: 0 3px 3px 0;
@@ -172,6 +182,16 @@ textarea#chat-message {
 	padding: 0.8px;
 	margin: 0px 0px !important;
 	margin-right: 0.3em !important;
+}
+
+.attributes-list #pace {
+	width: 50% !important;
+}
+
+.attributes-list #pace::after {
+	background-image: url('./systems/swade/assets/dice/d6-grey.svg');
+	content: "d6";
+	text-align: center;
 }
 
 /* Keeping this here in case we reconsider.

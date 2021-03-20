@@ -44,6 +44,9 @@
 .effects-list .effect-controls {
 	text-align: left;
 }
+.effects-list .effect-icon {
+	width: 24px;
+}
 /* AE ON colour */
 .effect-action .fa-power-off {
 	color: rgb(0, 148, 12);

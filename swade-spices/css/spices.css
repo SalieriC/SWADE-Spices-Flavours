@@ -192,7 +192,7 @@ textarea#chat-message {
 }
 
 .attributes-list #pace::after {
-	background-image: url('./systems/swade/assets/dice/d6-grey.svg');
+	background-image: url('systems/swade/assets/dice/d6-grey.svg');
 	content: "d6";
 	text-align: center;
 }

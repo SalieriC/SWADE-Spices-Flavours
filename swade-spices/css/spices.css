@@ -166,6 +166,7 @@ input[name="data.pp"], label[for="data.pp"] {
 }
 textarea#chat-message {
     background-image: var(--background_chat);
+	background-color: var(--window-bg-colour);
 }
 #chat-log .chat-message.whisper {
     background-image: var(--background_chat);

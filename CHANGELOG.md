@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.5.0] - Unreleased
 - Power Point values on the sheet now use the text colour of inactive tab text.
+- Sheet background colour now also applied to the chat inpot.
 
 ## [0.4.0] - 2021-03-06
 ### Added

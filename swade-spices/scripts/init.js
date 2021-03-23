@@ -615,15 +615,6 @@ Hooks.on(`ready`, () => {
     if (colour_tab_text_active) {
         document.documentElement.style.setProperty('--active_tab_text_color', colour_tab_text_active);
     }
-    //Make sheet BG the chat BG.
-    if (game.settings.get('swade-spices', 'chatBackgroundOption')) {
-        const chat_background = game.settings.get("swade-spices", "sheetBack");
-        const chat_background_colour = game.settings.get("swade-spices", "windowBGColour");
-        if (chat_background) {
-            document.documentElement.style.setProperty('--background_chat', `url("/${chat_background}")`);
-            document.documentElement.style.setProperty('--chat-bg-colour', `${chat_background_colour}`);
-        }
-    }
     //Whisper message border colour
     const private_border = game.settings.get("swade-spices", "privateMessageBorder");
     if (private_border) {
@@ -638,6 +629,15 @@ Hooks.on(`ready`, () => {
     const scrollbar_border = game.settings.get("swade-spices", "scrollbarBorderColour");
     if (scrollbar_border) {
         document.documentElement.style.setProperty('--scrollbar_border', `1px solid ${scrollbar_border}`);
+    }
+    //Make sheet BG the chat BG.
+    if (game.settings.get('swade-spices', 'chatBackgroundOption')) {
+        const chat_background = game.settings.get("swade-spices", "sheetBack");
+        const chat_background_colour = game.settings.get("swade-spices", "windowBGColour");
+        if (chat_background) {
+            document.documentElement.style.setProperty('--background_chat', `url("/${chat_background}")`);
+            document.documentElement.style.setProperty('--chat-bg-colour', `${chat_background_colour}`);
+        }
     }
 });
 

@@ -276,7 +276,6 @@ function register_settings() {
         defaultColor: "#ff6400",
         scope: "world",
     });
-    /* Fonts
     game.settings.register('swade-spices', 'font-family', {
         name: game.i18n.localize('SWADESPICE.FontFamilyName'),
         hint: game.i18n.localize("SWADESPICE.FontFamilyHint"),
@@ -284,7 +283,7 @@ function register_settings() {
         default: "",
         scope: "world",
         config: true
-    });*/
+    });
     // Open sheet SFX
     game.settings.register('swade-spices', 'openSFX', {
         name: game.i18n.localize("SWADESPICE.openSFXName"),
@@ -424,11 +423,10 @@ function modify_community_sheets(app, html) {
     let colour_checkboxBG = game.settings.get(
         'swade-spices', 'checkboxBGColour');
         html.find(".checkmark").css("background-color", `${colour_checkboxBG}`);
-    /* Fonts
     let font_family = game.settings.get('swade-spices', 'font-family');
     if (font_family) {
         html.find('.window-content').css('font-family', font_family);
-    }*/
+    }
     // Disabled active effects
     html.find('.effect-controls>a>i.fa-power-off[style="color: gray;"]').parent().parent().parent().css(
         'text-decoration', 'line-through');

@@ -525,6 +525,11 @@ function modify_npc_sheet(app, html, _) {
     // Skill Icons
     add_icons(app.object, html)
     modify_community_sheets(app, html)
+    // Change the portrait to the token
+    const img = html.find('.profile-img')[0];
+    if (game.settings.get('swade-spices', 'protrait_first') === 'token') {
+        img.src = app.object.token.data.img;
+    }
 }
 
 function modify_official_sheet(app, html, __) {

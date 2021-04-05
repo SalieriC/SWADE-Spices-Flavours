@@ -237,15 +237,6 @@ function register_settings() {
         scope: 'world',
         config: true
     });
-    // Header size
-    game.settings.register('swade-spices', 'PC_header_size', {
-        name: game.i18n.localize("SWADESPICE.PCHeaderSizeName"),
-        hint: game.i18n.localize("SWADESPICE.PCHeaderSizeHint"),
-        type: String,
-        default: '',
-        scope: 'world',
-        config: true
-    });
     // Sheets Background become chats background.
     game.settings.register('swade-spices', 'chatBackgroundOption', {
         name: game.i18n.localize("SWADESPICE.ChatBackgroundName"),
@@ -402,11 +393,6 @@ function modify_community_sheets(app, html) {
         'swade-spices', 'sheetBack');
     if (back_sheet) {
         html.find(".window-content").css("background-image", `url(${back_sheet})`);
-    }
-    // Header size
-    const size = parseInt(game.settings.get('swade-spices', 'PC_header_size'));
-    if (size) {
-        html.find('.header-fields>.charline').css('height', `${size}px`)
     }
     // Optional centered charname
     if (game.settings.get('swade-spices', 'charname_centered')) {

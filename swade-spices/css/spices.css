@@ -31,10 +31,14 @@
 
 .swade-logo {
 	border: none;
+	width: 30%;
+	height: auto!important;
 }
 
 .swade-portrait {
 	border: none;
+	width: 20%;
+	height: auto!important;
 }
 
 .charline {
@@ -198,11 +202,10 @@ textarea#chat-message {
 	text-align: center;
 }
 
-/* Keeping this here in case we reconsider.
 input.charname {
-	text-align: center;
+	width: 30%;
 }
-*/
+
 /*
 .swade-attribute-icons {
 

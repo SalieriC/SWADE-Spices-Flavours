@@ -554,7 +554,8 @@ function modify_item_sheet(app, html) {
         if (game.settings.get('swade-spices', 'protrait_items')) {
             const src = game.settings.get('swade-spices', 'protrait_items') === 'actor' ?
                 app.object.actor.data.img :
-                (app.object.actor.token ? app.object.actor.token.data.img : app.object.actor.data.img);
+                (app.object.actor.token ? app.object.actor.token.data.img :
+                    (app.object.actor.data.token ? app.object.actor.data.token.img : app.object.actor.data.img));
             html.find(".sheet-header").append(
                 `<img src="${src}" class="swade-portrait">`)
         }

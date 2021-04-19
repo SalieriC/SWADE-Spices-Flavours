@@ -293,9 +293,28 @@ function register_settings() {
         scope: 'world',
         config: true,
     });
+    // Close sheet SFX
     game.settings.register('swade-spices', 'closeSFX', {
         name: game.i18n.localize("SWADESPICE.closeSFXName"),
         hint: game.i18n.localize("SWADESPICE.closeSFXHint"),
+        type: window.Azzu.SettingsTypes.FilePickerAudio,
+        default: 'modules/swade-spices/assets/close_sheet-www.fesliyanstudios.com.ogg',
+        scope: 'world',
+        config: true,
+    });
+    // Open item sheet SFX
+    game.settings.register('swade-spices', 'openItemSFX', {
+        name: game.i18n.localize("SWADESPICE.openItemSFXName"),
+        hint: game.i18n.localize("SWADESPICE.openItemSFXHint"),
+        type: window.Azzu.SettingsTypes.FilePickerAudio,
+        default: 'modules/swade-spices/assets/open_sheet-www.fesliyanstudios.com.ogg',
+        scope: 'world',
+        config: true,
+    });
+    // Close item sheet SFX
+    game.settings.register('swade-spices', 'closeItemSFX', {
+        name: game.i18n.localize("SWADESPICE.closeItemSFXName"),
+        hint: game.i18n.localize("SWADESPICE.closeItemSFXHint"),
         type: window.Azzu.SettingsTypes.FilePickerAudio,
         default: 'modules/swade-spices/assets/close_sheet-www.fesliyanstudios.com.ogg',
         scope: 'world',
@@ -575,12 +594,29 @@ function modify_item_sheet(app, html) {
             }
         }, 50);
     }
+    // Open sheet SFX
+    let open_sfx = game.settings.get('swade-spices', 'openItemSFX',);
+    if (open_sfx && "spicesRenderer" in app === false) {
+        // Check for initial render of the sheet to prevent sfx upon editing the sheet
+        app.spicesRenderer = true;
+        // Playing the sfx
+        AudioHelper.play({ src: `${open_sfx}` }, false);
+    }
     modify_community_sheets(app, html);
 }
 
 function close_sheet(app, __, ___) {
     // Close sheet SFX
     let close_sfx = game.settings.get('swade-spices', 'closeSFX');
+    if (close_sfx) {
+        AudioHelper.play({ src: `${close_sfx}` }, false);
+        // delete the spicesRenderer upon closing so that sfx plays the next time the sheet is opened.
+        if ("spicesRenderer" in app) {delete app.spicesRenderer;}
+    }
+}
+
+function close_item_sheet(app, __, ___) {
+    let close_sfx = game.settings.get('swade-spices', 'closeItemSFX');
     if (close_sfx) {
         AudioHelper.play({ src: `${close_sfx}` }, false);
         // delete the spicesRenderer upon closing so that sfx plays the next time the sheet is opened.
@@ -659,7 +695,7 @@ Hooks.on(`closeSwadeCharacterSheet`, close_sheet);
 
 Hooks.on('closeSwadeNPCSheet', close_sheet);
 
-Hooks.on('closeSwadeItemSheet', close_sheet);
+Hooks.on('closeSwadeItemSheet', close_item_sheet);
 
 Hooks.on('closeSwadeVehicleSheet', close_sheet);
 

@@ -18,9 +18,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Option to remove the text from buttons in headers. If the text is hidden, tooltips are applied. Thanks to [JeansenVaars](https://github.com/saif-ellafi) for helping with that.
 - Sheets logo and token (if displayed) resizes now with the window.
+- Update actor of unlinked token sheets to the token image upon placing the token on the canvas.
 ### Fixed
 - Power Point values on the sheet now use the text colour of inactive tab text.
 - Sheet background colour now also applied to the chat input.
+- Token image shown on items and actors now use the tokens image even when it is randomised.
 
 ## [0.4.0] - 2021-03-06
 ### Added

@@ -91,6 +91,8 @@
   "SWADESPICE.hidePPHint": "This hides Power Points from the actor sheets and the power item sheet, for example for the No Power Points setting rule.",
   "SWADESPICE.hideCurrName": "Hide Currency",
   "SWADESPICE.hideCurrHint": "This hides the currency from the PC sheet, for example when using the Wealth rules or in case you want to calculate weight for the currency.",
+  "SWADESPICE.hideTextName": "Hide Text from Header Buttons",
+  "SWADESPICE.hideTextHint": "This option hides all core and system text from buttons in the header fields. It will only leave the buttons and adds tooltips if the user hovers the mouse over it. This option can save a lot of space in the headers but can confuse new users.",
   "SWADESPICE.None": "None",
   "SWADESPICE.Actor": "Actor portrait",
   "SWADESPICE.Token": "Token Image"

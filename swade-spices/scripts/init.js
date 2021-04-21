@@ -350,6 +350,15 @@ function register_settings() {
         scope: 'world',
         config: true,
     });
+    // Hide Text from Header Buttons
+    game.settings.register('swade-spices', 'hideText', {
+        name: game.i18n.localize("SWADESPICE.hideTextName"),
+        hint: game.i18n.localize("SWADESPICE.hideTextHint"),
+        type: Boolean,
+        default: false,
+        scope: 'world',
+        config: true,
+    });
 }
 
 function add_icons (actor, html) {
@@ -407,6 +416,7 @@ function getTextWidth (fontSize, value) {
 
 
 function modify_community_sheets(app, html) {
+    if (game.settings.get('swade-spices', 'hideText')) {actor_sheet_header();}
     // Sheet Background
     let back_sheet = game.settings.get(
         'swade-spices', 'sheetBack');
@@ -568,6 +578,7 @@ function modify_official_sheet(app, html, __) {
 }
 
 function modify_item_sheet(app, html) {
+    if (game.settings.get('swade-spices', 'hideText')) {item_sheet_header();}
     // Character Portrait on owned items
     if (app.object.isOwned) {
         if (game.settings.get('swade-spices', 'protrait_items')) {
@@ -681,6 +692,35 @@ Hooks.on(`ready`, () => {
     }
 });
 
+function actor_sheet_header() {
+    $(".configure-token").text('');
+    $(".configure-token").append(`<abbr title="Prototype Token"><a class="header-button configure-token"><i class="fas fa-user-circle"></i></abbr></a>`);
+    item_sheet_header();
+}
+
+function item_sheet_header() {
+    $(".configure-sheet").text('');
+    $(".configure-sheet").append(`<abbr title="Sheet"><a class="header-button configure-sheet"><i class="fas fa-cog"></i></abbr></a>`);
+    $(".configure-actor").text('');
+    $(".configure-actor").append(`<abbr title="Tweaks"><a class="header-button configure-actor"><i class="fas fa-dice"></i></abbr></a>`);
+    affect_all_headers();
+}
+
+function journal_header() {
+    $(".entry-image").text('');
+    $(".entry-image").append(`<abbr title="Image"><a class="header-button entry-image"><i class="fas fa-image"></i></abbr></a>`);
+    $(".entry-text").text('');
+    $(".entry-text").append(`<abbr title="Text"><a class="header-button entry-text"><i class="fas fa-file-alt"></i></abbr></a>`);
+    $(".share-image").text('');
+    $(".share-image").append(`<abbr title="Show Players"><a class="header-button share-image"><i class="fas fa-eye"></i></abbr></a>`);
+    affect_all_headers();
+}
+
+function affect_all_headers() {
+    $(".close").text('');
+    $(".close").append(`<abbr title="Close"><a class="header-button close"><i class="fas fa-times"></i></abbr></a>`);
+}
+
 Hooks.on(`renderSwadeCharacterSheet`, modify_character_sheet);
 
 Hooks.on('renderSwadeNPCSheet', modify_npc_sheet);
@@ -700,6 +740,30 @@ Hooks.on('closeSwadeItemSheet', close_item_sheet);
 Hooks.on('closeSwadeVehicleSheet', close_sheet);
 
 Hooks.on(`closeCharacterSheet`, close_sheet);
+
+Hooks.on('renderJournalSheet', () => {
+    if (game.settings.get('swade-spices', 'hideText')) {journal_header();}
+});
+
+Hooks.on('renderRollTableConfig', () => {
+    if (game.settings.get('swade-spices', 'hideText')) {affect_all_headers();}
+});
+
+Hooks.on('renderSettingsConfig', () => {
+    if (game.settings.get('swade-spices', 'hideText')) {affect_all_headers();}
+});
+
+Hooks.on('renderModuleManagement', () => {
+    if (game.settings.get('swade-spices', 'hideText')) {affect_all_headers();}
+});
+
+Hooks.on('renderCompendium', () => {
+    if (game.settings.get('swade-spices', 'hideText')) {affect_all_headers();}
+});
+
+Hooks.on('renderSceneConfig', () => {
+    if (game.settings.get('swade-spices', 'hideText')) {affect_all_headers();}
+});
 
 // The "preCreateActor" hook differs from the "createActor" hook in that it is only executed on the client that is creating the actor (createActor will trigger on all clients), and it happens before the actual Actor instance is created, which allows you to safely add data to the actor easily before it's created. We can modify actorData and all of those modifications will show up in the final result.
 Hooks.on('preCreateActor', (actorData, options, userID) => {

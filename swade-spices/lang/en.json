@@ -95,5 +95,7 @@
   "SWADESPICE.hideTextHint": "This option hides all core and system text from buttons in the header fields. It will only leave the buttons and adds tooltips if the user hovers the mouse over it. This option can save a lot of space in the headers but can confuse new users.",
   "SWADESPICE.None": "None",
   "SWADESPICE.Actor": "Actor portrait",
-  "SWADESPICE.Token": "Token Image"
+  "SWADESPICE.Token": "Token Image",
+  "SWADESPICE.PCHeaderSizeName": "Character sheet header height",
+  "SWADESPICE.PCHeaderSizeHint": "Put a number here to specify an heigght, in pixels, to the header section, leave it blank for default behaviour"
 }

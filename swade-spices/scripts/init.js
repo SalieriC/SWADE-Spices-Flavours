@@ -237,6 +237,15 @@ function register_settings() {
         scope: 'world',
         config: true
     });
+    // Header size
+    game.settings.register('swade-spices', 'PC_header_size', {
+        name: game.i18n.localize("SWADESPICE.PCHeaderSizeName"),
+        hint: game.i18n.localize("SWADESPICE.PCHeaderSizeHint"),
+        type: Boolean,
+        default: '',
+        scope: 'world',
+        config: true
+    });
     // Sheets Background become chats background.
     game.settings.register('swade-spices', 'chatBackgroundOption', {
         name: game.i18n.localize("SWADESPICE.ChatBackgroundName"),
@@ -547,6 +556,14 @@ function modify_character_sheet(app, html, __) {
     let even_skills_bg = game.settings.get("swade-spices", "evenSkillsBGColour");
     if (even_skills_bg) {
         document.documentElement.style.setProperty('--skills_even_bg_colour', `${even_skills_bg}`);
+    }
+    //Header size
+    if (game.settings.get('swade-spices', 'PC_header_size')) {
+        html.find('.swade-logo').css('width', '30%');
+        console.log(html.find('.swade-logo'))
+        html.find('.swade-logo').css('height', 'auto');
+        html.find('.swade-portrait').css('width', '20%')
+        html.find('.swade-portrait').css('height', 'auto')
     }
 }
 

@@ -96,6 +96,6 @@
   "SWADESPICE.None": "None",
   "SWADESPICE.Actor": "Actor portrait",
   "SWADESPICE.Token": "Token Image",
-  "SWADESPICE.PCHeaderSizeName": "Character sheet header height",
-  "SWADESPICE.PCHeaderSizeHint": "Put a number here to specify an heigght, in pixels, to the header section, leave it blank for default behaviour"
+  "SWADESPICE.PCHeaderSizeName": "Character sheet auto adjust header height",
+  "SWADESPICE.PCHeaderSizeHint": "Mark this option to let Spices try to adjust the header height for your logos (works better with landscape images)"
 }

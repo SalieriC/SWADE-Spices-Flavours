@@ -69,3 +69,6 @@ Tabs on the side of the sheet could save a lot of space. Edit: Not sure about th
 - *Consistency*. Clicking in the same place should lead to the same results.  
 - Complete compatibility with BR2 and PDFoundry (clickable PDF links).
 - Quick Insert integration.  
+
+# Some crazy ideas
+- Themable? That means having some presets of customization options, so the user can choose "Western" or "Sci-fi" instead of choosing each color an graphic.

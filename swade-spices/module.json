@@ -20,7 +20,7 @@
 		}
 	],
 	"systems": ["swade"],
-	"esmodules": ["./scripts/init.js"],
+	"esmodules": ["./scripts/spices.js"],
 	"styles": [],
 	"packs": [],
 	"url": "https://github.com/SalieriC/SWADE-Spices-Flavours",

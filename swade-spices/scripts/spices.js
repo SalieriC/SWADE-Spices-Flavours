@@ -1,10 +1,10 @@
-import {SpiceCharacterSheet} from './characterSheet.js'
+import {SpicyCharacterSheet} from './characterSheet.js'
 
 Hooks.once('init', () => {
     console.log("SWADE Spices & Flavor, initializing")
-    Actors.registerSheet('swade', SpiceCharacterSheet, {
+    Actors.registerSheet('swade', SpicyCharacterSheet, {
         types: ['character'],
         makeDefault: false,
-        label: 'Spice Sheet',
+        label: 'Spicy Sheet',
     });
 })

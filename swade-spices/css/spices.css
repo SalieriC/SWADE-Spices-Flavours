@@ -8,23 +8,21 @@
 	display: grid;
 	grid-row-gap: 0;
 	grid-column-gap: 0;
+	padding: 0px;
 }
 
 .spicy-left-bar {
 	background-color: var(--spicy-left-bar-bg-color);
 	grid-column: 1/3;
 	grid-row: 1/10;
-	margin: 0px;
 }
 .spicy-top-bar {
 	background-color: var(--spicy-top-bar-bg-color);
 	grid-column: 3/12;
 	grid-row: 1;
-	margin: 0px;
 }
 .spicy-main-body {
 	background-color: var(--spicy-main-body-bg-color);
 	grid-column: 3/12;
 	grid-row: 2/10;
-	margin: 0px;
 }

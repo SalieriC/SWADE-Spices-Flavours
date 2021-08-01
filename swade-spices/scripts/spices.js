@@ -1,5 +1,6 @@
 import {SpicyCharacterSheet} from './characterSheet.js'
 import {register_settings, ConfigurationVariables} from "./configuration.js";
+import {THEMES} from "./themes.js";
 
 Hooks.once('init', () => {
     console.log("SWADE Spices & Flavor, initializing")
@@ -12,10 +13,15 @@ Hooks.once('init', () => {
 
 Hooks.once('ready', () => {
     register_settings();
+    const theme = game.settings.get('swade-spices', 'theme')
     for (let config_var of ConfigurationVariables) {
-        console.log(config_var)
-        const value = game.settings.get('swade-spices', config_var.id)
+        let value = theme === 'Custom' ?
+            game.settings.get('swade-spices', config_var.id) :
+            THEMES[theme][config_var.id]
         if (value) {
+            if (config_var.config_type === 'file') {
+                value = `url(${value})`
+            }
             document.documentElement.style.setProperty(config_var.variable, value);
         }
     }

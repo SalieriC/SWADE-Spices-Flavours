@@ -2,9 +2,9 @@
 	--spicy-left-bar-bg-color: #ffffff;
 	--spicy-top-bar-bg-color: #000000;
 	--spicy-main-body-bg-color: #114400;
-	--spicy-left-bar-bg-image: url("/modules/swade-spices/assets/img/test_background_1.jpg");
-	--spicy-top-bar-bg-image: url("/modules/swade-spices/assets/img/test_background_2.jpg");
-	--spicy-main-body-bg-image: url("/modules/swade-spices/assets/img/test_background_3.jpg");
+	--spicy-left-bar-bg-image: "";
+	--spicy-top-bar-bg-image: "";
+	--spicy-main-body-bg-image: "";
 }
 
 .spicy-grid-container {

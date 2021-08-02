@@ -17,6 +17,9 @@ export function register_settings(){
             default: '',
             scope: 'world',
             config: true,
+            onChange: () => {
+            window.location.reload();
+            }
         });
     }
     const theme_choices = {Custom: 'Custom'}

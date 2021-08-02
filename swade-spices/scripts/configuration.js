@@ -13,7 +13,7 @@ export function register_settings(){
     for (let setting of ConfigurationVariables) {
         game.settings.register('swade-spices', setting.id, {
             name: game.i18n.localize("SWADESPICE.SettingName-" + setting.id),
-            hint: game.i18n.localize("SWADESPICE.SettingHint" + setting.id),
+            hint: game.i18n.localize("SWADESPICE.SettingHint-" + setting.id),
             default: '',
             scope: 'world',
             config: true,
@@ -27,7 +27,7 @@ export function register_settings(){
         theme_choices[theme] = theme
     }
     game.settings.register('swade-spices', 'theme', {
-        name: game.i18n.localize("SWADESPICE.Theme"),
+        name: game.i18n.localize("SWADESPICE.ThemeName"),
         hint: game.i18n.localize("SWADESPICE.ThemeHint"),
         default: 'Pulp',
         scope: 'world',

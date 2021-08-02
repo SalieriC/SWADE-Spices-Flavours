@@ -12,5 +12,9 @@
     "SWADESPICE.SettingName-BodyBGImage": "Main Body Background Image:",
     "SWADESPICE.SettingHint-BodyBGImage": "The background image of the main body on the sheet, where you find the tabs and their content.",
     "SWADESPICE.ThemeName": "Theme:",
-    "SWADESPICE.ThemeHint": "Here you can load a predefined theme."
+    "SWADESPICE.ThemeHint": "Here you can load a predefined theme.",
+    "SWADESPICE.CustomTitle": "Custom Sheet Configuration",
+    "SWADESPICE.CustomSheetName":  "Custom sheet configuration",
+    "SWADESPICE.CustomSheetLabel":  "Customize",
+    "SWADESPICE.CustomSheetHint": "Click this buttom to customize all aspects of the sheet"
 }

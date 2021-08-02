@@ -38,4 +38,19 @@ export function register_settings(){
             window.location.reload();
         }
     })
+    game.settings.registerMenu('swade-spices', 'custom-config', {
+        name: "SWADESPICE.CustomSheetName",
+        label: "SWADESPICE.CustomSheetLabel",
+        hint: "SWADESPICE.CustomSheetHint",
+        type: CustomConfigForm
+    });
+}
+
+class CustomConfigForm extends FormApplication {
+    static get defaultOptions() {
+        let options = super.defaultOptions;
+        options.id = 'spices-custom-config';
+        options.template = "/modules/swade-spices/templates/customConfig.html";
+        return options;
+    }
 }

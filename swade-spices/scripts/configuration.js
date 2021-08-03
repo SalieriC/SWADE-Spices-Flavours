@@ -1,3 +1,5 @@
+// noinspection JSCheckFunctionSignatures,JSValidateTypes
+
 import {THEMES} from "./themes.js";
 
 export const ConfigurationVariables = [
@@ -16,9 +18,9 @@ export function register_settings(){
             hint: game.i18n.localize("SWADESPICE.SettingHint-" + setting.id),
             default: '',
             scope: 'world',
-            config: true,
+            config: false,
             onChange: () => {
-            window.location.reload();
+                window.location.reload();
             }
         });
     }
@@ -51,6 +53,31 @@ class CustomConfigForm extends FormApplication {
         let options = super.defaultOptions;
         options.id = 'spices-custom-config';
         options.template = "/modules/swade-spices/templates/customConfig.html";
+        options.width = 630
+        options.height = 700
         return options;
+    }
+
+    getData() {
+        let settings_array = []
+        for (let setting of ConfigurationVariables) {
+            settings_array.push(
+                {id: setting.id, config_type: setting.config_type,
+                 value: game.settings.get('swade-spices', setting.id),
+                name: game.i18n.localize("SWADESPICE.SettingName-" + setting.id),
+                hint: game.i18n.localize("SWADESPICE.SettingHint-" + setting.id)})
+        }
+        return {settings_array: settings_array}
+    }
+
+    async _updateObject(_, formData) {
+        for (let id in formData) {
+            if (formData[id]) {
+                await game.settings.set('swade-spices', id, formData[id])
+            } else {
+                await game.settings.set('swade-spices', id, '')
+            }
+        }
+        window.location.reload()
     }
 }

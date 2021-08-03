@@ -1,3 +1,13 @@
 <form id="spices-custom-config">
     <h2>{{ localize "SWADESPICE.CustomTitle" }}</h2>
+    {{#each settings_array}}
+        <div class="form-group">
+            <label>{{ this.name }}</label>
+            <div class="form-fields">
+                <input type="text" name="{{ this.id }}" value="{{ this.value }}">
+            </div>
+            <p class="notes">{{ this.hint }}</p>
+        </div>
+    {{/each}}
+    <button type="submit"><i class="far fa-save"></i>{{localize "BRSW.Save"}}</button>
 </form>

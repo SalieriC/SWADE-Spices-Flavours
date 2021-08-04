@@ -10,6 +10,10 @@
 		{
 		  "name": "swade",
 		  "type": "system"
+		},
+		{
+			"name": "colorsettings",
+			"type": "module"
 		}
 	],
 	"languages": [

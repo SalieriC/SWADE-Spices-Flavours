@@ -20,6 +20,9 @@ Hooks.once('ready', () => {
             THEMES[theme][config_var.id]
         if (value) {
             if (config_var.config_type === 'file') {
+                if (value.slice(0, 1) !== '/') {
+                    value = '/' + value
+                }
                 value = `url(${value})`
             }
             document.documentElement.style.setProperty(config_var.variable, value);

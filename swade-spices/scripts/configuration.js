@@ -62,10 +62,12 @@ class CustomConfigForm extends FormApplication {
         let settings_array = []
         for (let setting of ConfigurationVariables) {
             settings_array.push(
-                {id: setting.id, config_type: setting.config_type,
+                {id: setting.id,
+                 use_color_picker: setting.config_type === "colour",
+                 use_file_picker: setting.config_type === "file",
                  value: game.settings.get('swade-spices', setting.id),
-                name: game.i18n.localize("SWADESPICE.SettingName-" + setting.id),
-                hint: game.i18n.localize("SWADESPICE.SettingHint-" + setting.id)})
+                 name: game.i18n.localize("SWADESPICE.SettingName-" + setting.id),
+                 hint: game.i18n.localize("SWADESPICE.SettingHint-" + setting.id)})
         }
         return {settings_array: settings_array}
     }

@@ -16,5 +16,10 @@
     "SWADESPICE.CustomTitle": "Custom Sheet Configuration",
     "SWADESPICE.CustomSheetName":  "Custom sheet configuration",
     "SWADESPICE.CustomSheetLabel":  "Customize",
-    "SWADESPICE.CustomSheetHint": "Click this buttom to customize all aspects of the sheet"
+    "SWADESPICE.CustomSheetHint": "Click this button to customize all aspects of the sheet",
+    "SWADESPICE.Save": "Save",
+    "SWADESPICE.Export": "Export to JSON",
+    "SWADESPICE.Import": "Import",
+    "SWADESPICE.ImportWarning": "WARNING: Your current settings will be overwritten",
+    "SWADESPICE.ImportHint": "Select a json file to import"
 }

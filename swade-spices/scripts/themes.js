@@ -4,9 +4,9 @@ export const THEMES = {
     // Pulp: the "default" sheet, red stripe side bar, sandy colored main area with a map motif
     'Pulp' : {
         LeftBarBGColour: "#ffffff",
-        TopBarColour: "#000000",
-        BodyBGColour: "#114400",
-        LeftBarBGImage: "",
+        TopBarColour: "#5b0b0d",
+        BodyBGColour: "#cac1b4",
+        LeftBarBGImage: "/modules/swade-spices/assets/img/squared-paper-texture.jpg",
         TopBarBGImage: "",
         BodyBGImage: ""
     },
@@ -15,9 +15,9 @@ export const THEMES = {
         LeftBarBGColour: "#ffffff",
         TopBarColour: "#ffffff",
         BodyBGColour: "#ffffff",
-        LeftBarBGImage: "/modules/swade-spices/assets/img/test_background_1.jpg",
-        TopBarBGImage: "/modules/swade-spices/assets/img/test_background_2.jpg",
-        BodyBGImage: "/modules/swade-spices/assets/img/test_background_3.jpg"
+        LeftBarBGImage: "",
+        TopBarBGImage: "",
+        BodyBGImage: ""
 
     },
     // Wooden: good for wild west or steampunk settings. Wood side bar, Green felt main with brass details

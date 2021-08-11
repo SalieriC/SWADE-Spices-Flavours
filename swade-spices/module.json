@@ -28,6 +28,6 @@
 	"styles": ["./css/spices.css"],
 	"packs": [],
 	"url": "https://github.com/SalieriC/SWADE-Spices-Flavours",
-	"manifest": "https://raw.githubusercontent.com/SalieriC/SWADE-Spices-Flavours/main/swade-spices/module.json",
-	"download": "https://github.com/SalieriC/SWADE-Spices-Flavours/raw/main/swade-spices.zip"
+	"manifest": "https://raw.githubusercontent.com/SalieriC/SWADE-Spices-Flavours/S%26F-2/swade-spices/module.json",
+	"download": "https://github.com/SalieriC/SWADE-Spices-Flavours/raw/S%26F-2/swade-spices.zip"
 }

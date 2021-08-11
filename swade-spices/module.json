@@ -4,7 +4,7 @@
 	"description": "<p>A new Character Sheet for SWADE. <a href='https://ko-fi.com/salieric'>Please consider donating.</a> </p>",
 	"minimumCoreVersion": "0.8.4",
 	"compatibleCoreVersion": "0.8.8",
-	"version": "1.0.0",
+	"version": "0.0.1",
 	"author": "SalieriC, Javier Rivera",
 	"dependencies": [
 		{
@@ -28,6 +28,6 @@
 	"styles": ["./css/spices.css"],
 	"packs": [],
 	"url": "https://github.com/SalieriC/SWADE-Spices-Flavours",
-	"manifest": "",
-	"download": ""
+	"manifest": "https://raw.githubusercontent.com/SalieriC/SWADE-Spices-Flavours/main/swade-spices/module.json",
+	"download": "https://github.com/SalieriC/SWADE-Spices-Flavours/raw/main/swade-spices.zip"
 }

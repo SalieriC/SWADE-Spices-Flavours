@@ -1,6 +1,26 @@
 <div class="spicyClass-left-bar-logo">
 </div>
-<div class="spicyClass-left-bar-content">
-    <h1>Health</h1>
-    <p><h2>Wounds:</h2> <h2>Fatigue:</h2></p>
+<div class="spicyClass-left-bar-health">
+    <div class="spicyClass-health-column-1 spicyClass-health-title">
+        WOUNDS
+        <div>
+            <input
+                class = "spicyClass-health-input"
+                type="number"
+                name="data.wounds.value"
+                value="{{data.data.wounds.value}}"/>
+            /{{data.data.wounds.max}}
+        </div>
+    </div>
+    <div class="spicyClass-health-column-2 spicyClass-health-title">
+        FATIGUE
+        <div>
+            <input
+                class = "spicyClass-health-input"
+                type="number"
+                name="data.fatigue.value"
+                value="{{data.data.fatigue.value}}"/>
+            /{{data.data.fatigue.max}}
+        </div>
+    </div>
 </div>

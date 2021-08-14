@@ -5,6 +5,7 @@
 	--spicy-left-bar-bg-image: "";
 	--spicy-top-bar-bg-image: "";
 	--spicy-main-body-bg-image: "";
+	--spicy-left-bar-logo: url('/modules/swade-spices/assets/img/SW_LOGO_FP_2018.png');
 }
 
 .spicy-grid-container {
@@ -21,12 +22,20 @@
 	grid-row: 1/10;
 	display: grid;
 }
+.spicyClass-left-bar-logo {
+	background-image: var(--spicy-left-bar-logo);
+	background-size: contain;
+	background-repeat: no-repeat;
+	grid-row: 1
+}
+
 .spicy-top-bar {
 	background-color: var(--spicy-top-bar-bg-color);
 	background-image: var(--spicy-top-bar-bg-image);
 	grid-column: 3/12;
 	grid-row: 1;
 }
+
 .spicy-main-body {
 	background-color: var(--spicy-main-body-bg-color);
 	background-image: var(--spicy-main-body-bg-image);

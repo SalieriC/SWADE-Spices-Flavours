@@ -8,7 +8,8 @@ export const THEMES = {
         BodyBGColour: "#cac1b4",
         LeftBarBGImage: "/modules/swade-spices/assets/img/squared-paper-texture.jpg",
         TopBarBGImage: "",
-        BodyBGImage: ""
+        BodyBGImage: "",
+        LeftBarLogo: "/modules/swade-spices/assets/img/SW_LOGO_FP_2018.png"
     },
     // Horror: the "dark mode" sheet. Purple sidebar, black main white text. Gothic details
     'Horror': {
@@ -17,8 +18,8 @@ export const THEMES = {
         BodyBGColour: "#ffffff",
         LeftBarBGImage: "",
         TopBarBGImage: "",
-        BodyBGImage: ""
-
+        BodyBGImage: "",
+        LeftBarLogo: "/modules/swade-spices/assets/img/SW_LOGO_FP_2018.png"
     },
     // Wooden: good for wild west or steampunk settings. Wood side bar, Green felt main with brass details
     'Wooden': {
@@ -27,6 +28,7 @@ export const THEMES = {
         BodyBGColour: "#ff4444",
         LeftBarBGImage: "",
         TopBarBGImage: "",
-        BodyBGImage: ""
+        BodyBGImage: "",
+        LeftBarLogo: "/modules/swade-spices/assets/img/SW_LOGO_FP_2018.png"
     }
 }

@@ -9,6 +9,7 @@ export const ConfigurationVariables = [
     {id: 'LeftBarBGImage', variable: '--spicy-left-bar-bg-image', config_type: "file"},
     {id: 'TopBarBGImage', variable: '--spicy-top-bar-bg-image', config_type: "file"},
     {id: 'BodyBGImage', variable: '--spicy-main-body-bg-image', config_type: "file"},
+    {id: 'LeftBarLogo', variable: '--spicy-left-bar-logo', config_type: "file"},
 ];
 
 export function register_settings(){

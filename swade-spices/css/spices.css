@@ -6,6 +6,7 @@
 	--spicy-top-bar-bg-image: "";
 	--spicy-main-body-bg-image: "";
 	--spicy-left-bar-logo: url('/modules/swade-spices/assets/img/SW_LOGO_FP_2018.png');
+	--spicy-left-bar-health-text-color: #8C0809;
 }
 
 .spicy-grid-container {
@@ -41,7 +42,7 @@
 }
 .spicyClass-health-title{
 	text-align: center;
-	color: darkred;
+	color: var(--spicy-left-bar-health-text-color);
 }
 input[type="number"].spicyClass-health-input {
 	width: 2em;

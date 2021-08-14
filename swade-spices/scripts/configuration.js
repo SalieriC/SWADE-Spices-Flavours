@@ -10,6 +10,7 @@ export const ConfigurationVariables = [
     {id: 'TopBarBGImage', variable: '--spicy-top-bar-bg-image', config_type: "file"},
     {id: 'BodyBGImage', variable: '--spicy-main-body-bg-image', config_type: "file"},
     {id: 'LeftBarLogo', variable: '--spicy-left-bar-logo', config_type: "file"},
+    {id: 'LeftBarHealthTextColour', variable: '--spicy-left-bar-health-text-color', config_type: "colour"},
 ];
 
 export function register_settings(){

@@ -19,6 +19,7 @@
 	background-image: var(--spicy-left-bar-bg-image);
 	grid-column: 1/3;
 	grid-row: 1/10;
+	display: grid;
 }
 .spicy-top-bar {
 	background-color: var(--spicy-top-bar-bg-color);

@@ -2,6 +2,11 @@ import {SpicyCharacterSheet} from './characterSheet.js'
 import {register_settings, ConfigurationVariables} from "./configuration.js";
 import {THEMES} from "./themes.js";
 
+function register_templates(){
+    loadTemplates(['modules/swade-spices/templates/leftBar.html']).then(
+        () => {console.log("SWADE Spices templates loaded")})
+}
+
 Hooks.once('init', () => {
     console.log("SWADE Spices & Flavor, initializing")
     Actors.registerSheet('swade', SpicyCharacterSheet, {
@@ -12,7 +17,8 @@ Hooks.once('init', () => {
 })
 
 Hooks.once('ready', () => {
-    register_settings();
+    register_settings()
+    register_templates()
     const theme = game.settings.get('swade-spices', 'theme')
     for (let config_var of ConfigurationVariables) {
         let value = theme === 'Custom' ?
@@ -25,7 +31,7 @@ Hooks.once('ready', () => {
                 }
                 value = `url(${value})`
             }
-            document.documentElement.style.setProperty(config_var.variable, value);
+            document.documentElement.style.setProperty(config_var.variable, value)
         }
     }
 })

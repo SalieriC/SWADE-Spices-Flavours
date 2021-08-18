@@ -7,11 +7,13 @@
 	background-image: var(--spicy-left-bar-logo);
 	background-size: contain;
 	background-repeat: no-repeat;
-	grid-row: 1
+	grid-row: 1;
 }
 
 .spicyClass-left-bar-health {
 	display: grid;
+	font-weight: bold;
+	font-size: 15pt;
 }
 
 .spicyClass-health-column-1 {
@@ -31,4 +33,9 @@
 
 input[type="number"].spicyClass-health-input {
 	width: 2em;
+	border: none;
+	padding: none;
+	color: var(--spicy-left-bar-health-text-color);
+	background: none;
+	font-weight: bold;
 }

@@ -24,3 +24,67 @@
         </div>
     </div>
 </div>
+<div class="spicyClass-status">
+    <label class="spicyClass-check-container"
+      >{{localize "SWADE.Shaken"}}
+      <input
+        type="checkbox"
+        name="data.status.isShaken"
+        {{checked
+        data.data.status.isShaken}}
+      />
+      <span class="spicyClass-checkmark"></span>
+    </label>
+    <label class="spicyClass-check-container"
+      >{{localize "SWADE.Distr"}}
+      <input
+        type="checkbox"
+        name="data.status.isDistracted"
+        {{checked
+        data.data.status.isDistracted}}
+      />
+      <span class="spicyClass-checkmark"></span>
+    </label>
+    <label class="spicyClass-check-container"
+      >{{localize "SWADE.Vuln"}}
+      <input
+        type="checkbox"
+        name="data.status.isVulnerable"
+        {{checked
+        data.data.status.isVulnerable}}
+      />
+      <span class="spicyClass-checkmark"></span>
+    </label>
+  </div>
+  <div class="status">
+    <label class="spicyClass-check-container"
+      >{{localize "SWADE.Stunned"}}
+      <input
+        type="checkbox"
+        name="data.status.isStunned"
+        {{checked
+        data.data.status.isStunned}}
+      />
+      <span class="spicyClass-checkmark"></span>
+    </label>
+    <label class="spicyClass-check-container"
+      >{{localize "SWADE.Entangled"}}
+      <input
+        type="checkbox"
+        name="data.status.isEntangled"
+        {{checked
+        data.data.status.isEntangled}}
+      />
+      <span class="spicyClass-checkmark"></span>
+    </label>
+    <label class="spicyClass-check-container"
+      >{{localize "SWADE.Bound"}}
+      <input
+        type="checkbox"
+        name="data.status.isBound"
+        {{checked
+        data.data.status.isBound}}
+      />
+      <span class="spicyClass-checkmark"></span>
+    </label>
+  </div>

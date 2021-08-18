@@ -10,7 +10,10 @@ export const THEMES = {
         TopBarColour: "#5b0b0d",
         TopBarBGImage: "",
         BodyBGColour: "#cac1b4",
-        BodyBGImage: ""
+        BodyBGImage: "",
+        LeftBarStatusTextColour: "#000000FF",
+        CheckboxColour: "#6B6D6E",
+        CheckmarkColour: "#8C0809"
     },
     // Horror: the "dark mode" sheet. Purple sidebar, black main white text. Gothic details
     'Horror': {
@@ -21,7 +24,10 @@ export const THEMES = {
         TopBarColour: "#ffffff",
         TopBarBGImage: "",
         BodyBGColour: "#ffffff",
-        BodyBGImage: ""
+        BodyBGImage: "",
+        LeftBarStatusTextColour: "#000000FF",
+        CheckboxColour: "#6B6D6E",
+        CheckmarkColour: "#8C0809"
     },
     // Wooden: good for wild west or steampunk settings. Wood side bar, Green felt main with brass details
     'Wooden': {
@@ -32,6 +38,9 @@ export const THEMES = {
         TopBarColour: "#ff3333",
         TopBarBGImage: "",
         BodyBGColour: "#ff4444",
-        BodyBGImage: ""
+        BodyBGImage: "",
+        LeftBarStatusTextColour: "#000000FF",
+        CheckboxColour: "#6B6D6E",
+        CheckmarkColour: "#8C0809"
     }
 }

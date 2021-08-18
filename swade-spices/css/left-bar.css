@@ -1,6 +1,9 @@
 :root {
     --spicy-left-bar-logo: url('/modules/swade-spices/assets/img/SW_LOGO_FP_2018.png');
 	--spicy-left-bar-health-text-color: #8C0809;
+	--spicy-left-bar-status-text-color: black;
+	--spicy-checkbox-color: #6B6D6E;
+	--spicy-checkmark-color: #8C0809;
 }
 
 .spicyClass-left-bar-logo {
@@ -38,4 +41,8 @@ input[type="number"].spicyClass-health-input {
 	color: var(--spicy-left-bar-health-text-color);
 	background: none;
 	font-weight: bold;
+}
+
+input[type="number"].spicyClass-health-input:hover {
+	box-shadow: 0 0 5px red;
 }

@@ -3,7 +3,8 @@ import {register_settings, ConfigurationVariables} from "./configuration.js";
 import {THEMES} from "./themes.js";
 
 function register_templates(){
-    loadTemplates(['modules/swade-spices/templates/leftBar.html']).then(
+    loadTemplates(['modules/swade-spices/templates/leftBar.html',
+        'modules/swade-spices/templates/topBar.html']).then(
         () => {console.log("SWADE Spices templates loaded")})
 }
 

@@ -25,7 +25,7 @@
 	],
 	"systems": ["swade"],
 	"esmodules": ["./scripts/spices.js"],
-	"styles": ["./css/spices.css", "./css/left-bar.css"],
+	"styles": ["./css/spices.css", "./css/left-bar.css", "./css/top-bar.css"],
 	"packs": [],
 	"url": "https://github.com/SalieriC/SWADE-Spices-Flavours",
 	"manifest": "https://raw.githubusercontent.com/SalieriC/SWADE-Spices-Flavours/S%26F-2/swade-spices/module.json",

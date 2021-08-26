@@ -1,7 +1,7 @@
 <div class="spicyClass-left-bar-logo">
 </div>
 <div class="spicyClass-left-bar-health">
-    <div class="spicyClass-health-column-1 spicyClass-health-title">
+    <div class="spicyClass-health-title">
       {{localize "SWADE.Wounds"}}
         <div>
             <input
@@ -12,7 +12,7 @@
             /{{data.data.wounds.max}}
         </div>
     </div>
-    <div class="spicyClass-health-column-2 spicyClass-health-title">
+    <div class="spicyClass-health-title">
       {{localize "SWADE.Fatigue"}}
         <div>
             <input
@@ -25,66 +25,28 @@
     </div>
 </div>
 <div class="spicyClass-status">
-    <label class="spicyClass-check-container"
-      >{{localize "SWADE.Shaken"}}
-      <input
-        type="checkbox"
-        name="data.status.isShaken"
-        {{checked
-        data.data.status.isShaken}}
-      />
-      <span class="spicyClass-checkmark"></span>
-    </label>
-    <label class="spicyClass-check-container"
-      >{{localize "SWADE.Distr"}}
-      <input
-        type="checkbox"
-        name="data.status.isDistracted"
-        {{checked
-        data.data.status.isDistracted}}
-      />
-      <span class="spicyClass-checkmark"></span>
-    </label>
-    <label class="spicyClass-check-container"
-      >{{localize "SWADE.Vuln"}}
-      <input
-        type="checkbox"
-        name="data.status.isVulnerable"
-        {{checked
-        data.data.status.isVulnerable}}
-      />
-      <span class="spicyClass-checkmark"></span>
-    </label>
-  </div>
-  <div class="spicyClass-status">
-    <label class="spicyClass-check-container"
-      >{{localize "SWADE.Stunned"}}
-      <input
-        type="checkbox"
-        name="data.status.isStunned"
-        {{checked
-        data.data.status.isStunned}}
-      />
-      <span class="spicyClass-checkmark"></span>
-    </label>
-    <label class="spicyClass-check-container"
-      >{{localize "SWADE.Entangled"}}
-      <input
-        type="checkbox"
-        name="data.status.isEntangled"
-        {{checked
-        data.data.status.isEntangled}}
-      />
-      <span class="spicyClass-checkmark"></span>
-    </label>
-    <label class="spicyClass-check-container"
-      >{{localize "SWADE.Bound"}}
-      <input
-        type="checkbox"
-        name="data.status.isBound"
-        {{checked
-        data.data.status.isBound}}
-      />
-      <span class="spicyClass-checkmark"></span>
-    </label>
+    <div>
+        <label class="spicyClass-check-container">{{localize "SWADE.Shaken"}}</label>
+        <input type="checkbox" name="data.status.isShaken" {{checked data.data.status.isShaken}} />
+    </div>
+    <div>
+        <label class="spicyClass-check-container">{{localize "SWADE.Distr"}}</label>
+        <input type="checkbox" name="data.status.isDistracted" {{checked data.data.status.isDistracted}} />
+    </div>
+    <div>
+        <label class="spicyClass-check-container">{{localize "SWADE.Vuln"}}</label>
+        <input type="checkbox" name="data.status.isVulnerable" {{checked data.data.status.isVulnerable}} />
+    </div>
+    <div>
+        <label class="spicyClass-check-container">{{localize "SWADE.Stunned"}}</label>
+        <input type="checkbox" name="data.status.isStunned" {{checked data.data.status.isStunned}} />
+    </div>
+    <div>
+        <label class="spicyClass-check-container">{{localize "SWADE.Entangled"}}</label>
+        <input type="checkbox" name="data.status.isEntangled" {{checked data.data.status.isEntangled}} />
+    </div>
+    <div>
+        <label class="spicyClass-check-container">{{localize "SWADE.Bound"}}</label>
+        <input type="checkbox" name="data.status.isBound" {{checked data.data.status.isBound}} />
+    </div>
   </div>

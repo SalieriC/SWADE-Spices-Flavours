@@ -11,22 +11,20 @@
 	background-size: contain;
 	background-repeat: no-repeat;
 	grid-row: 1;
+	grid-column: 1;
 }
 
 .spicyClass-left-bar-health {
 	display: grid;
 	font-weight: bold;
 	font-size: 15pt;
+	grid-row: 2;
+	grid-template: minmax(0, 1fr) / repeat(2, minmax(0, 1fr));
 }
 
-.spicyClass-health-column-1 {
+.spicyClass-status {
 	grid-column: 1;
-	grid-row: 1;
-}
-
-.spicyClass-health-column-2 {
-	grid-column: 2;
-	grid-row: 1;
+	grid-row: 3/6;
 }
 
 .spicyClass-health-title{

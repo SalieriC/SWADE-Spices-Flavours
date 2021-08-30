@@ -1,18 +1,18 @@
-<div class="spicyClass-text-zone">
-    <div class="spicyClass-name">
-        <input type="text" name="name" class="charname" value="{{actor.name}}"
-          placeholder="{{localize 'Name'}}"/>
-    </div>
-    <div>
-        <span>
-            <input type="text" name="data.details.species.name" value="{{data.data.details.species.name}}"
-                placeholder="{{localize 'SWADE.Race'}}">
-            <input type="text" name="data.advances.rank" value="{{data.data.advances.rank}}"
-                placeholder="{{localize 'SWADE.Rank'}}">
-            <input type="number" name="data.advances.value" value="{{data.data.advances.value}}"
-                placeholder="{{localize 'SWADE.Adv'}}">
-        </span>
-    </div>
+<div class="spicyClass-name">
+    <input type="text" name="name" class="charname" value="{{actor.name}}"
+      placeholder="{{localize 'Name'}}"/>
+</div>
+<div class="spicyClass-header-input">
+    <input type="text" name="data.details.species.name" value="{{data.data.details.species.name}}"
+        placeholder="{{localize 'SWADE.Race'}}">
+</div>
+<div class="spicyClass-header-input">
+    <input type="text" name="data.advances.rank" value="{{data.data.advances.rank}}"
+        placeholder="{{localize 'SWADE.Rank'}}">
+</div>
+<div class="spicyClass-header-input">
+    <input type="number" name="data.advances.value" value="{{data.data.advances.value}}"
+        placeholder="{{localize 'SWADE.Adv'}}">
 </div>
 <div class="char-img-container spicyClass-img-zone">
     <img class="profile-img spicyClass-img" src="{{actor.img}}" data-edit="img" alt="{{actor.name}}"/>

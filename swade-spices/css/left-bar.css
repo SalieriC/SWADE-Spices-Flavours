@@ -10,6 +10,7 @@
 	background-image: var(--spicy-left-bar-logo);
 	background-size: contain;
 	background-repeat: no-repeat;
+	background-position: center;
 	grid-row: 1;
 	grid-column: 1;
 }
@@ -47,4 +48,9 @@ input[type="number"].spicyClass-health-input:hover {
 
 .spicyClass-status {
 	font-weight: bold;
+}
+
+.spicyClass-status-container {
+	width: 45%;
+	display: inline-block;
 }

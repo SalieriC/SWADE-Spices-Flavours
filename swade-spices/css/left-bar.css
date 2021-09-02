@@ -37,7 +37,7 @@
 input[type="number"].spicyClass-health-input {
 	width: 2em;
 	border: none;
-	padding: none;
+	padding: 0px;
 	color: var(--spicy-left-bar-health-text-color);
 	background: none;
 	font-weight: bold;
@@ -54,7 +54,7 @@ input[type="number"].spicyClass-health-input:hover {
 
 .spicyClass-derived {
 	grid-column: 1;
-	grid-row: 5/7;
+	grid-row: 5/8;
 	display: grid;
 	grid-template: 2em 2em 1fr 2em 1fr / 50% 50%;
 }
@@ -70,4 +70,13 @@ input[type="number"].spicyClass-health-input:hover {
 
 .spicyClass-derived-name {
 	text-align: center;
+}
+
+.spicyClass-running-die {
+    max-height: 28px;
+    margin: 0 2px;
+    padding: 0 2px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }

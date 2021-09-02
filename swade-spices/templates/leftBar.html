@@ -60,10 +60,40 @@
     <div class="spicyClass-derived-name">
         {{ localize "SWADE.Tough" }}
     </div>
+    <div class="spicyClass-derived-value">
+        <input name="data.stats.parry.value" value="{{data.data.stats.parry.value}}"
+               type="text" placeholder="{{ localize 'SWADE.Parry' }}"
+               data-dtype="Number" {{disabled data.data.details.autoCalcParry}}>
+        <button type="button" class="parry-display">
+            {{signedString data.data.stats.parry.modifier}}
+        </button>
+    </div>
+    <div class="spicyClass-derived-value">
+        <input id="toughness" name="data.stats.toughness.value" type="text"
+               value="{{data.data.stats.toughness.value}}"
+               placeholder="{{localize 'SWADE.Tough'}}"
+               data-dtype="Number" {{disabled data.data.details.autoCalcToughness}}>
+        <button type="button" class="armor-display" {{disabled data.data.details.autoCalcToughness}}>
+            {{data.data.stats.toughness.armor}}
+        </button>
+    </div>
     <div class="spicyClass-derived-name">
         {{localize "SWADE.Pace"}}
     </div>
     <div class="spicyClass-derived-name">
         {{ localize "SWADE.Size" }}
+    </div>
+    <div class="spicyClass-derived-value">
+        <input type="text" value="{{data.data.stats.speed.adjusted}}" data-dtype="Number"
+               placeholder="{{ localize 'SWADE.Pace' }}" disabled/>
+        <button type="button" class="spicyClass-running-die"
+                title="{{localize 'SWADE.Roll'}} {{localize 'SWADE.RunningDie'}}"
+                style="background-image: url(systems/swade/assets/official/dice/d{{data.data.stats.speed.runningDie}}.svg);">
+            <span class="sr-only">d{{data.stats.speed.runningDie}} {{localize 'SWADE.RunningDie'}}</span>
+        </button>
+    </div>
+    <div class="spicyClass-derived-value">
+        <input name="data.stats.size" type="text" value="{{data.data.stats.size}}"
+          data-dtype="Number"/>
     </div>
 </div>

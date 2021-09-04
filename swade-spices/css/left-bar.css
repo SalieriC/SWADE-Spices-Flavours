@@ -80,3 +80,15 @@ input[type="number"].spicyClass-health-input:hover {
     background-repeat: no-repeat;
     background-size: contain;
 }
+
+.spicyClass-bennies {
+	grid-column: 1;
+	grid-row: 8/10;
+}
+
+.spicyClass-bennies-title {	text-align: center;
+	font-weight: bold;
+	font-size: 15pt;
+	color: var(--spicy-left-bar-health-text-color);
+
+}

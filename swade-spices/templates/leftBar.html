@@ -97,3 +97,21 @@
           data-dtype="Number"/>
     </div>
 </div>
+<div class="spicyClass-bennies">
+    <div class="spicyClass-bennies-title">
+        {{localize "SWADE.Bennies"}}
+    </div>
+    <div class="bennies" title="{{localize 'SWADE.Bennies'}}">
+        {{#each currentBennies as |benny|}} {{#unless (gte @index 5) }}
+            <span title="{{localize 'SWADE.BenniesSpend'}}" class="benny spend-benny" style="z-index: {{@index}}; grid-column: {{benny}} / span 8; background-image: url({{../bennyImageURL}});">
+            </span>
+        {{/unless}} {{/each}}
+        <button type="button" class="add-benny" title="{{localize 'SWADE.AddBenny'}}">
+            <i class="fas fa-plus fa-lg"></i>
+        </button>
+        <button type="button" class="spend-benny current-bennies"
+                title="{{localize 'SWADE.CurrentBennies'}}">
+            {{data.data.bennies.value}}
+        </button>
+    </div>
+</div>

@@ -115,3 +115,16 @@
         </button>
     </div>
 </div>
+<div class="spicyClass-conviction">
+    <button type="button" class="conviction-toggle">
+      <strong class="{{#if data.data.details.conviction.active}}pulse{{/if}}">
+        {{~#if data.data.details.conviction.active~}} {{localize
+        "SWADE.ConvictionActive"}} {{~else~}} {{localize "SWADE.Conv"}} {{/if}}
+      </strong>
+    </button>
+    <div>
+      <input type="Number" class="conviction-counter" name="data.details.conviction.value"
+             value="{{data.data.details.conviction.value}}"
+             data-dtype="Number"/>
+    </div>
+</div>

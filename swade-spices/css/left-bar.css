@@ -92,3 +92,8 @@ input[type="number"].spicyClass-health-input:hover {
 	color: var(--spicy-left-bar-health-text-color);
 
 }
+
+.spicyClass-conviction {
+	grid-column: 1;
+	grid-row: 10/11;
+}

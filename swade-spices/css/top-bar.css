@@ -9,6 +9,11 @@
     float: right;
 }
 
-.spicyClass-header-input {
+.spicyClass-header-input input {
     grid-row: 2;
+}
+
+.spicyClass-header-input input::placeholder {
+    color: var(--spicy-top-bar-charname-color);
+    opacity: .5;
 }

@@ -1,33 +1,48 @@
 {
-	"name": "swade-spices",
-	"title": "SWADE Spices & Flavours",
-	"description": "<p>A new Character Sheet for SWADE. <a href='https://ko-fi.com/salieric'>Please consider donating.</a> </p>",
-	"minimumCoreVersion": "0.8.4",
-	"compatibleCoreVersion": "0.8.8",
-	"version": "1.99.1",
-	"author": "SalieriC, Javier Rivera",
-	"dependencies": [
-		{
-		  "name": "swade",
-		  "type": "system"
-		},
-		{
-			"name": "colorsettings",
-			"type": "module"
-		}
-	],
-	"languages": [
-		{
-			"lang": "en",
-			"name": "English",
-			"path": "lang/en.json"
-		}
-	],
-	"systems": ["swade"],
-	"esmodules": ["./scripts/spices.js"],
-	"styles": ["./css/spices.css", "./css/left-bar.css", "./css/top-bar.css"],
-	"packs": [],
-	"url": "https://github.com/SalieriC/SWADE-Spices-Flavours",
-	"manifest": "https://raw.githubusercontent.com/SalieriC/SWADE-Spices-Flavours/S%26F-2/swade-spices/module.json",
-	"download": "https://github.com/SalieriC/SWADE-Spices-Flavours/raw/S%26F-2/swade-spices.zip"
+  "name": "swade-spices",
+  "title": "SWADE Spices & Flavours",
+  "description": "<p>A new Character Sheet for SWADE. <a href='https://ko-fi.com/salieric'>Please consider donating.</a> </p>",
+  "author": "SalieriC, Javier Rivera",
+  "authors": [],
+  "url": "https://github.com/SalieriC/SWADE-Spices-Flavours",
+  "flags": {},
+  "version": "1.99.1",
+  "minimumCoreVersion": "0.7.4",
+  "compatibleCoreVersion": "0.8.8",
+  "scripts": [],
+  "esmodules": [
+    "./scripts/spices.js"
+  ],
+  "styles": [
+    "./css/spices.css",
+    "./css/left-bar.css",
+    "./css/top-bar.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "packs": [],
+  "system": [
+    "swade"
+  ],
+  "dependencies": [
+    {
+      "name": "swade",
+      "type": "system"
+    },
+    {
+      "name": "colorsettings",
+      "type": "module"
+    }
+  ],
+  "socket": false,
+  "manifest": "https://raw.githubusercontent.com/SalieriC/SWADE-Spices-Flavours/S%26F-2/swade-spices/module.json",
+  "download": "https://github.com/SalieriC/SWADE-Spices-Flavours/raw/S%26F-2/swade-spices.zip",
+  "protected": false,
+  "coreTranslation": false,
+  "library": false
 }

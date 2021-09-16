@@ -14,6 +14,7 @@ export const ConfigurationVariables = [
     {id: 'LeftBarStatusTextColour', variable: '--spicy-left-bar-status-text-color', config_type: "colour"},
     {id: 'CheckboxColour', variable: '--spicy-checkbox-color', config_type: "colour"},
     {id: 'CheckmarkColour', variable: '--spicy-checkmark-color', config_type: "colour"},
+    {id: 'CharnameTextColour', variable: '--spicy-top-bar-charname-color', config_type: "colour"}
 ];
 
 export function register_settings(){

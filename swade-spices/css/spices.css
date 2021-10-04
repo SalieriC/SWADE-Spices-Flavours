@@ -21,7 +21,7 @@
 	grid-column: 1/4;
 	grid-row: 1/11;
 	display: grid;
-	grid-template: repeat(10, minmax(0, 1fr)) / minmax(0, 1fr);
+	grid-template: repeat(18, minmax(0, 1fr)) / minmax(0, 1fr);
 }
 
 .spicyClass-top-bar {

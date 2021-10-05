@@ -19,6 +19,7 @@ export const THEMES = {
         CheckboxColourChecked: "#ffffff",
         CheckmarkColour: "#8C0809",
         CharnameTextColour: "#ffffff",
+        CheckmarkColourFocus: "#cf1818",
     },
     // Horror: the "dark mode" sheet. Purple sidebar, black main white text. Gothic details
     'Horror': {
@@ -38,6 +39,7 @@ export const THEMES = {
         CheckboxColourChecked: "#ffffff",
         CheckmarkColour: "#8C0809",
         CharnameTextColour: "#ffffff",
+        CheckmarkColourFocus: "#cf1818",
     },
     // Wooden: good for wild west or steampunk settings. Wood side bar, Green felt main with brass details
     'Wooden': {
@@ -57,5 +59,6 @@ export const THEMES = {
         CheckboxColourChecked: "#ffffff",
         CheckmarkColour: "#8C0809",
         CharnameTextColour: "#ffffff",
+        CheckmarkColourFocus: "#cf1818",
     }
 }

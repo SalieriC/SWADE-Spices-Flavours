@@ -9,6 +9,7 @@ export const ConfigurationVariables = [
     {id: 'LeftBarBGImage', variable: '--spicy-left-bar-bg-image', config_type: "file"},
     {id: 'TopBarBGImage', variable: '--spicy-top-bar-bg-image', config_type: "file"},
     {id: 'BodyBGImage', variable: '--spicy-main-body-bg-image', config_type: "file"},
+    {id: 'CharnameTextColour', variable: '--spicy-top-bar-charname-color', config_type: "colour"},
     {id: 'LeftBarLogo', variable: '--spicy-left-bar-logo', config_type: "file"},
     {id: 'LeftBarHealthTextColour', variable: '--spicy-left-bar-health-text-color', config_type: "colour"},
     {id: 'LeftBarStatusTextColour', variable: '--spicy-left-bar-status-text-color', config_type: "colour"},
@@ -18,7 +19,7 @@ export const ConfigurationVariables = [
     {id: 'CheckboxColour', variable: '--spicy-checkbox-color', config_type: "colour"},
     {id: 'CheckboxColourChecked', variable: '--spicy-checkbox-color-checked', config_type: "colour"},
     {id: 'CheckmarkColour', variable: '--spicy-checkmark-color', config_type: "colour"},
-    {id: 'CharnameTextColour', variable: '--spicy-top-bar-charname-color', config_type: "colour"}
+    {id: 'CheckmarkColourFocus', variable: '--spicy-checkbox-color-focus', config_type: "colour"}
 ];
 
 export function register_settings(){

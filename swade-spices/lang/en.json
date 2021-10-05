@@ -31,6 +31,8 @@
     "SWADESPICE.SettingHint-CheckboxColourChecked":"The background colour of checked (activated) checkboxes.",
     "SWADESPICE.SettingName-CheckmarkColour":"Checkmark Colour:",
     "SWADESPICE.SettingHint-CheckmarkColour":"The colour of checkmarks in checked (activated) checkboxes.",
+    "SWADESPICE.SettingName-CheckmarkColourFocus":"Focused Checkbox Colour:",
+    "SWADESPICE.SettingHint-CheckmarkColourFocus":"The background colour of checkboxes when they have focus (whilst being clicked, before the button is released).",
     "SWADESPICE.ThemeName": "Theme:",
     "SWADESPICE.ThemeHint": "Here you can load a predefined theme.",
     "SWADESPICE.CustomTitle": "Custom Sheet Configuration",

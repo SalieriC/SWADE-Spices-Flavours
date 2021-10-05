@@ -3,7 +3,11 @@
 	--spicy-left-bar-health-text-color: #8C0809;
 	--spicy-left-bar-status-text-color: black;
 	--spicy-checkbox-color: #6B6D6E;
+    --spicy-checkbox-color-checked: #ffffff;
 	--spicy-checkmark-color: #8C0809;
+    --spicy-left-bar-derived-name-text-color: #191813;
+    --spicy-left-bar-derived-value-text-color: #191813;
+    --spicy-left-bar-derived-modifier-text-color: #191813;
 }
 
 .spicyClass-left-bar-hr {
@@ -36,6 +40,7 @@
     display: grid;
     grid-template: 1rem 1.3rem 1.3rem 1.3rem /50% 50%;
     font-weight: bold;
+    color: var(--spicy-left-bar-status-text-color);
 }
 
 .spicyClass-health-title{
@@ -92,6 +97,7 @@ input[type="number"].spicyClass-health-input:hover {
 	text-align: center;
     font-weight: bold;
     font-size: 1rem;
+    color: var(--spicy-left-bar-derived-name-text-color);
 }
 
 .spicyClass-derived-value {
@@ -101,6 +107,7 @@ input[type="number"].spicyClass-health-input:hover {
     max-height: 50px;
 	text-align: center;
     width: 70%;
+    color: var(--spicy-left-bar-derived-value-text-color);
 }
 
     .spicyClass-derived-value > input {
@@ -120,6 +127,7 @@ input[type="number"].spicyClass-health-input:hover {
         text-align: center;
         top: -0.35rem;
         width: 70%;
+        color: var(--spicy-left-bar-derived-modifier-text-color);
     }
 
         .spicyClass-derived-value > button.spicyClass-running-die {
@@ -127,6 +135,8 @@ input[type="number"].spicyClass-health-input:hover {
             background-size: 1.5rem;
             width: 25px;
             height: 25px;
+            /* Is it possible to lay a colour over the die image? If so please use "--spicy-left-bar-derived-modifier-text-color" for that.
+            Also: We may need to use the foundry die models because the official ones are copywrong protected. */
         }
 
 .spicyClass-running-die {

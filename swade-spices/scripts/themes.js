@@ -7,14 +7,18 @@ export const THEMES = {
         LeftBarBGImage: "/modules/swade-spices/assets/img/squared-paper-texture.jpg",
         LeftBarLogo: "/modules/swade-spices/assets/img/SW_LOGO_FP_2018.png",
         LeftBarHealthTextColour: "#8C0809",
+        LeftBarStatusTextColour: "#000000FF",
+        LeftBarDerivedNameTextColour: "#191813",
+        LeftBarDerivedValueTextColour: "#191813",
+        LeftBarDerivedModifierTextColour: "#191813",
         TopBarColour: "#5b0b0d",
         TopBarBGImage: "",
         BodyBGColour: "#cac1b4",
         BodyBGImage: "",
-        LeftBarStatusTextColour: "#000000FF",
         CheckboxColour: "#6B6D6E",
+        CheckboxColourChecked: "#ffffff",
         CheckmarkColour: "#8C0809",
-        CharnameTextColour: "#ffffff"
+        CharnameTextColour: "#ffffff",
     },
     // Horror: the "dark mode" sheet. Purple sidebar, black main white text. Gothic details
     'Horror': {
@@ -22,14 +26,18 @@ export const THEMES = {
         LeftBarBGImage: "",
         LeftBarLogo: "/modules/swade-spices/assets/img/SW_LOGO_FP_2018.png",
         LeftBarHealthTextColour: "#000000",
+        LeftBarStatusTextColour: "#000000FF",
+        LeftBarDerivedNameTextColour: "#191813",
+        LeftBarDerivedValueTextColour: "#191813",
+        LeftBarDerivedModifierTextColour: "#191813",
         TopBarColour: "#ffffff",
         TopBarBGImage: "",
         BodyBGColour: "#ffffff",
         BodyBGImage: "",
-        LeftBarStatusTextColour: "#000000FF",
         CheckboxColour: "#6B6D6E",
+        CheckboxColourChecked: "#ffffff",
         CheckmarkColour: "#8C0809",
-        CharnameTextColour: "#ffffff"
+        CharnameTextColour: "#ffffff",
     },
     // Wooden: good for wild west or steampunk settings. Wood side bar, Green felt main with brass details
     'Wooden': {
@@ -37,13 +45,17 @@ export const THEMES = {
         LeftBarBGImage: "",
         LeftBarLogo: "/modules/swade-spices/assets/img/SW_LOGO_FP_2018.png",
         LeftBarHealthTextColour: "#000000",
+        LeftBarStatusTextColour: "#000000FF",
+        LeftBarDerivedNameTextColour: "#191813",
+        LeftBarDerivedValueTextColour: "#191813",
+        LeftBarDerivedModifierTextColour: "#191813",
         TopBarColour: "#ff3333",
         TopBarBGImage: "",
         BodyBGColour: "#ff4444",
         BodyBGImage: "",
-        LeftBarStatusTextColour: "#000000FF",
         CheckboxColour: "#6B6D6E",
+        CheckboxColourChecked: "#ffffff",
         CheckmarkColour: "#8C0809",
-        CharnameTextColour: "#ffffff"
+        CharnameTextColour: "#ffffff",
     }
 }

@@ -12,7 +12,11 @@ export const ConfigurationVariables = [
     {id: 'LeftBarLogo', variable: '--spicy-left-bar-logo', config_type: "file"},
     {id: 'LeftBarHealthTextColour', variable: '--spicy-left-bar-health-text-color', config_type: "colour"},
     {id: 'LeftBarStatusTextColour', variable: '--spicy-left-bar-status-text-color', config_type: "colour"},
+    {id: 'LeftBarDerivedNameTextColour', variable: '--spicy-left-bar-derived-name-text-color', config_type: "colour"},
+    {id: 'LeftBarDerivedValueTextColour', variable: '--spicy-left-bar-derived-value-text-color', config_type: "colour"},
+    {id: 'LeftBarDerivedModifierTextColour', variable: '--spicy-left-bar-derived-modifier-text-color', config_type: "colour"},
     {id: 'CheckboxColour', variable: '--spicy-checkbox-color', config_type: "colour"},
+    {id: 'CheckboxColourChecked', variable: '--spicy-checkbox-color-checked', config_type: "colour"},
     {id: 'CheckmarkColour', variable: '--spicy-checkmark-color', config_type: "colour"},
     {id: 'CharnameTextColour', variable: '--spicy-top-bar-charname-color', config_type: "colour"}
 ];

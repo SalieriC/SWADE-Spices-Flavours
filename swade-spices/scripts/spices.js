@@ -4,7 +4,8 @@ import {THEMES} from "./themes.js";
 
 function register_templates(){
     loadTemplates(['modules/swade-spices/templates/leftBar.html',
-        'modules/swade-spices/templates/topBar.html']).then(
+        'modules/swade-spices/templates/topBar.html',
+        'modules/swade-spices/templates/mainBody.html']).then(
         () => {console.log("SWADE Spices templates loaded")})
 }
 

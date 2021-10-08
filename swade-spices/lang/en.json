@@ -45,5 +45,14 @@
     "SWADESPICE.ImportWarning": "WARNING: Your current settings will be overwritten!",
     "SWADESPICE.ImportHint": "Select a json file to import:",
     "SWADESPICE.CompactModeName": "Compact Mode",
-    "SWADESPICE.CompactModeHint": "Compact Mode reduces the hight of the top bar (header) to make more space for the sheets tabs. As a result this decreases the size of the actor image preview. The actor image in the bio tab is unaffected."
+    "SWADESPICE.CompactModeHint": "Compact Mode reduces the hight of the top bar (header) to make more space for the sheets tabs. As a result this decreases the size of the actor image preview. The actor image in the bio tab is unaffected.",
+    "SWADESPICE.Summary": "Summary",
+    "SWADESPICE.Traits": "Traits",
+    "SWADESPICE.Edges": "Edges",
+    "SWADESPICE.Hindrances": "Hindrances",
+    "SWADESPICE.Abilities": "Special Abilities",
+    "SWADESPICE.Inventory": "Inventory",
+    "SWADESPICE.Powers": "Powers",
+    "SWADESPICE.Effects": "Effects",
+    "SWADESPICE.Description": "Description"
 }

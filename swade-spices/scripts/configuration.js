@@ -56,6 +56,14 @@ export function register_settings(){
         label: "SWADESPICE.CustomSheetLabel",
         hint: "SWADESPICE.CustomSheetHint",
         type: CustomConfigForm
+    })
+    game.settings.register('swade-spices', 'compactMode', {
+        name: game.i18n.localize("SWADESPICE.CompactModeName"),
+        hint: game.i18n.localize("SWADESPICE.CompactModeHint"),
+        default: 'true',
+        scope: 'world',
+        config: true,
+        type: Boolean,
     });
 }
 

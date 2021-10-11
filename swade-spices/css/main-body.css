@@ -1,0 +1,47 @@
+.spicyClass-navbar {
+    float: right;
+}
+
+.spicyClass-icon {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+.spicyClass-icon-summary {
+    background-image: url('/modules/swade-spices/assets/img/placeholder-tab-icon.png');
+}
+
+.spicyClass-icon-trait {
+    background-image: url('/modules/swade-spices/assets/img/placeholder-tab-icon.png');
+}
+
+.spicyClass-icon-edges {
+    background-image: url('/modules/swade-spices/assets/img/placeholder-tab-icon.png');
+}
+
+.spicyClass-icon-hindrance {
+    background-image: url('/modules/swade-spices/assets/img/placeholder-tab-icon.png');
+}
+
+.spicyClass-icon-abilities {
+    background-image: url('/modules/swade-spices/assets/img/placeholder-tab-icon.png');
+}
+
+.spicyClass-icon-inventory
+{
+    background-image: url('/modules/swade-spices/assets/img/placeholder-tab-icon.png');
+}
+
+.spicyClass-icon-powers {
+    background-image: url('/modules/swade-spices/assets/img/placeholder-tab-icon.png');
+}
+
+.spicyClass-icon-effects {
+    background-image: url('/modules/swade-spices/assets/img/placeholder-tab-icon.png');
+}
+
+.spicyClass-icon-description {
+    background-image: url('/modules/swade-spices/assets/img/placeholder-tab-icon.png');
+}

@@ -3,32 +3,32 @@
 import {THEMES} from "./themes.js";
 
 export const ConfigurationVariables = [
-    {id: 'LeftBarBGColour', variable: '--spicy-left-bar-bg-color', config_type: "colour"},
-    {id: 'TopBarColour', variable: '--spicy-top-bar-bg-color', config_type: "colour"},
-    {id: 'BodyBGColour', variable: '--spicy-main-body-bg-color', config_type: "colour"},
-    {id: 'LeftBarBGImage', variable: '--spicy-left-bar-bg-image', config_type: "file"},
-    {id: 'TopBarBGImage', variable: '--spicy-top-bar-bg-image', config_type: "file"},
-    {id: 'BodyBGImage', variable: '--spicy-main-body-bg-image', config_type: "file"},
-    {id: 'CharnameTextColour', variable: '--spicy-top-bar-charname-color', config_type: "colour"},
-    {id: 'LeftBarLogo', variable: '--spicy-left-bar-logo', config_type: "file"},
-    {id: 'LeftBarHealthTextColour', variable: '--spicy-left-bar-health-text-color', config_type: "colour"},
-    {id: 'LeftBarStatusTextColour', variable: '--spicy-left-bar-status-text-color', config_type: "colour"},
-    {id: 'LeftBarDerivedNameTextColour', variable: '--spicy-left-bar-derived-name-text-color', config_type: "colour"},
-    {id: 'LeftBarDerivedValueTextColour', variable: '--spicy-left-bar-derived-value-text-color', config_type: "colour"},
-    {id: 'LeftBarDerivedModifierTextColour', variable: '--spicy-left-bar-derived-modifier-text-color', config_type: "colour"},
-    {id: 'CheckboxColour', variable: '--spicy-checkbox-color', config_type: "colour"},
-    {id: 'CheckboxColourChecked', variable: '--spicy-checkbox-color-checked', config_type: "colour"},
-    {id: 'CheckmarkColour', variable: '--spicy-checkmark-color', config_type: "colour"},
-    {id: 'CheckmarkColourFocus', variable: '--spicy-checkbox-color-focus', config_type: "colour"},
-    {id: 'MainBodyTabIconsQA', variable: '--spicy-main-body-tab-icon-qa', config_type: "file"},
-    {id: 'MainBodyTabIconsTraits', variable: '--spicy-main-body-tab-icon-traits', config_type: "file"},
-    {id: 'MainBodyTabIconsEdges', variable: '--spicy-main-body-tab-icon-edges', config_type: "file"},
-    {id: 'MainBodyTabIconsHindrances', variable: '--spicy-main-body-tab-icon-hindrances', config_type: "file"},
-    {id: 'MainBodyTabIconsAbilities', variable: '--spicy-main-body-tab-icon-abilities', config_type: "file"},
-    {id: 'MainBodyTabIconsInventory', variable: '--spicy-main-body-tab-icon-inventory', config_type: "file"},
-    {id: 'MainBodyTabIconsPowers', variable: '--spicy-main-body-tab-icon-powers', config_type: "file"},
-    {id: 'MainBodyTabIconsEffects', variable: '--spicy-main-body-tab-icon-effects', config_type: "file"},
-    {id: 'MainBodyTabIconsDescription', variable: '--spicy-main-body-tab-icon-description', config_type: "file"}
+    {id: 'LeftBarBGColour', variable: '--spicy-left-bar-bg-color', config_type: "colour", tab:"Tab1"},
+    {id: 'TopBarColour', variable: '--spicy-top-bar-bg-color', config_type: "colour", tab:"Tab1"},
+    {id: 'BodyBGColour', variable: '--spicy-main-body-bg-color', config_type: "colour", tab:"Tab1"},
+    {id: 'LeftBarBGImage', variable: '--spicy-left-bar-bg-image', config_type: "file", tab:"Tab1"},
+    {id: 'TopBarBGImage', variable: '--spicy-top-bar-bg-image', config_type: "file", tab:"Tab1"},
+    {id: 'BodyBGImage', variable: '--spicy-main-body-bg-image', config_type: "file", tab:"Tab1"},
+    {id: 'CharnameTextColour', variable: '--spicy-top-bar-charname-color', config_type: "colour", tab:"Tab2"},
+    {id: 'LeftBarLogo', variable: '--spicy-left-bar-logo', config_type: "file", tab:"Tab2"},
+    {id: 'LeftBarHealthTextColour', variable: '--spicy-left-bar-health-text-color', config_type: "colour", tab:"Tab2"},
+    {id: 'LeftBarStatusTextColour', variable: '--spicy-left-bar-status-text-color', config_type: "colour", tab:"Tab2"},
+    {id: 'LeftBarDerivedNameTextColour', variable: '--spicy-left-bar-derived-name-text-color', config_type: "colour", tab:"Tab2"},
+    {id: 'LeftBarDerivedValueTextColour', variable: '--spicy-left-bar-derived-value-text-color', config_type: "colour", tab:"Tab2"},
+    {id: 'LeftBarDerivedModifierTextColour', variable: '--spicy-left-bar-derived-modifier-text-color', config_type: "colour", tab:"Tab2"},
+    {id: 'CheckboxColour', variable: '--spicy-checkbox-color', config_type: "colour", tab:"Tab2"},
+    {id: 'CheckboxColourChecked', variable: '--spicy-checkbox-color-checked', config_type: "colour", tab:"Tab2"},
+    {id: 'CheckmarkColour', variable: '--spicy-checkmark-color', config_type: "colour", tab:"Tab2"},
+    {id: 'CheckmarkColourFocus', variable: '--spicy-checkbox-color-focus', config_type: "colour", tab:"Tab2"},
+    {id: 'MainBodyTabIconsQA', variable: '--spicy-main-body-tab-icon-qa', config_type: "file", tab:"Tab3"},
+    {id: 'MainBodyTabIconsTraits', variable: '--spicy-main-body-tab-icon-traits', config_type: "file", tab:"Tab3"},
+    {id: 'MainBodyTabIconsEdges', variable: '--spicy-main-body-tab-icon-edges', config_type: "file", tab:"Tab3"},
+    {id: 'MainBodyTabIconsHindrances', variable: '--spicy-main-body-tab-icon-hindrances', config_type: "file", tab:"Tab3"},
+    {id: 'MainBodyTabIconsAbilities', variable: '--spicy-main-body-tab-icon-abilities', config_type: "file", tab:"Tab3"},
+    {id: 'MainBodyTabIconsInventory', variable: '--spicy-main-body-tab-icon-inventory', config_type: "file", tab:"Tab3"},
+    {id: 'MainBodyTabIconsPowers', variable: '--spicy-main-body-tab-icon-powers', config_type: "file", tab:"Tab3"},
+    {id: 'MainBodyTabIconsEffects', variable: '--spicy-main-body-tab-icon-effects', config_type: "file", tab:"Tab3"},
+    {id: 'MainBodyTabIconsDescription', variable: '--spicy-main-body-tab-icon-description', config_type: "file", tab:"Tab3"}
 ];
 
 export function register_settings(){
@@ -86,13 +86,28 @@ class CustomConfigForm extends FormApplication {
     activateListeners(html) {
         html.find('.spices-export').on('click', export_custom_theme)
         html.find('.spices-import').on('click', import_custom_theme)
+        html.find('.spices-tab-header').on('click', this.change_tab)
         return super.activateListeners(html);
     }
 
+    change_tab(event) {
+        const tab_name = event.currentTarget.dataset.tab
+        $('.spices-tab').each((_, tab) => {
+            if (tab.dataset.tab === tab_name) {
+                $(tab).addClass('active')
+            } else {
+                $(tab).removeClass('active')
+            }
+        })
+    }
+
     getData() {
-        let settings_array = []
+        let tabs = {}
         for (let setting of ConfigurationVariables) {
-            settings_array.push(
+            if (! tabs.hasOwnProperty(setting.tab)) {
+                tabs[setting.tab] = []
+            }
+            tabs[setting.tab].push(
                 {id: setting.id,
                  use_color_picker: setting.config_type === "colour",
                  use_file_picker: setting.config_type === "file",
@@ -100,7 +115,8 @@ class CustomConfigForm extends FormApplication {
                  name: game.i18n.localize("SWADESPICE.SettingName-" + setting.id),
                  hint: game.i18n.localize("SWADESPICE.SettingHint-" + setting.id)})
         }
-        return {settings_array: settings_array}
+        console.log(tabs)
+        return {tabs: tabs}
     }
 
     async _updateObject(_, formData) {

@@ -22,38 +22,38 @@
 }
 
 .spicyClass-icon-summary {
-    background-image: url('/modules/swade-spices/assets/img/placeholder-tab-icon.png');
+    background-image: var(--spicy-main-body-tab-icon-qa);
 }
 
 .spicyClass-icon-trait {
-    background-image: url('/modules/swade-spices/assets/img/placeholder-tab-icon.png');
+    background-image: var(--spicy-main-body-tab-icon-traits);
 }
 
 .spicyClass-icon-edges {
-    background-image: url('/modules/swade-spices/assets/img/placeholder-tab-icon.png');
+    background-image: var(--spicy-main-body-tab-icon-edges);
 }
 
 .spicyClass-icon-hindrance {
-    background-image: url('/modules/swade-spices/assets/img/placeholder-tab-icon.png');
+    background-image: var(--spicy-main-body-tab-icon-hindrances);
 }
 
 .spicyClass-icon-abilities {
-    background-image: url('/modules/swade-spices/assets/img/placeholder-tab-icon.png');
+    background-image: var(--spicy-main-body-tab-icon-abilities);
 }
 
 .spicyClass-icon-inventory
 {
-    background-image: url('/modules/swade-spices/assets/img/placeholder-tab-icon.png');
+    background-image: var(--spicy-main-body-tab-icon-inventory);
 }
 
 .spicyClass-icon-powers {
-    background-image: url('/modules/swade-spices/assets/img/placeholder-tab-icon.png');
+    background-image: var(--spicy-main-body-tab-icon-powers);
 }
 
 .spicyClass-icon-effects {
-    background-image: url('/modules/swade-spices/assets/img/placeholder-tab-icon.png');
+    background-image: var(--spicy-main-body-tab-icon-effects);
 }
 
 .spicyClass-icon-description {
-    background-image: url('/modules/swade-spices/assets/img/placeholder-tab-icon.png');
+    background-image: var(--spicy-main-body-tab-icon-description);
 }

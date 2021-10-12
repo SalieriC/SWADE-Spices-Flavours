@@ -1,4 +1,6 @@
 // noinspection JSCheckFunctionSignatures,JSValidateTypes
+/* global game, FormApplication, saveDataToFile, Dialog, renderTemplate, ui, readTextFromFile */
+/* jshint -W089 */
 
 import {THEMES} from "./themes.js";
 
@@ -115,7 +117,6 @@ class CustomConfigForm extends FormApplication {
                  name: game.i18n.localize("SWADESPICE.SettingName-" + setting.id),
                  hint: game.i18n.localize("SWADESPICE.SettingHint-" + setting.id)})
         }
-        console.log(tabs)
         return {tabs: tabs}
     }
 
@@ -161,7 +162,7 @@ async function import_custom_theme() {
           label: "Import",
           callback: html => {
             const form = html.find("form")[0];
-            if ( !form.data.files.length ) return ui.notifications.error("You did not upload a data file!");
+            if ( !form.data.files.length ) {return ui.notifications.error("You did not upload a data file!")}
             readTextFromFile(form.data.files[0]).then((json) => {
                 const settings = JSON.parse(json)
                 for (let setting in settings) {

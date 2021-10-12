@@ -9,6 +9,7 @@
     --spicy-main-body-tab-icon-effects: url('/modules/swade-spices/assets/img/placeholder-tab-icon.png');
     --spicy-main-body-tab-icon-description: url('/modules/swade-spices/assets/img/placeholder-tab-icon.png');
     --spicy-main-body-tab-background-color: #000000;
+    --spicy-main-body-tab-text-color: #ffffff;
 }
 
 .spicyClass-navbar {

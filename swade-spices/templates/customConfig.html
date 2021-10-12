@@ -6,7 +6,7 @@
             <div class="form-fields">
                 <input type="text" name="{{ this.id }}" value="{{ this.value }}"
                     {{#if this.use_color_picker}}is="colorpicker-input" data-responsive-color{{/if}}>
-            {{# if this.use_file_picker }}{{ filePicker type="image" target=this.id }}{{/if}}
+                {{# if this.use_file_picker }}{{ filePicker type="image" target=this.id }}{{/if}}
             </div>
             <p class="notes">{{ this.hint }}</p>
         </div>

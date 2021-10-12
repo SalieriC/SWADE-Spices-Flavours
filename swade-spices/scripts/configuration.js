@@ -39,9 +39,6 @@ export function register_settings(){
             default: '',
             scope: 'world',
             config: false,
-            onChange: () => {
-                window.location.reload();
-            }
         });
     }
     const theme_choices = {Custom: 'Custom'}

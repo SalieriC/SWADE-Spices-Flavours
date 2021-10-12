@@ -19,7 +19,16 @@ export const ConfigurationVariables = [
     {id: 'CheckboxColour', variable: '--spicy-checkbox-color', config_type: "colour"},
     {id: 'CheckboxColourChecked', variable: '--spicy-checkbox-color-checked', config_type: "colour"},
     {id: 'CheckmarkColour', variable: '--spicy-checkmark-color', config_type: "colour"},
-    {id: 'CheckmarkColourFocus', variable: '--spicy-checkbox-color-focus', config_type: "colour"}
+    {id: 'CheckmarkColourFocus', variable: '--spicy-checkbox-color-focus', config_type: "colour"},
+    {id: 'MainBodyTabIconsQA', variable: '--spicy-main-body-tab-icon-qa', config_type: "file"},
+    {id: 'MainBodyTabIconsTraits', variable: '--spicy-main-body-tab-icon-traits', config_type: "file"},
+    {id: 'MainBodyTabIconsEdges', variable: '--spicy-main-body-tab-icon-edges', config_type: "file"},
+    {id: 'MainBodyTabIconsHindrances', variable: '--spicy-main-body-tab-icon-hindrances', config_type: "file"},
+    {id: 'MainBodyTabIconsAbilities', variable: '--spicy-main-body-tab-icon-abilities', config_type: "file"},
+    {id: 'MainBodyTabIconsInventory', variable: '--spicy-main-body-tab-icon-inventory', config_type: "file"},
+    {id: 'MainBodyTabIconsPowers', variable: '--spicy-main-body-tab-icon-powers', config_type: "file"},
+    {id: 'MainBodyTabIconsEffects', variable: '--spicy-main-body-tab-icon-effects', config_type: "file"},
+    {id: 'MainBodyTabIconsDescription', variable: '--spicy-main-body-tab-icon-description', config_type: "file"}
 ];
 
 export function register_settings(){

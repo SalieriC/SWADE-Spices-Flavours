@@ -1,3 +1,15 @@
+:root {
+    --spicy-main-body-tab-icon-qa: url('/modules/swade-spices/assets/img/placeholder-tab-icon.png');
+    --spicy-main-body-tab-icon-traits: url('/modules/swade-spices/assets/img/placeholder-tab-icon.png');
+    --spicy-main-body-tab-icon-edges: url('/modules/swade-spices/assets/img/placeholder-tab-icon.png');
+    --spicy-main-body-tab-icon-hindrances: url('/modules/swade-spices/assets/img/placeholder-tab-icon.png');
+    --spicy-main-body-tab-icon-abilities: url('/modules/swade-spices/assets/img/placeholder-tab-icon.png');
+    --spicy-main-body-tab-icon-inventory: url('/modules/swade-spices/assets/img/placeholder-tab-icon.png');
+    --spicy-main-body-tab-icon-powers: url('/modules/swade-spices/assets/img/placeholder-tab-icon.png');
+    --spicy-main-body-tab-icon-effects: url('/modules/swade-spices/assets/img/placeholder-tab-icon.png');
+    --spicy-main-body-tab-icon-description: url('/modules/swade-spices/assets/img/placeholder-tab-icon.png');
+}
+
 .spicyClass-navbar {
     float: right;
 }

@@ -30,7 +30,8 @@ export const ConfigurationVariables = [
     {id: 'MainBodyTabIconsInventory', variable: '--spicy-main-body-tab-icon-inventory', config_type: "file", tab:"Tab3"},
     {id: 'MainBodyTabIconsPowers', variable: '--spicy-main-body-tab-icon-powers', config_type: "file", tab:"Tab3"},
     {id: 'MainBodyTabIconsEffects', variable: '--spicy-main-body-tab-icon-effects', config_type: "file", tab:"Tab3"},
-    {id: 'MainBodyTabIconsDescription', variable: '--spicy-main-body-tab-icon-description', config_type: "file", tab:"Tab3"}
+    {id: 'MainBodyTabIconsDescription', variable: '--spicy-main-body-tab-icon-description', config_type: "file", tab:"Tab3"},
+    {id: 'MainBodyTabBackgroundColour', variable: '--spicy-main-body-tab-background-color', config_type: "color", tab:"Tab3"}
 ];
 
 export function register_settings(){

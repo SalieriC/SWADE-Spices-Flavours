@@ -76,5 +76,9 @@
     "SWADESPICE.Inventory": "Inventory",
     "SWADESPICE.Powers": "Powers",
     "SWADESPICE.Effects": "Effects",
-    "SWADESPICE.Description": "Description"
+    "SWADESPICE.Description": "Description",
+    "SWADESPICE.SettingGeneralTab": "General",
+    "SWADESPICE.SettingLeftBarTab": "Left Bar",
+    "SWADESPICE.SettingTopBarTab": "Top Bar",
+    "SWADESPICE.SettingMainBodyTab": "Main Body"
 }

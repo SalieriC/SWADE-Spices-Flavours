@@ -5,12 +5,12 @@
 import {THEMES} from "./themes.js";
 
 export const ConfigurationVariables = [
-    {id: 'BodyBGColour', variable: '--spicy-main-body-bg-color', config_type: "colour", tab:"General"},
-    {id: 'LeftBarBGColour', variable: '--spicy-left-bar-bg-color', config_type: "colour", tab:"Left Bar"},
-    {id: 'TopBarColour', variable: '--spicy-top-bar-bg-color', config_type: "colour", tab:"Top Bar"},
+    {id: 'BodyBGColour', variable: '--spicy-main-body-bg-color', config_type: "colour", tab:"General"}, //game.i18n.localize("SWADESPICE.SettingGeneralTab")
+    {id: 'LeftBarBGColour', variable: '--spicy-left-bar-bg-color', config_type: "colour", tab:"Left Bar"}, //game.i18n.localize("SWADESPICE.SettingLeftBarTab")
+    {id: 'TopBarColour', variable: '--spicy-top-bar-bg-color', config_type: "colour", tab:"Top Bar"}, //game.i18n.localize("SWADESPICE.SettingTopBarTab")
     {id: 'LeftBarBGImage', variable: '--spicy-left-bar-bg-image', config_type: "file", tab:"Left Bar"},
     {id: 'TopBarBGImage', variable: '--spicy-top-bar-bg-image', config_type: "file", tab:"Top Bar"},
-    {id: 'BodyBGImage', variable: '--spicy-main-body-bg-image', config_type: "file", tab:"Main Body"},
+    {id: 'BodyBGImage', variable: '--spicy-main-body-bg-image', config_type: "file", tab:"Main Body"}, //game.i18n.localize("SWADESPICE.SettingMainBodyTab")
     {id: 'CharnameTextColour', variable: '--spicy-top-bar-charname-color', config_type: "colour", tab:"Top Bar"},
     {id: 'LeftBarLogo', variable: '--spicy-left-bar-logo', config_type: "file", tab:"Left Bar"},
     {id: 'LeftBarHealthTextColour', variable: '--spicy-left-bar-health-text-color', config_type: "colour", tab:"Left Bar"},

@@ -59,3 +59,7 @@
 .spicyClass-icon-description {
     background-image: var(--spicy-main-body-tab-icon-description);
 }
+
+.spicyClass-char-img-container {
+    text-align: left;
+}

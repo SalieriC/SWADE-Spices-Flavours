@@ -45,5 +45,28 @@
     </section>
     <section class="tab" data-tab="description">
         <h2>{{localize "SWADESPICE.Description"}}</h2>
+        <span class="spicyClass-description">
+            <span class="spicyClass-flexrow">
+              <div class="spicyClass-char-img-container">
+                <img
+                  class="spicyClass-char-img"
+                  src="{{actor.img}}"
+                  data-edit="img"
+                  alt="{{actor.name}}"
+                />
+              </div>
+              <div class="spicyClass-advances">
+                <header class="spicyClass-section-header">{{ localize "SWADE.Adv" }}</header>
+                {{editor content=data.data.advances.details target="data.advances.details"
+                button=true owner=owner editable=editable}}
+              </div>
+            </span>
+            <div class="spicyClass-biography">
+              <header class="spicyClass-section-header">{{ localize "SWADE.Biography" }}</header>
+              {{editor content=data.data.details.biography.value
+              target="data.details.biography.value" button=true owner=owner
+              editable=editable}}
+            </div>
+          </span>
     </section>
 </main>

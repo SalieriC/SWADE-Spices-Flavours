@@ -17,7 +17,8 @@
     "./css/spices.css",
     "./css/left-bar.css",
     "./css/top-bar.css",
-    "./css/main-body.css"
+    "./css/main-body.css",
+    "./css/description-tab.css"
   ],
   "languages": [
     {

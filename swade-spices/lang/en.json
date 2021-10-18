@@ -80,5 +80,6 @@
     "SWADESPICE.SettingGeneralTab": "General",
     "SWADESPICE.SettingLeftBarTab": "Left Bar",
     "SWADESPICE.SettingTopBarTab": "Top Bar",
-    "SWADESPICE.SettingMainBodyTab": "Main Body"
+    "SWADESPICE.SettingMainBodyTab": "Main Body",
+    "SWADESPICE.Actions": "Actions"
 }

@@ -6,7 +6,8 @@ function register_templates(){
     loadTemplates(['modules/swade-spices/templates/leftBar.html',
         'modules/swade-spices/templates/topBar.html',
         'modules/swade-spices/templates/mainBody.html',
-        'modules/swade-spices/templates/descriptionTab.html']).then(
+        'modules/swade-spices/templates/descriptionTab.html',
+        'modules/swade-spices/templates/itemTables.html']).then(
         () => {console.log("SWADE Spices templates loaded")})
 }
 

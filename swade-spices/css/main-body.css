@@ -23,6 +23,21 @@
     height: 30px;
 }
 
+.spicyClass-tab-container {
+    display: grid;
+    grid-template: minmax(0, 1fr) / minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.spicyClass-tab-column-left {
+    grid-column: 1/2;
+    grid-row: 1;
+}
+
+.spicyClass-tab-column-right {
+    grid-column: 2/3;
+    grid-row: 1;
+}
+
 .spicyClass-icon-summary {
     background-image: var(--spicy-main-body-tab-icon-qa);
 }
@@ -58,8 +73,4 @@
 
 .spicyClass-icon-description {
     background-image: var(--spicy-main-body-tab-icon-description);
-}
-
-.spicyClass-char-img-container {
-    text-align: left;
 }

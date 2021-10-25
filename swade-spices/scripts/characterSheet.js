@@ -14,4 +14,14 @@ export class SpicyCharacterSheet extends CharacterSheet {
     get template() {
         return 'modules/swade-spices/templates/spicySheet.html';
     }
+
+    getData() {
+        let data = super.getData()
+        let trait_tab = {left: {}, right: {}}
+        trait_tab.left.name = 'Attributes'
+        trait_tab.right.name = 'Skills'
+        data.spicytabs = {'trait': trait_tab}
+        console.log(data)
+        return data
+    }
 }

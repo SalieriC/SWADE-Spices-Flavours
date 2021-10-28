@@ -1,5 +1,11 @@
 <table class="spicyClass-item-table">
     <thead><tr>
         <th><i class="fas fa-star"></i></th><th>{{ tab.name }}</th><th>{{ localize "SWADESPICE.Actions" }}</th>
-    </tr></thead>
+    </tr>
+    {{# each tab.items }}
+        <tr>
+            <td><i class="fas fa-star"></i></td><td data-itemId="{{ this.item_id }}">{{ this.name }}</td><td></td>
+        </tr>
+    {{/each}}
+    </thead>
 </table>

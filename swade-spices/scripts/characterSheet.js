@@ -27,10 +27,10 @@ export class SpicyCharacterSheet extends CharacterSheet {
             }
         }
         let trait_tab = {left: this.create_attribute_tab(data),
-                         right: this.create_skill_tab(items_grouped.skill)}
-        trait_tab.left.name = 'Attributes'
-        trait_tab.right.name = 'Skills'
-        data.spicytabs = {'trait': trait_tab}
+                         right: this.create_item_tab(
+                             items_grouped.skill, game.i18n.localize("SWADE.Skills"), true)}
+        let edge_tab = this.create_item_tab(items_grouped.edge, game.i18n.localize("SWADE.Edges"), true)
+        data.spicytabs = {'trait': trait_tab, 'edge': edge_tab}
         return data
     }
 
@@ -47,19 +47,23 @@ export class SpicyCharacterSheet extends CharacterSheet {
                 name = game.i18n.localize(ATTR_TRANSLATION_STRINGS[attribute])
             }
             name += this.create_die_string(die)
-            tab.items.push({item_id: attribute, name: name})
+            tab.items.push({item_id: attribute, name: name, rollable: true})
         }
         return tab
     }
 
-    create_skill_tab(skills) {
-        let tab = {'name': game.i18n.localize("SWADE.Skills"), items: []}
-        const skill_ordered = skills.sort((a, b) => a.name.localeCompare(b.name))
-        for (let skill of skill_ordered) {
-            const die = skill.data.data.die
-            let name = skill.name
-            name += this.create_die_string(die)
-            tab.items.push({item_id: skill.id, name: name})
+    create_item_tab(items, name, ordered) {
+        let tab = {'name': name, items: []}
+        const items_ordered = ordered?items.sort((a, b) => a.name.localeCompare(b.name)):items
+        for (let item of items_ordered) {
+            let rollable = false
+            let name = item.name
+            if (item.data.data.die) {
+                const die = item.data.data.die
+                name += this.create_die_string(die)
+                rollable = true
+            }
+            tab.items.push({item_id: item.id, name: name, rollable: rollable})
         }
         return tab
     }

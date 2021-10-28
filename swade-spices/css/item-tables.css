@@ -2,3 +2,11 @@
     width: 97%;
     margin: 5px;
 }
+
+.spicyClass-cell-actions {
+    text-align: right;
+}
+
+.spicyClass-cell-names {
+    padding-left: 2px;
+}

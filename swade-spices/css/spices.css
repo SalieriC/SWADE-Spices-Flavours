@@ -5,6 +5,7 @@
 	--spicy-left-bar-bg-image: "";
 	--spicy-top-bar-bg-image: "";
 	--spicy-main-body-bg-image: "";
+	--spicy-clickable-shadow-color: red;
 }
 
 .spicyClass-grid-container {
@@ -47,4 +48,9 @@
 	display: block;
 	object-fit: cover;
 	padding: .5em;
+}
+
+.spicyClass-clickable:hover  {
+	box-shadow: 0 0 8px var(--spicy-clickable-shadow-color);
+	cursor: pointer;
 }

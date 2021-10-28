@@ -4,7 +4,13 @@
     </tr>
     {{# each tab.items }}
         <tr>
-            <td><i class="fas fa-star"></i></td><td data-itemId="{{ this.item_id }}">{{ this.name }}</td><td></td>
+            <td><i class="fas fa-star"></i></td>
+            <td class="spicyClass-cell-names">{{ this.name }}</td>
+            <td class="spicyClass-cell-actions">
+                <span class="spicyClass-clickable "><i class="fas fa-bolt"></i></span>
+                <span class="spicyClass-clickable "><i class="fas fa-dice-d6"></i></span>
+                <span class="spicyClass-clickable "><i class="fas fa-comment-alt"></i></span>
+            </td>
         </tr>
     {{/each}}
     </thead>

@@ -1,5 +1,5 @@
 // noinspection JSFileReferences,NpmUsedModulesInstalled
-/* globals game */
+/* globals game, ChatMessage */
 import CharacterSheet from "/systems/swade/module/sheets/official/CharacterSheet.js";
 
 export class SpicyCharacterSheet extends CharacterSheet {

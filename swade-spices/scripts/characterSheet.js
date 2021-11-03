@@ -34,6 +34,33 @@ export class SpicyCharacterSheet extends CharacterSheet {
         return data
     }
 
+    activateListeners(html) {
+        super.activateListeners(html);
+        if (!this.options.editable) {return}
+        html.find(".spicyClass-clickable").bind(
+            "click", {actor: this.actor}, this.clicked_element)
+    }
+
+    clicked_element(event) {
+        const current_dataset = event.currentTarget.dataset
+        if (current_dataset.clickType === 'fast_roll') {
+            if (current_dataset.itemType === 'skill') {
+                const skill = event.data.actor.items.get(current_dataset.itemId)
+                let roll = event.data.actor.rollSkill(
+                    current_dataset.itemId, {suppressChat: true})
+                roll.evaluate()
+                roll.toMessage(
+                    {speaker: ChatMessage.getSpeaker({ actor: event.data.actor }),
+                     flavor: `${skill.name} ${game.i18n.localize('SWADE.SkillTest')}`,
+                     flags: { swade: { colorMessage: true } }})
+            }
+        } else if (current_dataset.clickType === 'roll') {
+            if (current_dataset.itemType === 'skill') {
+                event.data.actor.rollSkill(current_dataset.itemId)
+            }
+        }
+    }
+
     create_attribute_tab(data) {
         const ATTR_TRANSLATION_STRINGS = {
             strength: "SWADE.AttrStr", agility: "SWADE.AttrAgi", vigor: "SWADE.AttrVig",
@@ -47,7 +74,8 @@ export class SpicyCharacterSheet extends CharacterSheet {
                 name = game.i18n.localize(ATTR_TRANSLATION_STRINGS[attribute])
             }
             name += this.create_die_string(die)
-            tab.items.push({item_id: attribute, name: name, rollable: true})
+            tab.items.push({item_id: attribute, name: name, rollable: true,
+                item_type: "attribute"})
         }
         return tab
     }
@@ -63,7 +91,8 @@ export class SpicyCharacterSheet extends CharacterSheet {
                 name += this.create_die_string(die)
                 rollable = true
             }
-            tab.items.push({item_id: item.id, name: name, rollable: rollable})
+            tab.items.push({item_id: item.id, name: name, rollable: rollable,
+                item_type: item.type})
         }
         return tab
     }

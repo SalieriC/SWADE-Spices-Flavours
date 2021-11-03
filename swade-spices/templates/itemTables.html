@@ -8,8 +8,14 @@
             <td class="spicyClass-cell-names">{{ this.name }}</td>
             <td class="spicyClass-cell-actions">
                 {{# if this.rollable }}
-                    <span class="spicyClass-clickable "><i class="fas fa-bolt"></i></span>
-                    <span class="spicyClass-clickable "><i class="fas fa-dice-d6"></i></span>
+                    <span class="spicyClass-clickable" data-item-id="{{this.item_id}}" data-item-type="{{this.item_type}}"
+                            data-click-type="fast_roll">
+                        <i class="fas fa-bolt"></i>
+                    </span>
+                    <span class="spicyClass-clickable"data-item-id="{{this.item_id}}" data-item-type="{{this.item_type}}"
+                            data-click-type="roll">
+                        <i class="fas fa-dice-d6"></i>
+                    </span>
                 {{/if}}
                 <span class="spicyClass-clickable "><i class="fas fa-comment-alt"></i></span>
             </td>

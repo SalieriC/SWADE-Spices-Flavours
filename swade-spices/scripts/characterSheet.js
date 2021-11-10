@@ -58,6 +58,12 @@ export class SpicyCharacterSheet extends CharacterSheet {
             if (current_dataset.itemType === 'skill') {
                 event.data.actor.rollSkill(current_dataset.itemId)
             }
+        } else if (current_dataset.clickType === 'edit') {
+            const item = event.data.actor.items.get(current_dataset.itemId)
+            item?.sheet.render(true)
+        } else if (current_dataset.clickType === 'chat') {
+            const item = event.data.actor.items.get(current_dataset.itemId)
+            item.show()
         }
     }
 

@@ -30,7 +30,8 @@ export class SpicyCharacterSheet extends CharacterSheet {
                          right: this.create_item_tab(
                              items_grouped.skill, game.i18n.localize("SWADE.Skills"), true)}
         let edge_tab = this.create_item_tab(items_grouped.edge, game.i18n.localize("SWADE.Edges"), true)
-        data.spicytabs = {'trait': trait_tab, 'edge': edge_tab}
+        let hindrance_tab = this.create_item_tab(items_grouped.hindrance, game.i18n.localize("SWADE.Hindrances"), true)
+        data.spicytabs = {trait: trait_tab, edge: edge_tab, hindrance:hindrance_tab}
         return data
     }
 

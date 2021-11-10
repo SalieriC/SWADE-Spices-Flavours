@@ -26,12 +26,15 @@ export class SpicyCharacterSheet extends CharacterSheet {
                 items_grouped[item.type] = [item]
             }
         }
+        console.log(items_grouped)
         let trait_tab = {left: this.create_attribute_tab(data),
                          right: this.create_item_tab(
                              items_grouped.skill, game.i18n.localize("SWADE.Skills"), true)}
         let edge_tab = this.create_item_tab(items_grouped.edge, game.i18n.localize("SWADE.Edges"), true)
         let hindrance_tab = this.create_item_tab(items_grouped.hindrance, game.i18n.localize("SWADE.Hindrances"), true)
-        data.spicytabs = {trait: trait_tab, edge: edge_tab, hindrance:hindrance_tab}
+        let ability_tab = this.create_item_tab(items_grouped.ability, game.i18n.localize("SWADE.SpecialAbility"), true)
+        data.spicytabs = {trait: trait_tab, edge: edge_tab, hindrance:hindrance_tab,
+            ability: ability_tab}
         return data
     }
 

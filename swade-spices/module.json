@@ -6,9 +6,9 @@
   "authors": [],
   "url": "https://github.com/SalieriC/SWADE-Spices-Flavours",
   "flags": {},
-  "version": "1.99.1",
+  "version": "1.99.2",
   "minimumCoreVersion": "0.7.4",
-  "compatibleCoreVersion": "0.8.8",
+  "compatibleCoreVersion": "0.8.9",
   "scripts": [],
   "esmodules": [
     "./scripts/spices.js"

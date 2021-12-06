@@ -7,7 +7,8 @@ function register_templates(){
         'modules/swade-spices/templates/topBar.html',
         'modules/swade-spices/templates/mainBody.html',
         'modules/swade-spices/templates/descriptionTab.html',
-        'modules/swade-spices/templates/itemTables.html']).then(
+        'modules/swade-spices/templates/itemTables.html',
+        'modules/swade-spices/templates/inventoryHeader.html']).then(
         () => {console.log("SWADE Spices templates loaded")})
 }
 

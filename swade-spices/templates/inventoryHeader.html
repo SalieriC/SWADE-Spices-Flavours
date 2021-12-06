@@ -1,0 +1,26 @@
+<div class="spicyClass-tab-container">
+    <div class="spicyClass-tab-column-left">
+        {{localize "SWADE.CarryWeight"}}
+        <strong>{{formatNumber data.data.details.encumbrance.value}} / {{data.data.details.encumbrance.max}} {{weightUnit}}</strong>
+    </div>
+    <div class="spicyClass-tab-column-right">
+        {{#if (eq settingrules.wealthType "currency")}}
+            <label>{{settingrules.currencyName}}</label>
+            <span>
+                <input name="data.details.currency" type="text" value="{{data.data.details.currency}}"
+                       placeholder="{{localize 'SWADE.Currency'}}"/>
+            </span>
+        {{else if (eq settingrules.wealthType "wealthDie")}}
+            <label>
+                <button class="roll">{{localize "SWADE.WealthDie"}}</button>
+            </label>
+            <span>
+                <select data-dtype="Number" name="data.details.wealth.die">
+                    {{#select data.data.details.wealth.die}} {{> "systems/swade/templates/die-sides-options.hbs"}} {{/select}}
+                </select>
+                <input type="text" data-dtype="Number" name="data.details.wealth.modifier"
+                       value="{{signedString data.data.details.wealth.modifier}}" placeholder="{{localize 'SWADE.Mod'}}"/>
+            </span>
+        {{/if}}
+    </div>
+</div>

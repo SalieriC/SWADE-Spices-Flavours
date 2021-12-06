@@ -91,8 +91,9 @@ export class SpicyCharacterSheet extends CharacterSheet {
     }
 
     create_item_tab(items, name, ordered) {
+        if (! items) {return {}}
         let tab = {'name': name, items: []}
-        const items_ordered = ordered?items.sort((a, b) => a.name.localeCompare(b.name)):items
+        const items_ordered = ordered ? items.sort((a, b) => a.name.localeCompare(b.name)): items
         for (let item of items_ordered) {
             let rollable = false
             let name = item.name

@@ -1,0 +1,31 @@
+<table class="spicyClass-item-table">
+    <thead><tr>
+        <th><i class="fas fa-star"></i></th><th>{{ tab.name }}</th><th>{{ localize "SWADESPICE.Actions" }}</th>
+    </tr>
+    {{# each tab.items }}
+        <tr>
+            <td><i class="fas fa-star"></i></td>
+            <td class="spicyClass-cell-names spicyClass-clickable"
+                    data-item-id="{{this.item_id}}" data-item-type="{{this.item_type}}" data-click-type="edit">
+                {{ this.name }}
+            </td>
+            <td class="spicyClass-cell-actions">
+                {{# if this.rollable }}
+                    <span class="spicyClass-clickable" data-item-id="{{this.item_id}}" data-item-type="{{this.item_type}}"
+                            data-click-type="fast_roll">
+                        <i class="fas fa-bolt"></i>
+                    </span>
+                    <span class="spicyClass-clickable" data-item-id="{{this.item_id}}" data-item-type="{{this.item_type}}"
+                            data-click-type="roll">
+                        <i class="fas fa-dice-d6"></i>
+                    </span>
+                {{/if}}
+                <span class="spicyClass-clickable" data-item-id="{{this.item_id}}" data-item-type="{{this.item_type}}"
+                            data-click-type="chat">
+                    <i class="fas fa-comment-alt"></i>
+                </span>
+            </td>
+        </tr>
+    {{/each}}
+    </thead>
+</table>

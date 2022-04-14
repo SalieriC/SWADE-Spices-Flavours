@@ -1,40 +1,51 @@
 {
-	"name": "swade-spices",
-	"title": "SWADE Spices & Flavours",
-	"description": "<p>A simple module to configure some stuff in the SWADE System on Foundry VTT. <a href='https://ko-fi.com/salieric'>Please consider donating.</a> </p>",
-	"minimumCoreVersion": "0.7.4",
-	"compatibleCoreVersion": "0.7.10",
-	"version": "0.5.0",
-	"author": "SalieriC, Javier Rivera",
-	"dependencies": [
-		{
-		  "name": "colorsettings",
-		  "type": "module",
-		  "manifest": "https://raw.githubusercontent.com/ardittristan/VTTColorSettings/master/module.json"
-		},
-		{
-		  "name": "swade",
-		  "type": "system"
-		},
-		{
-			"name": "dice-so-nice",
-			"type": "module",
-			"manifest": "https://gitlab.com/riccisi/foundryvtt-dice-so-nice/-/raw/master/module/module.json"
-		}
-	],
-	"languages": [
-		{
-			"lang": "en",
-			"name": "English",
-			"path": "lang/en.json"
-		}
-	],
-	"systems": ["swade"],
-	"esmodules": ["./scripts/init.js"],
-	"scripts": ["./scripts/settings-extender.js"],
-	"styles": ["./css/spices.css"],
-	"packs": [],
-	"url": "https://github.com/SalieriC/SWADE-Spices-Flavours",
-	"manifest": "https://raw.githubusercontent.com/SalieriC/SWADE-Spices-Flavours/main/swade-spices/module.json",
-	"download": "https://github.com/SalieriC/SWADE-Spices-Flavours/blob/main/swade-spices.zip?raw=true"
+  "name": "swade-spices",
+  "title": "SWADE Spices & Flavours",
+  "description": "<p>A new Character Sheet for SWADE. <a href='https://ko-fi.com/salieric'>Please consider donating.</a> </p>",
+  "author": "SalieriC, Javier Rivera",
+  "authors": [],
+  "url": "https://github.com/SalieriC/SWADE-Spices-Flavours",
+  "flags": {},
+  "version": "1.99.2",
+  "minimumCoreVersion": "0.7.4",
+  "compatibleCoreVersion": "0.8.9",
+  "scripts": [],
+  "esmodules": [
+    "./scripts/spices.js"
+  ],
+  "styles": [
+    "./css/spices.css",
+    "./css/left-bar.css",
+    "./css/top-bar.css",
+    "./css/main-body.css",
+    "./css/description-tab.css",
+    "./css/item-tables.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "packs": [],
+  "system": [
+    "swade"
+  ],
+  "dependencies": [
+    {
+      "name": "swade",
+      "type": "system"
+    },
+    {
+      "name": "colorsettings",
+      "type": "module"
+    }
+  ],
+  "socket": false,
+  "manifest": "https://raw.githubusercontent.com/SalieriC/SWADE-Spices-Flavours/S%26F-2/swade-spices/module.json",
+  "download": "https://github.com/SalieriC/SWADE-Spices-Flavours/raw/S%26F-2/swade-spices.zip",
+  "protected": false,
+  "coreTranslation": false,
+  "library": false
 }

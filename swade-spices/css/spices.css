@@ -1,209 +1,56 @@
 :root {
-	--window-bg-colour: #faf9ed;
-	--chat-bg-colour: #ffffff00;
-	--active_tab_color: #ffffff;
-	--active_tab_text_color: #ffffff;
-	--passive_tab_color: #444444;
-	--passive_tab_text_colour: #dfe6f5;
-	--checkmark_colour: solid white;
-	--background_chat: url("/ui/parchment.jpg");
-	--private_color: 3px solid #ffffff00;
-	--tab_border_colour: 1px solid #2c4251;
-	--tab_border_radius: 4px;
-	--header_border_radius: 0px;
-	--scrollbar_background: #782e22;
-	--scrollbar_border: 1px solid #ff6400;
-	--quick_access_bg_colour: #00000033;
-	--skills_even_bg_colour: #0000001a;
-	--passive_ab_tab: #972824;
-	--block_pp: visible;
-	--prevent_empty_space: flex;
-	--block_curr: visible;
+	--spicy-left-bar-bg-color: #ffffff;
+	--spicy-top-bar-bg-color: #000000;
+	--spicy-main-body-bg-color: #114400;
+	--spicy-left-bar-bg-image: "";
+	--spicy-top-bar-bg-image: "";
+	--spicy-main-body-bg-image: "";
+	--spicy-clickable-shadow-color: red;
 }
 
-.swade-skill-image {
-	max-height: 1em;
-	flex-grow: 0;
-	object-fit: scale-down;
-	margin-top: 2px !important;
-	border: none;
+.spicyClass-grid-container {
+	display: grid;
+	grid-row-gap: 0;
+	grid-column-gap: 0;
+	margin: -8px;
+	grid-template: repeat(10, minmax(0, 1fr)) / repeat(12, minmax(0, 1fr));
 }
 
-.swade-logo {
-	border: none;
+.spicyClass-left-bar {
+	background-color: var(--spicy-left-bar-bg-color);
+	background-image: var(--spicy-left-bar-bg-image);
+	grid-column: 1/4;
+	grid-row: 1/11;
+	display: grid;
+	grid-template: repeat(18, minmax(0, 1fr)) / minmax(0, 1fr);
 }
 
-.swade-portrait {
-	border: none;
+.spicyClass-top-bar {
+	background-color: var(--spicy-top-bar-bg-color);
+	background-image: var(--spicy-top-bar-bg-image);
+	grid-column: 4/13;
+	grid-row: 1/3;
+	display: grid;
+	grid-template: repeat(2, 1fr) /  repeat(3, minmax(0, 1fr)) 30%;
 }
 
-.charline {
-	align-items: center;
-}
-/* Allign AE buttons */
-.effects-list .effect-controls {
-	text-align: left;
-}
-.effects-list .effect-icon {
-	width: 24px;
-}
-/* AE ON colour */
-.effect-action .fa-power-off {
-	color: rgb(0, 148, 12);
-}
-/* AE OFF colour */
-.disabled-effect .effect-action .fa-power-off {
-	color: rgb(148, 0, 0) !important;
+.spicyClass-main-body {
+	background-color: var(--spicy-main-body-bg-color);
+	background-image: var(--spicy-main-body-bg-image);
+	grid-column: 4/13;
+	grid-row: 3/11;
 }
 
-/* Discovered this by accident and like it so I'll keep it here but... This is Whetstone Territory...
-.tabs .item {
-	color: var(--passive_tab_text_colour);
-}
-*/
-
-#chat-log .chat-message {
-	background: var(--chat-bg-colour);
-}
-
-.swade.sheet .window-content {
-	background: var(--window-bg-colour);
+.spicyClass-img {
+	border: 0px;
+	width: 100%;
+	height: 100%;
+	display: block;
+	object-fit: cover;
+	padding: .5em;
 }
 
-.swade.sheet .tabs a.item {
-	background: var(--passive_tab_color);
-	border: var(--tab_border_colour);
-	border-radius: var(--tab_border_radius);
-	color: var(--passive_tab_text_colour);
-	border-bottom-left-radius: 0px;
-	border-bottom-right-radius: 0px;
+.spicyClass-clickable:hover  {
+	box-shadow: 0 0 8px var(--spicy-clickable-shadow-color);
+	cursor: pointer;
 }
-.swade.sheet .tabs .item:hover, .swade.sheet .tabs .item:focus {
-	background: var(--active_tab_color) !important;
-	color: var(--active_tab_text_color) !important;
-	border-radius: var(--tab_border_radius);
-	border-bottom-left-radius: 0px;
-	border-bottom-right-radius: 0px;
-}
-.swade.sheet .tabs a.item.active {
-	background: var(--active_tab_color);
-	color: var(--active_tab_text_color) !important;
-	border-radius: var(--tab_border_radius);
-	border-bottom-left-radius: 0px;
-	border-bottom-right-radius: 0px;
-}
-.swade.sheet.item .sheet-body .header-field, .swade.sheet.actor.character .inventory .items-list .item-header, .swade.sheet.actor .sheet-body .header-field {
-	border: var(--tab_border_colour);
-	border-radius: var(--header_border_radius);
-	color: var(--passive_tab_text_colour);
-}
-.swade.sheet .tabs {
-	border-bottom: var(--tab_border_colour);
-}
-
-/* Hiding options */
-.swade.sheet.actor .powers .power-counter.active {
-    display: block;
-    visibility: var(--block_pp);
-}
-input[name="data.pp"], label[for="data.pp"] {
-	visibility: var(--block_pp);
-	display: var(--prevent_empty_space);
-}
-.swade.sheet.actor .inventory .currency {
-	visibility : var(--block_curr);
-}
-
-.swade.sheet.actor .sheet-body .quickaccess-list .gear-list .gear-card .card-header {
-	background: var(--quick_access_bg_colour);
-}
-.swade.sheet.actor.character .skills .skills-list .skill:nth-child(even) {
-	background-color: var(--skills_even_bg_colour);
-}
-.swade.sheet.actor.character .edges .edges-hindrances-list .items-list .item:nth-child(even) {
-	background-color: var(--skills_even_bg_colour);
-}
-.swade.sheet.actor.character .edges .edges-hindrances-list .items-list .item:nth-child(even) {
-	background-color: var(--skills_even_bg_colour);
-}
-.swade.sheet.actor .inventory .inventory-categories .item-list .item:nth-child(even) {
-	background-color: var(--skills_even_bg_colour);
-}
-
-.swade.sheet.actor .powers .arcane-tabs .arcane.active {
-	background: var(--active_tab_color);
-	color: var(--active_tab_text_color);
-}
-.swade.sheet.actor .powers .arcane-tabs .arcane {
-	background: var(--passive_ab_tab);
-}
-.swade.sheet.actor .powers .arcane-tabs .arcane:hover, .swade.sheet.actor .powers .arcane-tabs .arcane:focus {
-	background: var(--active_tab_color);
-	color: var(--active_tab_text_color);
-}
-.swade.sheet.actor .powers .powers-list .power .power-header {
-	background: var(--passive_tab_color);
-	color: var(--passive_tab_text_colour);
-}
-.swade.sheet.actor .powers .powers-list .power .power-header .item-controls {
-	color: var(--passive_tab_text_colour);
-}
-.swade.sheet.actor .powers .powers-list .power.active {
-	border-radius: var(--tab_border_radius);
-}
-
-.swade.sheet.actor .powers .power-counter input {
-	color: var(--passive_tab_text_colour);
-}
-
-.swade.sheet .check-container .checkmark:after {
-    border: var(--checkmark_colour);
-    border-width: 0 3px 3px 0;
-}
-
-#chat-log .chat-message {
-    background-image: var(--background_chat);
-}
-textarea#chat-message {
-    background-image: var(--background_chat);
-	background-color: var(--window-bg-colour);
-}
-#chat-log .chat-message.whisper {
-    background-image: var(--background_chat);
-    border: var(--private_color);
-}
-
-::-webkit-scrollbar-thumb {
-	background: var(--scrollbar_background);
-	border: var(--scrollbar_border);
-}
-
-.skill-label {
-	max-width: 45%;
-}
-
-.skill-icon {
-	padding: 0.8px;
-	margin: 0px 0px !important;
-	margin-right: 0.3em !important;
-}
-
-.attributes-list #pace {
-	width: 50% !important;
-}
-
-.attributes-list #pace::after {
-	background-image: url('systems/swade/assets/dice/d6-grey.svg');
-	content: "d6";
-	text-align: center;
-}
-
-input.charname {
-	width: 30%;
-}
-
-/*
-.swade-attribute-icons {
-
-}
-/*

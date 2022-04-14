@@ -1,0 +1,35 @@
+:root {
+    --spicy-top-bar-charname-color: white;
+}
+
+.spicyClass-name {
+    grid-column: 1/4;
+    grid-row: 1;
+}
+
+.spicyClass-name .charname {
+    border: none;
+    text-align: center;
+    font-size: 2.5em;
+    height: 2.5em;
+    color: var(--spicy-top-bar-charname-color);
+    margin-left: 3px;
+}
+
+.spicyClass-img-zone {
+    grid-column: 4/5;
+    grid-row: 1/3;
+    float: right;
+}
+
+.spicyClass-header-input input {
+    grid-row: 2;
+    border: none;
+    color: var(--spicy-top-bar-charname-color);
+    margin: 3px;
+}
+
+.spicyClass-header-input input::placeholder {
+    color: var(--spicy-top-bar-charname-color);
+    opacity: .5;
+}

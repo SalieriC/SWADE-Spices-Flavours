@@ -1,0 +1,76 @@
+:root {
+    --spicy-main-body-tab-icon-qa: url('/modules/swade-spices/assets/img/placeholder-tab-icon.png');
+    --spicy-main-body-tab-icon-traits: url('/modules/swade-spices/assets/img/placeholder-tab-icon.png');
+    --spicy-main-body-tab-icon-edges: url('/modules/swade-spices/assets/img/placeholder-tab-icon.png');
+    --spicy-main-body-tab-icon-hindrances: url('/modules/swade-spices/assets/img/placeholder-tab-icon.png');
+    --spicy-main-body-tab-icon-abilities: url('/modules/swade-spices/assets/img/placeholder-tab-icon.png');
+    --spicy-main-body-tab-icon-inventory: url('/modules/swade-spices/assets/img/placeholder-tab-icon.png');
+    --spicy-main-body-tab-icon-powers: url('/modules/swade-spices/assets/img/placeholder-tab-icon.png');
+    --spicy-main-body-tab-icon-effects: url('/modules/swade-spices/assets/img/placeholder-tab-icon.png');
+    --spicy-main-body-tab-icon-description: url('/modules/swade-spices/assets/img/placeholder-tab-icon.png');
+    --spicy-main-body-tab-background-color: #000000;
+    --spicy-main-body-tab-text-color: #ffffff;
+}
+
+.spicyClass-navbar {
+    float: right;
+}
+
+.spicyClass-icon {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+.spicyClass-tab-container {
+    display: grid;
+    grid-template: minmax(0, 1fr) / minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.spicyClass-tab-column-left {
+    grid-column: 1/2;
+    grid-row: 1;
+}
+
+.spicyClass-tab-column-right {
+    grid-column: 2/3;
+    grid-row: 1;
+}
+
+.spicyClass-icon-summary {
+    background-image: var(--spicy-main-body-tab-icon-qa);
+}
+
+.spicyClass-icon-trait {
+    background-image: var(--spicy-main-body-tab-icon-traits);
+}
+
+.spicyClass-icon-edges {
+    background-image: var(--spicy-main-body-tab-icon-edges);
+}
+
+.spicyClass-icon-hindrance {
+    background-image: var(--spicy-main-body-tab-icon-hindrances);
+}
+
+.spicyClass-icon-abilities {
+    background-image: var(--spicy-main-body-tab-icon-abilities);
+}
+
+.spicyClass-icon-inventory
+{
+    background-image: var(--spicy-main-body-tab-icon-inventory);
+}
+
+.spicyClass-icon-powers {
+    background-image: var(--spicy-main-body-tab-icon-powers);
+}
+
+.spicyClass-icon-effects {
+    background-image: var(--spicy-main-body-tab-icon-effects);
+}
+
+.spicyClass-icon-description {
+    background-image: var(--spicy-main-body-tab-icon-description);
+}

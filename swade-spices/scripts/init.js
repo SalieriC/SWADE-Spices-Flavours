@@ -661,12 +661,12 @@ Hooks.on(`ready`, () => {
     const benny_front = game.settings.get(
         'swade-spices', 'bennyFront');
     if (benny_front) {
-        CONFIG.SWADE.bennies.textures.front = benny_front;
+        //CONFIG.SWADE.bennies.textures.front = benny_front;
     }
     const benny_back = game.settings.get(
         'swade-spices', 'bennyBack');
     if (benny_back) {
-        CONFIG.SWADE.bennies.textures.back = benny_back;
+        //CONFIG.SWADE.bennies.textures.back = benny_back;
     }
     // Modify css variables
     const colour_tab_passive = game.settings.get("swade-spices", "tabColour");

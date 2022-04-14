@@ -1,0 +1,135 @@
+<div class="spicyClass-left-bar-logo">
+</div>
+<div class="spicyClass-left-bar-health">
+    <div class="spicyClass-health-title">
+      {{localize "SWADE.Wounds"}}
+        <span class="spicyClass-health-value">
+            <input
+                class = "spicyClass-health-input"
+                type="number"
+                name="data.wounds.value"
+                value="{{data.data.wounds.value}}"/>
+            /{{data.data.wounds.max}}
+        </span>
+    </div>
+    <div class="spicyClass-health-title">
+      {{localize "SWADE.Fatigue"}}
+        <span class="spicyClass-health-value">
+            <input
+                class = "spicyClass-health-input"
+                type="number"
+                name="data.fatigue.value"
+                value="{{data.data.fatigue.value}}"/>
+            /{{data.data.fatigue.max}}
+        </span>
+    </div>
+</div>
+<div class="spicyClass-status">
+    <hr class="spicyClass-left-bar-hr">
+
+    <span class="spicyClass-status-container">
+        <input type="checkbox" class="spicyClass-status-checkbox" name="data.status.isShaken" {{checked data.data.status.isShaken}} />
+        <label class="spicyClass-check-container">{{localize "SWADE.Shaken"}}</label>
+    </span>
+    <span class="spicyClass-status-container">
+        <input type="checkbox" class="spicyClass-status-checkbox" name="data.status.isDistracted" {{checked data.data.status.isDistracted}} />
+        <label class="spicyClass-check-container">{{localize "SWADE.Distr"}}</label>
+    </span>
+    <span class="spicyClass-status-container">
+        <input type="checkbox" class="spicyClass-status-checkbox" name="data.status.isVulnerable" {{checked data.data.status.isVulnerable}} />
+        <label class="spicyClass-check-container">{{localize "SWADE.Vuln"}}</label>
+    </span>
+    <span class="spicyClass-status-container">
+        <input type="checkbox" class="spicyClass-status-checkbox" name="data.status.isStunned" {{checked data.data.status.isStunned}} />
+        <label class="spicyClass-check-container">{{localize "SWADE.Stunned"}}</label>
+    </span>
+    <span class="spicyClass-status-container">
+        <input type="checkbox" class="spicyClass-status-checkbox" name="data.status.isEntangled" {{checked data.data.status.isEntangled}} />
+        <label class="spicyClass-check-container">{{localize "SWADE.Entangled"}}</label>
+    </span>
+    <span class="spicyClass-status-container">
+        <input type="checkbox" class="spicyClass-status-checkbox" name="data.status.isBound" {{checked data.data.status.isBound}} />
+        <label class="spicyClass-check-container">{{localize "SWADE.Bound"}}</label>
+    </span>
+</div>
+<div class="spicyClass-derived">
+    <hr class="spicyClass-left-bar-hr">
+    <div class="spicyClass-derived-title">
+        {{localize "SWADE.Derived"}}
+    </div>
+    <div class="spicyClass-derived-name">
+        {{ localize "SWADE.Parry" }}
+    </div>
+    <div class="spicyClass-derived-name">
+        {{ localize "SWADE.Tough" }}
+    </div>
+    <div class="spicyClass-derived-value">
+        <input name="data.stats.parry.value" value="{{data.data.stats.parry.value}}"
+                type="text" placeholder="{{ localize 'SWADE.Parry' }}"
+                data-dtype="Number" {{disabled data.data.details.autoCalcParry}}>
+        <button type="button" class="parry-display">
+            {{signedString data.data.stats.parry.modifier}}
+        </button>
+    </div>
+    <div class="spicyClass-derived-value">
+        <input id="toughness" name="data.stats.toughness.value" type="text"
+                value="{{data.data.stats.toughness.value}}"
+                placeholder="{{localize 'SWADE.Tough'}}"
+                data-dtype="Number" {{disabled data.data.details.autoCalcToughness}}>
+        <button type="button" class="armor-display" {{disabled data.data.details.autoCalcToughness}}>
+            {{data.data.stats.toughness.armor}}
+        </button>
+    </div>
+    <div class="spicyClass-derived-name">
+        {{localize "SWADE.Pace"}}
+    </div>
+    <div class="spicyClass-derived-name">
+        {{ localize "SWADE.Size" }}
+    </div>
+    <div class="spicyClass-derived-value">
+        <input type="text" value="{{data.data.stats.speed.adjusted}}" data-dtype="Number"
+                placeholder="{{ localize 'SWADE.Pace' }}" disabled/>
+        <button type="button" class="spicyClass-running-die running-die"
+                title="{{localize 'SWADE.Roll'}} {{localize 'SWADE.RunningDie'}}"
+                style="background-image: url(systems/swade/assets/official/dice/d{{data.data.stats.speed.runningDie}}.svg);">
+            <span class="sr-only">d{{data.stats.speed.runningDie}} {{localize 'SWADE.RunningDie'}}</span>
+        </button>
+    </div>
+    <div class="spicyClass-derived-value">
+        <input name="data.stats.size" type="text" value="{{data.data.stats.size}}"
+            data-dtype="Number"/>
+    </div>
+</div>
+<div class="spicyClass-bennies">
+    <hr class="spicyClass-left-bar-hr">
+    <div class="spicyClass-bennies-title">
+        {{localize "SWADE.Bennies"}}
+    </div>
+    <div class="bennies" title="{{localize 'SWADE.Bennies'}}">
+        {{#each currentBennies as |benny|}} {{#unless (gte @index 5) }}
+            <span title="{{localize 'SWADE.BenniesSpend'}}" class="benny spend-benny" style="z-index: {{@index}}; grid-column: {{benny}} / span 8; background-image: url({{../bennyImageURL}});">
+            </span>
+        {{/unless}} {{/each}}
+        <button type="button" class="add-benny" title="{{localize 'SWADE.AddBenny'}}">
+            <i class="fas fa-plus fa-lg"></i>
+        </button>
+        <button type="button" class="spend-benny current-bennies"
+                title="{{localize 'SWADE.CurrentBennies'}}">
+            {{data.data.bennies.value}}
+        </button>
+    </div>
+</div>
+<div class="spicyClass-conviction">
+    <button type="button" class="conviction-toggle">
+        <strong class="{{#if data.data.details.conviction.active}}pulse{{/if}}">
+            {{~#if data.data.details.conviction.active~}} {{localize
+            "SWADE.ConvictionActive"}} {{~else~}} {{localize "SWADE.Conv"}} {{/if}}
+        </strong>
+    </button>
+    <div>
+    <input type="Number" class="conviction-counter" 
+            name="data.details.conviction.value"
+            value="{{data.data.details.conviction.value}}"
+            data-dtype="Number"/>
+    </div>
+</div>
